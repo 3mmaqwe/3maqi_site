@@ -49,15 +49,14 @@ nav ul {
   overflow: hidden;
    background-color: #4A5E4C;
    border-style: double;
-  border-width: medium;
+  border-width: thick;
   border-color: #ADDFB3;
-
 }
 
 nav li {
   list-style-type: none;
   float: left;
-  border-right: medium double #ADDFB3;
+  border-right: thick double #ADDFB3;
 }
 
 nav li:last-child {
@@ -119,7 +118,7 @@ section {
   background-color: white;
   padding: 15px;
   border-style: double;
-  border-width: medium;
+  border-width: thick;
   border-color: #4A5E4C;
   margin: 15px 0; 
 }
