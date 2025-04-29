@@ -136,7 +136,7 @@ footer {
 }
 
 
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+/* Responsive layout for mobile devices */
 @media screen and (max-width: 800px) {
  .aside, .main {   
     width: 100%;
@@ -144,5 +144,18 @@ footer {
   }
   body {
     width: 100%;
+  }
+  /* styling change for navigation bar */
+   nav ul li.right, 
+  nav ul li {
+    float: none;
+    border-right: none;
+    border-bottom:  thick double #ADDFB3;
+  }
+  nav li:last-child {
+    float: none;
+    border-right: none;
+    border-bottom: none;
+
   }
 }
