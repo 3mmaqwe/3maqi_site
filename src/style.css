@@ -16,6 +16,10 @@ https://pocketbroto.com/en/home - i really like the colors on this page and love
   box-sizing: border-box;
 }
 
+#bannerisda{
+  width: 300px;
+}
+
 body {
   color: #362825;
   color: black;
@@ -157,5 +161,8 @@ footer {
     border-right: none;
     border-bottom: none;
 
+  }
+  #bannerisda{
+    width: 200px;
   }
 }
