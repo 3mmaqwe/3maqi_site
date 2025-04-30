@@ -30,7 +30,7 @@ body {
 }
 
 figure{
-  float: left;
+  /*float: left; */
   max-width: 100%;
   display: inline-block;
   margin: 2.5%;
