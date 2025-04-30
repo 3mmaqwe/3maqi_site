@@ -24,13 +24,21 @@ body {
   color: #362825;
   color: black;
    background-color: #4A5E4C;
-  font-family: Verdana;
+  font-family: Helvetica, Verdana;
   width: 75%;
   margin: auto;
 }
 
+figure{
+  /*float: left; */
+  max-width: 100%;
+  display: inline-block;
+  margin: 2.5%;
+}
 
-
+figure img{
+  width:200px;
+}
 /* Header/Blog Title */
 .header {
   padding: 5px;
@@ -125,6 +133,7 @@ section {
   border-width: thick;
   border-color: #4A5E4C;
   margin: 15px 0; 
+  display: flow-root;
 }
 
  li{  
@@ -164,5 +173,8 @@ footer {
   }
   #bannerisda{
     width: 200px;
+  }
+  figure img{
+    width:100px;
   }
 }
