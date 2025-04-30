@@ -5,6 +5,8 @@ some links for me that i use:
 my guestbook control page: https://atabook.org/control/general
 
 my css and javascript are in seperate documents, feel free to steal and take stuff i dont mind :)
+
+make sure to run the following command in src file in terminal: python -m http.server 8000 to test 
 -->
 <html>
   <head>
@@ -13,23 +15,13 @@ my css and javascript are in seperate documents, feel free to steal and take stu
     <link rel="icon" type="image/x-icon" href="images\isda_noboarder.png">
     <title>3maqi</title>
  <link href="style.css?v=initial" rel="stylesheet" type="text/css" media="all">
+ <!-- i have files that auto load for footer, header and sidebar, so that i can just change one file instead of manually change them across each page-->
+ <script src="loadComponents.js"></script>
 </head>
 <body>
   
-  <div class="header">
-    <img id="bannerisda" src="images/Isda_with_Zelda_flowers.png" title="Isda petting Zelda" alt="isda a goblin, petting a orange kitty named Zelda">
-    <h1>Welcome to my Website! :3</h1>
-  </div>
+  <div id="header-container"></div>
 
-<!-- temporary nav bar, will make prettier with css later -->
- <nav>
-    <ul>
-   <li><a class="active" href="index.html">home</a></li>
-    <li><a href="devlog.html">devlog</a></li>
-       <li><a href="todo.html">To-Do-List</a></li>
-    <li><a href="https://3maqi.atabook.org/">Sign my guest book!</a></li> 
-    </ul>  
-  </nav>
 <div class="row"> <!--contains main content and sidebar-->
     <!-- main content start -->
    <div class="main">
@@ -75,61 +67,16 @@ my css and javascript are in seperate documents, feel free to steal and take stu
 <!-- main content end -->
 
 <!-- sidebar bar start -->
-<div class="aside">
-   <section>
-   <img src='images/profile_pic.png'/>
-    <ul>
-   <li>pen name: 3maqi</li>
-   <li>pronouns: she/her</li>
-   <li>Born: 1999 </li>
-   <li>Status: Single</li>
-   <li>Pet: My cat Zelda </li>
-   </ul>
-   </section>
-  <section>
-      <p> cool websites: </p>
-      <ul>
-        <li><a href="https://www.makewordart.com/">Make Word Art</a></li>
-        <li><a href="https://neocities.org/tutorials">Neocities Html/css tutorials</a></li>
-        <li><a href="https://cari.institute/aesthetics">Consumer Aesthetics Research Institute</a></li>
-     </ul>
-   </section>
-   <section>
-   <p> buttons :3</p>
-   <!-- if any of these button links are broken lmk! but hopefully they should all work -->
-   <a href="https://goblin-heart.net/" target="_blank"><img src="https://goblin-heart.net/assets/images/gg-button.gif" alt="button to goblin-heart site" title="goblin-heart.net"></a>
-   <a href="https://ne0nbandit.art/" target="_blank"><img src="https://ne0nbandit.github.io/assets/img/btn/mine/nbbanner.png" alt="button to neOnbandit site" title="ne0nbadit.art"></a>
-   <a href="https://cloverbell.neocities.org/" target="_blank"><img src="https://cloverbell.neocities.org/n_n/cloverbell.gif" title="cloverbell.neocities.org"></a> 
-   <a href="https://frutigeraeroarchive.org/" target="_blank" ><img src="https://frutigeraeroarchive.org/images/buttons/frutigeraeroarchive_button.png" alt="88x31 - Frutiger Aero Archive" title="Frutiger Aero Archive Button" style="border: none"></a>
-   <a href="https://blamensir.neocities.org" target="_blank"><img src="https://blamensir.neocities.org/banner.gif" title="blamensir's banner"></a>
-   <a href="https://colrana.neocities.org" target="_blank"><img src="https://colrana.neocities.org/artist/col_button.gif" title="colrana" alt="A button for colrana's website."></a>
-   <a href="https://pocketbroto.com/" target="_blank"><img src="https://pocketbroto.com/pocketbutton.png" title="Pocket Broto" alt="Pocket Broto's site"></a>
-   </section>
-   <section>
-    <p>my socials</p>
-    <ul>
-    <!-- i might link my instagram one day, as it has most of my art. but honestly I want to like grab alot of art FROM it and repost here instead -->
-      <li><a href="https://neocities.org/site/3maqi" target="_blank">Neocities profile</a></li>
-      <li><a href="https://www.furaffinity.net/user/msfurryart/" target="_blank">Furaffinity</a></li>
-      <li><a href="https://steamcommunity.com/profiles/76561198077325145/" target="_blank">Steam</a></li>
-      <li><a href="discordapp.com/users/.3mmaqwe" target="_blank">Discord</a></li>
-    </ul>
-   </section>
-     </div>
+<div id="sidebar-container"></div>
+
  <!-- side bar end -->
  </div>
- 
- 
-  <footer>
-  <p id="date">Page last updated: </p>
-  <p>Visitors: <span id="hitcount"></span></p>
-  <a href="https://neocities.org" target="_blank"><img src="images/neocities.png" alt="Site hosted by Neocites"></a>
-  
-  </footer>
+
+ <!-- footer -->
+ <div id="footer-container"></div>
   
   <!-- moved my scripts to its own file -->
- <script src="3maqiscript.js" async defer>
-</script>
+ 
 <noscript>Your browser does not support JavaScript!</noscript>
   
   </body>
