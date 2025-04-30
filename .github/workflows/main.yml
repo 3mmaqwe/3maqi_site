@@ -10,8 +10,14 @@ concurrency: # concurrency stuff. dont worry about it
 jobs:
  deploy:
   runs-on: ubuntu-latest
-  steps:
+  steps: 
   - uses: actions/checkout@v4 # grabs your repository's files
+   # Add this new step for CSS versioning
+  - name: Update CSS versions
+    run: |
+     SHORT_SHA=$(git rev-parse --short HEAD)
+     find . -type f -name "*.html" -exec sed -i "s/style\.css\?v=[^\"]*\"/style.css?v=$SHORT_SHA\"/" {} +
+
   - name: Deploying to Neocities # deploys them to neocities
     uses: bcomnes/deploy-to-neocities@v1.1.21
     with:
