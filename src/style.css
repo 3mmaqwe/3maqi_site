@@ -16,6 +16,8 @@ https://pocketbroto.com/en/home - i really like the colors on this page and love
   box-sizing: border-box;
 }
 
+/* ids */
+
 #bannerisda{
   width: 300px;
 }
@@ -23,10 +25,12 @@ https://pocketbroto.com/en/home - i really like the colors on this page and love
   width: 400px;
 }
 
+#profile_pic{
+  border-radius: 25px;
+}
 
 body {
-  color: #362825;
-  color: black;
+  color: #171e18;
    background-color: #4A5E4C;
   font-family: Helvetica, Verdana;
   width: 75%;
@@ -43,11 +47,20 @@ figure{
 figure img{
   width:200px;
 }
+
+.screenshot{
+  width: 400px;
+}
 /* Header/Blog Title */
 .header {
+  margin: 15px 0; 
   padding: 5px;
+  border-radius: 25px;
   text-align: center;
   background-color: #ADDFB3;
+  border-style: double;
+  border-width: thick;
+  border-color: #4A5E4C;
 }
 
 img {
@@ -60,6 +73,7 @@ img {
 /* ugh still not working */
 nav ul {
   list-style-type: none;
+  border-radius: 25px;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -101,7 +115,7 @@ nav li a:hover {
 .main {
   float: left;
   width: 75%;
-  background-color:  #ADDFB3;
+  background-color: #4A5E4C;
   padding-left: 5px;
   padding-right: 5px;
 }
@@ -111,7 +125,7 @@ nav li a:hover {
 .aside {
   float: left;
   width: 25%;
-  background-color: #ADDFB3;
+  background-color: #4A5E4C;
   padding-right: 5px;
 }
 
@@ -124,14 +138,15 @@ nav li a:hover {
 }
 
 .row {
-  background-color: #ADDFB3;
+  background-color:#4A5E4C;;
 }
 
 
 
 /* Add a card effect for articles */
 section {
-  background-color: white;
+  background-color: #bdf3c4;;
+  border-radius: 25px;
   padding: 15px;
   border-style: double;
   border-width: thick;
@@ -146,9 +161,11 @@ section {
   
 
 footer {
+  margin: 15px 0; 
+  border-radius: 25px;
   padding: 5px;
   text-align: center;
-  background: #7B9E7F;
+  background-color: #ADDFB3;
   margin-top: 5px;
 }
 
