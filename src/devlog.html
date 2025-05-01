@@ -17,15 +17,27 @@
     <!-- main content start -->
    <div class="main">
      <section>
-     <h2>Devlog</h2>
+     <h1>Devlog</h1>
      <p>here is where i will write like big changes ive added to the page, maybe ill embed some screenshots so I can see how my site has changed overall</p>
    </section>
+
+   <section>
+    <h2>title image & journal- 4/30/2025</h2>
+    <figure><img src="images\title.png"  width="200px"><figcaption>handrawn title</figcaption></figure>
+    <h3>Changes</h3>
+    <ul>
+      <li>added handrawn image of my title for the header</li>
+      <li>new page: journal</li>
+    </ul>
+   </section>
+
+
    
    <section>
-    <h3>made sidebar, header, and footer own pages & load as components - 4/29/2025</h3>
+    <h2>made sidebar, header, and footer own pages & load as components - 4/29/2025</h2>
     <p>I was getting tired of manually changing each page for my site. figured it made sense to instead have one page i can make changes for the header, footer and sidebar instead</p>
     <p>now i just have to change it one page instead of each page. Downside is my pages will break if javascript is disabled</p>
-    <h4>Changes</h4>
+    <h3>Changes</h3>
     <ul>
       <li>header, footer, and sidebar have their own pages</li>
       <li>using javascript these sections will be loaded in on each page (unless i explictly dont include the script or correct div</li>
@@ -33,7 +45,7 @@
    </section>
    
    <section>
-    <h3>made new art for the site, retired old temp logo- 4/29/2025</h3>
+    <h2>made new art for the site, retired old temp logo- 4/29/2025</h2>
     <!-- hard coding the image sizes for now.. eventually maybe ill make a class to fix this issue-->
       <figure><img src="images\isda_noboarder.png"  width="200px"><figcaption>Isda favicon</figcaption></figure>
       <figure><img src="images\Isda_with_Zelda_flowers.png" width="200px"><figcaption>Isda with zelda</figcaption></figure>
@@ -42,7 +54,7 @@
     <p>i decide to also retire my first header image, its literally just wordart that i changed the hue to green</p>
     <figure><img src="images\Welcometomypage_green.png"  width="200px"><figcaption>retired green header image</figcaption></figure>
     <figure><img src="images\Welcometomypage.png"  width="200px"><figcaption>the very first header image</figcaption></figure>
-    <h4>Changes:</h4>
+    <h3>Changes:</h3>
     <ul>
       <li>retired old wordart logo</li>
       <li>added icon to site (you can see it in the tab)</li>
@@ -53,12 +65,12 @@
 
 
    <section>
-    <h3>added github deployment - 4/28/2025 5pm</h3>
+    <h2>added github deployment - 4/28/2025 5pm</h2>
     <p>so basically I wanted a better way to edit files and deploy changes to my site. I noticed when I was making a ton of edits they wouldnt appear right away and changes would take a while to load. Made it frustrating to see if my css styling was working.</p>
     <p>So, I was thinking like oh i wonder if github works with neocites? turns out it does! I used this <a href="https://juneish.neocities.org/written/resources/?page=neocities-git" target="_blank">guide</a> to help me!</p>
     <p>Now i can test my site bit by bit locally instead of having to wait for the changes to work on the main site. <strong>plus</strong>, it is bad practice to test in production :P</p>
     <p>Pretty much now when ever I push changes to my site, the changes will automatically be deployed and added to the site. How neat :)</p>
-    <h4>Changes:</h4>
+    <h3>Changes:</h3>
     <ul>
       <li>created private repo for site</li>
       <li>enabled way to deploy code automatically from github</li>
@@ -68,11 +80,11 @@
 
 
    <section>
-   <h3>I broke my dang side bar - 4/28/2025 3pm</h3>
+   <h2>I broke my dang side bar - 4/28/2025 3pm</h2>
    <p>so i finally got my navigation bar added, and it looks <em>ok</em>. However, I was like trying out a different tags for my main and sidebar and ended up just breaking the whole dang sidebar.</p>
    <p>also it seems when i change the styling in my css it takes a while to actually take changes on my page. So I think i want to be able to test and update my site locally before I push the changes to the site</p>
    <p>so gotta figure out how to host my site locally so its easier to debug and make changes LOL </p>
-   <h4>Heres the list of updates:</h4>
+   <h3>Heres the list of updates:</h3>
    <ul>
    <li>added a nicer nav bar</li>
    <li>got my first guest book signers!!</li>
@@ -84,12 +96,12 @@
    </section>
    
    <section>
-   <h3>Became a supporter - 4/26/2025</h3>
+   <h2>Became a supporter - 4/26/2025</h2>
    <p>I saw a viewer counter on <a href="frutigeraeroarchive.org" target="_blank">frutigeraeroarchive.org</a> site and i was like omg I want that!! Turns out it was bigger rabbithole then I thought it be</p>
    <p>I found a guide on how to implement it <a href="https://goblin-heart.net/sadgrl/learn/articles/last-update-visitors" target="_blank">here</a> but it wasnt working and I couldnt figure it out for the life of me... even had to ask Copilot for help.</p>
    <p>basically I kept getting an error, wasnt actually able to connect to the API that let me get the statistics for my page viewer count. I kept trying to like add meta tags to let me connect, and it just kept refusing.</p>
    <p>turns out you cant connect to API's unless your a supporter to this site LMAO. So, now im a supporter - paying that good ol $5 a month now.</p>
-   <h4>heres a list of things ive added in this update:</h4>
+   <h3>heres a list of things ive added in this update:</h3>
    <ul>
    <li>added a viewer counter to the footer of my page</li>
    <li>became a supporter to neocities</li>
@@ -109,9 +121,6 @@
 
   <!-- footer -->
  <div id="footer-container"></div>
- 
-  
-  
  
   </body>
 </html>
