@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images\isda_noboarder.png">
+    <title>3maqi</title>
+    <link href="style.css?v=initial" rel="stylesheet" type="text/css" media="all">
+    <!-- i have files that auto load for footer, header and sidebar, so that i can just change one file instead of manually change them across each page-->
+ <script src="loadComponents.js"></script>
+  </head>
+  <body>
+  
+    <div id="header-container"></div>
+   
+  <div class="row">
+    <div class="main">
+      <section>
+        <h1>Experiments Page</h1>
+          <p>Here just sorta a playground for me to make goofy things, such as just playing around with css, javascript, and html</p> 
+        </section>
+
+        <section id="silly_buttons" >
+            <h2>Silly buttons!</h2>
+            <p>i got this idea from <a href="https://bevweb.neocities.org/" target="_blank">Bev Web</a> and thought it be fun to make my own little random button board</p>
+            <p>i recommend you make one of ur own! its a super easy way to learn about javascript</p>
+            <p>this will take you to <a href="https://bevweb.neocities.org/fun/button" target="_blank">bevweb's board</a></p>
+            <p>some of these buttons may take u to random places! beware :3. I wont link to any badpages though i promise!</p>
+            <p>ill add more buttons when i feel like it but enjoy the goofy buttons for now</p>
+            <button onclick="window.open('https://3maqi.atabook.org', '_blank')" type="button" title="guestbook oops">:3</button>
+            <button onclick="window.open('https://www.youtube.com/watch?v=xvFZjo5PgG0', '_blank')" type="button" title="not a rick roll">:3</button>
+            <button title="i dont do anything">:3</button>
+            <button id=demo onclick="document.getElementById('demo').innerHTML = Date()">:3</button>
+            <button id=big onclick="document.getElementById('big').style.fontSize = '35px';">:3</button>
+            <button id=smol onclick="document.getElementById('smol').style.fontSize = '8px';">:3</button>
+            <button id=red onclick="document.getElementById('red').style.color = 'red';">:3</button>
+            <button onclick="document.getElementById('silly_buttons').style.background = 'white';">:3</button>
+            <button id=blue onclick="document.getElementById('blue').style.background = 'blue';">:3</button>
+            <button id=snap onclick="document.getElementById('snap').style.display = 'none';" title="thanos snap">:3</button>
+            <button onclick="document.getElementsByTagName('body')[0].style.background = 'purple';" title="i like purple">:3</button>
+            <button onclick="document.getElementsByTagName('body')[0].style.background = '#4A5E4C';" title="wait change it back!!">:3</button>
+           
+            <!-- Hello buttons will appear-->
+            <button onclick="showButtons()" title="hello">:3</button>
+            
+            <!-- -->
+            <button class="hello">:3</button>
+            <button class="hello">:3</button>
+
+             <!--make em say >:3 -->                   
+            <button class="hello" onclick="angryButtons()" title="angry moment">:3</button>
+
+            <!--hello buttons disappear-->
+            <button class="hello" onclick="hideButtons()" title="goodbye">:3</button>
+
+            <button onclick="window.alert('hello it is I, the button you have clicked. I am one of many but i have a story to share. Its a wonderful story, a great story, a story so powerful it will change ur life. Now this story, isnt just any old story. Its so important, that i must continue to explain the hype around it! \n \n The people who have heard this story, they told me,\' without it i would been empty, Without this story, i wouldnt have found the meaning of the life.\' And they told me to tell you that as well. People have travelled back in time from the future to hear this story, they believe that they must hear it from the purest of being, a button of course. \n Oh, you want to hear the story? you\'ve been waiting right? oh man. About that.... \n \n \n :3 ');">:3</button>                
+            <button id="grower" onclick="growerNotAShower()" title="im a grower not a shower">:3</button>
+            <button id="counter" onclick="increment()">:3</button>
+            <button id="counter_s" onclick="increment_sideways()">:3</button>
+
+
+        </section>
+
+    </div>
+    <!-- sidebar bar start -->
+<div id="sidebar-container"></div>
+
+<!-- side bar end -->
+</div>
+
+<!-- footer -->
+<div id="footer-container"></div>
+  <!-- moved my scripts to its own file -->
+
+<script>
+// here is scripts for the experiments page
+
+    // functions for da buttons
+function showButtons(){
+    const hello = document.getElementsByClassName('hello');
+                        for (let i = 0; i < hello.length; i++) {
+                                hello[i].style.display = 'initial';
+                            }  
+                        }
+function angryButtons(){
+    const angry = document.getElementsByClassName('hello');
+                    for (let i = 0; i < angry.length; i++) {
+                            angry[i].innerHTML = '>:3';
+                        } 
+}
+function hideButtons(){
+    const goodbye = document.getElementsByClassName('hello');
+                    for (let i = 0; i < goodbye.length; i++) {
+                            goodbye[i].style.display = 'none';
+                        } 
+}
+
+let grow = 12;
+function growerNotAShower(){
+    var px = "px";
+    grow+=10;
+    let grow_px = grow + px;
+    document.getElementById('grower').style.fontSize = grow_px;
+
+}
+let count = 0;
+function increment(){
+      count=count+1; 
+      document.getElementById("counter").innerHTML = count;
+    }
+
+let count_s = 0; 
+ function increment_sideways(){
+      count_s=count_s+1; 
+      document.getElementById("counter_s").innerHTML += count_s;
+    }
+
+
+</script>
+  </body>
+</html>

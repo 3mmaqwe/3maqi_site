@@ -12,6 +12,7 @@ https://pocketbroto.com/en/home - i really like the colors on this page and love
 */
 
 
+
 * {
   box-sizing: border-box;
 }
@@ -29,6 +30,17 @@ https://pocketbroto.com/en/home - i really like the colors on this page and love
   border-radius: 25px;
 }
 
+/* adds a boarder image around only text */
+/* also if ur using this class make sure to put <br> tags after */
+#board_img_test{
+  display:inline;
+  border-radius: 25px;
+  border: 20px solid transparent;
+  padding: 15px;
+  border-image: url(/images/boarder_test.png) 20% round;
+}
+
+
 body {
   color: #171e18;
    background-color: #4A5E4C;
@@ -43,13 +55,50 @@ figure{
   margin: 2.5%;
 }
 
-figure img{
-  width:200px;
+.small_img{
+  width:300px;
 }
+
 
 .screenshot{
   width: 400px;
 }
+
+.screenshot_big{
+  width: 600px;
+}
+
+button {
+  border-radius: 25px;
+  margin: 0;
+  padding: 14px 16px;
+  overflow: hidden;
+   background-color: #4A5E4C;
+   border-style: double;
+  border-width: thick;
+  border-color: #ADDFB3;
+  color: white;
+  cursor: pointer;
+  
+}
+
+button a, button a:visited {
+  color:white;
+  text-decoration: none;
+}
+ button:hover {
+  background-color: #2a362c;
+}
+
+
+
+a {
+  color: #1e3620;
+}
+a:visited {
+  color: #402c47;
+}
+
 /* Header/Blog Title */
 .header {
   margin: 15px 0; 
@@ -102,14 +151,27 @@ nav li a {
   text-decoration: none;
 }
 
+nav li a:visited {
+  list-style-type: none;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
 nav li a:hover {
    background-color: #2a362c;
 
 }
 
-
-.mobile_nav{
+.collapsible{
   display:none;
+  width: 100%;
+}
+
+#mobile{
+  display: none;
 }
 
 /* Create 2 unequal columns that floats next to each other */
@@ -158,6 +220,7 @@ section {
   display: flow-root;
 }
 
+
  li{  
    list-style-type: "✦ ";
  }
@@ -172,6 +235,20 @@ footer {
   margin-top: 5px;
 }
 
+/* button expermiments class */
+
+.hello{
+  display: none;
+}
+
+
+
+/* plz hide the nav bar ;-; */
+@media screen and (min-width: 801px) {
+  #mobile{
+    display: none !important;
+  }
+}
 
 /* Responsive layout for mobile devices */
 /*a ton of people surf the internet on only their phone!*/
@@ -200,17 +277,36 @@ footer {
     width: 200px;
   }
   figure img{
-    width:100px;
+    width:400px;
   }
-  /* removes desktop navigation and switches to mobile */
-  .desktop_nav{
-    display: none;
+  /* actives menu button for mobile nav */
+  .collapsible{
+    display: initial;
   }
-  .mobile_nav{
-    display: inline;
+
+  #desktop{
+    display:none;
+ }
+
+  /*adds plus to menu button */
+  .collapsible:after {
+    content: '\002B';
+    color: white;
+    float: right;
   }
+   /*adds minus to menu button */
+.active:after {
+  content: "\2212";
+}
+
   /* images will be on top of each other instead of side to side */
   figure{
     display: block;
   }
+  /*side bar changes */
+  #about_me_sidebar, #websites_links_sidebar{
+    display:none;
+    /* i might just make an about me page tbh instead of having it in the sidebar*/
+    /* same for website links - i think it be nice to have like a page to sort links */
+  } 
 }

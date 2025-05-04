@@ -15,10 +15,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 loadedComponents++;
                 
                 // After all components are loaded, initialize your scripts
+
+                // last modified date
                 if (loadedComponents === components.length) {
+                    
                     // Last modified date
-                    let text = document.lastModified;
-                    document.getElementById("date").innerHTML += text;
+                    const date = new Date(document.lastModified);
+                     document.getElementById("date").innerHTML += date.toDateString();
 
                     // Visitor counter
                     var xhttp = new XMLHttpRequest();
@@ -36,13 +39,37 @@ document.addEventListener('DOMContentLoaded', function() {
                                 var date_obj = new Date(site_data.info.last_updated)
                             }
                             document.getElementById("hitcount").innerHTML = num_str;
-                        } else {
-                            console.log("failed connection didnt work");
                         }
                     };
 
                     xhttp.open("GET", "https://weirdscifi.ratiosemper.com/neocities.php?sitename=3maqi", true);
                     xhttp.send();
+                    /// end of vistor code
+
+                    //navigation bar code go here
+                    var coll = document.getElementsByClassName("collapsible");
+                    var nav;
+                   
+
+                    for (nav = 0; nav < coll.length; nav++) {
+                    coll[nav].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        var content = this.nextElementSibling;
+                        if (content.style.display === "block") {
+                            console.log("hello");
+                        content.style.display = "none";
+                        } else {
+                        content.style.display = "block";
+                        }
+                    });
+                    }
+
+                
+
+
+                    /// end of nav bar code
+                    
+
                 }
             })
             .catch(error => console.error(`Error loading ${component.file}:`, error));
