@@ -8,6 +8,99 @@
     <link href="style.css?v=initial" rel="stylesheet" type="text/css" media="all">
     <!-- i have files that auto load for footer, header and sidebar, so that i can just change one file instead of manually change them across each page-->
  <script src="loadComponents.js"></script>
+ <style>
+/* styling just for this page */
+ .small_g{
+  height:50px;
+  width:50px;
+}
+.med_g{
+  height:50px;
+  width:100px;
+}
+.long_g{
+  height:50px;
+  width:200px;
+}
+
+.grad_box{
+  display:flex;
+}
+#grad1{
+  background-color:#4A5E4C;
+  background-image: linear-gradient(to right, #4A5E4C,  #ADDFB3);
+}
+#grad2{
+  background-color:#4A5E4C;
+  background-image: linear-gradient(to bottom right, #4A5E4C,  #ADDFB3);
+}
+#grad3{
+  background-color:#4A5E4C;
+  background-image: linear-gradient(60deg, #4A5E4C,  #ADDFB3);
+}
+#grad4{
+  background-color:#4A5E4C;
+  background-image: linear-gradient(to left, #4A5E4C,  #ADDFB3);
+}
+#grad5{
+  background-color:#4A5E4C;
+  background-image: linear-gradient(to left, #4a4d5e,  #adcadf);
+}
+#grad6{
+  background-color:#4A5E4C;
+  background-image: linear-gradient(to left, #32385a,  #6eb1e1);
+}
+
+/*together makes funky diamond pattern - diamond 1*/
+#grad7{
+  background-color:#4A5E4C;
+  background-image: linear-gradient(to bottom left, #4A5E4C, #4a4d5e,  #32385a, #ADDFB3,  #adcadf,#6eb1e1 );
+}
+#grad7_r{
+  background-color:#4A5E4C;
+  background-image: linear-gradient(to bottom right, #4A5E4C, #4a4d5e,  #32385a, #ADDFB3,  #adcadf,#6eb1e1 );
+}
+#grad7_rt{
+  background-color:#4A5E4C;
+  background-image: linear-gradient(to top right, #4A5E4C, #4a4d5e,  #32385a, #ADDFB3,  #adcadf,#6eb1e1 );
+}
+#grad7_t{
+  background-color:#4A5E4C;
+  background-image: linear-gradient(to top left, #4A5E4C, #4a4d5e,  #32385a, #ADDFB3,  #adcadf,#6eb1e1 );
+}
+/*-----------*/
+
+/*bisexual diamond*/
+#gradBi_bl {
+  background-image: linear-gradient(to bottom left, #D60270,#9B4F96,#0038A8);
+}
+#gradBi_br {
+  background-image: linear-gradient(to bottom right, #D60270,#9B4F96,#0038A8);
+}
+#gradBi_tl {
+  background-image: linear-gradient(to top left, #D60270,#9B4F96,#0038A8);
+}
+#gradBi_tr {
+  background-image: linear-gradient(to top right, #D60270,#9B4F96,#0038A8);
+}
+
+/* pride colors! */
+/* this site was super helpful on getting color hexcodes for flags https://www.flagcolorcodes.com/flags/pride*/
+#gradPride {
+  background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+}
+#gradPastelPride {
+  background-image: linear-gradient(to right, rgb(254, 158, 158),rgb(248, 214, 151),rgb(248, 248, 167),rgb(170, 252, 170),rgb(175, 175, 251),rgb(213, 164, 248),rgb(250, 206, 250));
+}
+
+#gradBi {
+  background-image: linear-gradient(to right, #D60270,#9B4F96,#0038A8);
+}
+#gradLesbian{
+  background-image: linear-gradient(to right,#D52D00,#EF7627,#FF9A56,white,#D162A4,#B55690,#A30262)
+}
+
+ </style>
   </head>
   <body>
   
@@ -18,6 +111,7 @@
       <section>
         <h1>Experiments Page</h1>
           <p>Here just sorta a playground for me to make goofy things, such as just playing around with css, javascript, and html</p> 
+          <p>this pages colors and shapes and sizes may change! just a fair warning. Also this page might not be super mobile friendly</p>
         </section>
 
         <section id="silly_buttons" >
@@ -27,39 +121,79 @@
             <p>this will take you to <a href="https://bevweb.neocities.org/fun/button" target="_blank">bevweb's board</a></p>
             <p>some of these buttons may take u to random places! beware :3. I wont link to any badpages though i promise!</p>
             <p>ill add more buttons when i feel like it but enjoy the goofy buttons for now</p>
-            <button onclick="window.open('https://3maqi.atabook.org', '_blank')" type="button" title="guestbook oops">:3</button>
-            <button onclick="window.open('https://www.youtube.com/watch?v=xvFZjo5PgG0', '_blank')" type="button" title="not a rick roll">:3</button>
-            <button title="i dont do anything">:3</button>
-            <button id=demo onclick="document.getElementById('demo').innerHTML = Date()">:3</button>
-            <button id=big onclick="document.getElementById('big').style.fontSize = '35px';">:3</button>
-            <button id=smol onclick="document.getElementById('smol').style.fontSize = '8px';">:3</button>
-            <button id=red onclick="document.getElementById('red').style.color = 'red';">:3</button>
-            <button onclick="document.getElementById('silly_buttons').style.background = 'white';">:3</button>
-            <button id=blue onclick="document.getElementById('blue').style.background = 'blue';">:3</button>
-            <button id=snap onclick="document.getElementById('snap').style.display = 'none';" title="thanos snap">:3</button>
-            <button onclick="document.getElementsByTagName('body')[0].style.background = 'purple';" title="i like purple">:3</button>
-            <button onclick="document.getElementsByTagName('body')[0].style.background = '#4A5E4C';" title="wait change it back!!">:3</button>
+            <button class="owo"onclick="window.open('https://3maqi.atabook.org', '_blank')" type="button" title="guestbook oops">:3</button>
+            <button class="owo" onclick="window.open('https://www.youtube.com/watch?v=xvFZjo5PgG0', '_blank')" type="button" title="not a rick roll">:3</button>
+            <button  class="owo title="i dont do anything">:3</button>
+            <button class="owo" id="demo" onclick="document.getElementById('demo').innerHTML = Date()">:3</button>
+            <button class="owo" id="big" onclick="document.getElementById('big').style.fontSize = '35px';">:3</button>
+            <button class="owo" id="smol" onclick="document.getElementById('smol').style.fontSize = '8px';">:3</button>
+            <button class="owo" id="red" onclick="document.getElementById('red').style.color = 'red';">:3</button>
+            <button class="owo" onclick="document.getElementById('silly_buttons').style.background = 'white';">:3</button>
+            <button class="owo" id=blue onclick="document.getElementById('blue').style.background = 'blue';">:3</button>
+            <button class="owo" id=snap onclick="document.getElementById('snap').style.display = 'none';" title="thanos snap">:3</button>
+            <button class="owo" onclick="document.getElementsByTagName('body')[0].style.background = 'purple';" title="i like purple">:3</button>
+            <button class="owo" onclick="document.getElementsByTagName('body')[0].style.background = '#4A5E4C';" title="wait change it back!!">:3</button>
            
             <!-- Hello buttons will appear-->
-            <button onclick="showButtons()" title="hello">:3</button>
-            
+            <button class="owo" onclick="showButtons()" title="hello">:3</button>
             <!-- -->
-            <button class="hello">:3</button>
-            <button class="hello">:3</button>
+            <button class="hello owo">:3</button>
+            <button class="hello owo">:3</button>
 
              <!--make em say >:3 -->                   
-            <button class="hello" onclick="angryButtons()" title="angry moment">:3</button>
+            <button class="hello owo" onclick="angryButtons()" title="angry moment">:3</button>
+            <button class="owo" onclick="happyButtons()" title="hello">:3</button>
 
             <!--hello buttons disappear-->
-            <button class="hello" onclick="hideButtons()" title="goodbye">:3</button>
+            <button class="hello owo" onclick="hideButtons()" title="goodbye">:3</button>
 
-            <button onclick="window.alert('hello it is I, the button you have clicked. I am one of many but i have a story to share. Its a wonderful story, a great story, a story so powerful it will change ur life. Now this story, isnt just any old story. Its so important, that i must continue to explain the hype around it! \n \n The people who have heard this story, they told me,\' without it i would been empty, Without this story, i wouldnt have found the meaning of the life.\' And they told me to tell you that as well. People have travelled back in time from the future to hear this story, they believe that they must hear it from the purest of being, a button of course. \n Oh, you want to hear the story? you\'ve been waiting right? oh man. About that.... \n \n \n :3 ');">:3</button>                
-            <button id="grower" onclick="growerNotAShower()" title="im a grower not a shower">:3</button>
-            <button id="counter" onclick="increment()">:3</button>
+            <button  class="owo" onclick="window.alert('hello it is I, the button you have clicked. I am one of many but i have a story to share. Its a wonderful story, a great story, a story so powerful it will change ur life. Now this story, isnt just any old story. Its so important, that i must continue to explain the hype around it! \n \n The people who have heard this story, they told me,\' without it i would been empty, Without this story, i wouldnt have found the meaning of the life.\' And they told me to tell you that as well. People have travelled back in time from the future to hear this story, they believe that they must hear it from the purest of being, a button of course. \n Oh, you want to hear the story? you\'ve been waiting right? oh man. About that.... \n \n \n :3 ');">:3</button>                
+            <button class="owo"  id="grower" onclick="growerNotAShower()" title="im a grower not a shower">:3</button>
+            <button  id="counter" onclick="increment()">:3</button>
             <button id="counter_s" onclick="increment_sideways()">:3</button>
-
-
+            <button class="owo" onclick="goodbyeSidebar()" title="turn off and on the sidebar!">:3</button>
         </section>
+
+        <section>
+         <h2>Gradients oh my!</h2>
+        <p> just wanna mess around with the gradient styling - if your browser doesnt support gradients u wont be able to see em :(</p>
+        <div class="grad_box">
+          <!---class is size of box, id is coloring of box-->
+          <div class="small_g" id="grad1"></div>
+          <div class="med_g" id="grad3"></div>
+          <div class="small_g" id="grad2"></div>
+          <div class="long_g" id="grad4"></div>
+          <div class="med_g" id="grad5"></div>
+          <div class="small_g" id="grad6"></div>
+        </div>
+        <div class="grad_box" title="pride colors!">
+          <div class="long_g" id="gradPride" title="rainbow flag colors"></div>
+          <div class="long_g" id="gradPastelPride" title="rainbow flag pastels"></div>
+          <div class="long_g" id="gradBi" title="bisexual flag"></div>
+          <div class="long_g" id="gradLesbian" title="Lesbian Flag"></div>
+        </div>
+
+        <div title="a diamond :O">
+          <div class="grad_box">
+            <div class="long_g" id="grad7_t"></div>
+            <div class="long_g" id="grad7_rt"></div>
+            <div class="long_g" id="gradBi_tl"></div>
+            <div class="long_g" id="gradBi_tr"></div>
+          </div>
+          
+          <div class="grad_box">
+            <div class="long_g" id="grad7"></div>
+            <div class="long_g" id="grad7_r"></div>
+            <div class="long_g" id="gradBi_bl"></div>
+            <div class="long_g" id="gradBi_br"></div>
+          </div>
+        </div>
+       
+
+        
+        </section>
+
+
 
     </div>
     <!-- sidebar bar start -->
@@ -83,17 +217,38 @@ function showButtons(){
                             }  
                         }
 function angryButtons(){
-    const angry = document.getElementsByClassName('hello');
+    const angry = document.getElementsByClassName('owo');
                     for (let i = 0; i < angry.length; i++) {
                             angry[i].innerHTML = '>:3';
                         } 
 }
+
+function happyButtons(){
+    const angry = document.getElementsByClassName('owo');
+                    for (let i = 0; i < angry.length; i++) {
+                            angry[i].innerHTML = ':3';
+                        } 
+}
+
+
 function hideButtons(){
     const goodbye = document.getElementsByClassName('hello');
                     for (let i = 0; i < goodbye.length; i++) {
                             goodbye[i].style.display = 'none';
                         } 
 }
+
+function goodbyeSidebar(){
+  const sidebar = document.getElementById('sidebar-container');
+   if (sidebar.style.display != "none"){
+    sidebar.style.display = 'none';
+   }  else {
+    sidebar.style.display = 'initial';
+   }
+
+  
+}
+
 
 let grow = 12;
 function growerNotAShower(){
