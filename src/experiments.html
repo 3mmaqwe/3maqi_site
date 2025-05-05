@@ -115,7 +115,7 @@
         </section>
 
         <section id="silly_buttons" >
-            <h2>Silly buttons!</h2>
+            <h2 id="header_button">Silly buttons!</h2>
             <p>i got this idea from <a href="https://bevweb.neocities.org/" target="_blank">Bev Web</a> and thought it be fun to make my own little random button board</p>
             <p>i recommend you make one of ur own! its a super easy way to learn about javascript</p>
             <p>this will take you to <a href="https://bevweb.neocities.org/fun/button" target="_blank">bevweb's board</a></p>
@@ -152,6 +152,13 @@
             <button  id="counter" onclick="increment()">:3</button>
             <button id="counter_s" onclick="increment_sideways()">:3</button>
             <button class="owo" onclick="goodbyeSidebar()" title="turn off and on the sidebar!">:3</button>
+            <button class="owo" onclick="rotate('header_button','180','Y')">:3</button>
+            <button class="owo" id="me" onclick="rotate('me','180','Y')">:3</button>
+            <button class="owo" id="rotate90z" onclick="rotate('rotate90z','300','Y')">:3</button>
+            <button class="owo" id="rotatez" onclick="rotate('rotatez','300','Z')">:3</button>
+            <button class="owo" id="gradbutton" onclick="grad('gradbutton','rainbow')">:3</button>
+            <button class="owo" id="gradbutton_bi" onclick="grad('gradbutton_bi','bi')">:3</button>
+
         </section>
 
         <section>
@@ -216,11 +223,31 @@ function showButtons(){
                                 hello[i].style.display = 'initial';
                             }  
                         }
+
+function rotate(rotate,deg,axis){
+  //deg = degree you want rotated
+  //axis = Z,Y,X
+ const rotate_me = document.getElementById(rotate);
+   rotate_me.style.transform = 'rotate'+axis+'('+ deg + 'deg)';
+ }
+
+function grad(id,type){
+  var id_select = document.getElementById(id);
+  switch(type){
+   case 'rainbow':
+    id_select.style.backgroundImage = 'linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet)';
+    break;
+    case 'bi':
+    id_select.style.backgroundImage = 'linear-gradient(to right, #D60270,#9B4F96,#0038A8)';
+    break;
+  }
+}
+
 function angryButtons(){
     const angry = document.getElementsByClassName('owo');
-                    for (let i = 0; i < angry.length; i++) {
-                            angry[i].innerHTML = '>:3';
-                        } 
+    for (let i = 0; i < angry.length; i++) {
+          angry[i].innerHTML = '>:3';
+      } 
 }
 
 function happyButtons(){
