@@ -5,13 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="images\isda_noboarder.png">
     <title>3maqi</title>
+    <link rel="preload" href="images/seamless-texture-green-watercolor.jpg" as="image">
     <link href="style.css?v=initial" rel="stylesheet" type="text/css" media="all">
-    <!-- i have files that auto load for footer, header and sidebar, so that i can just change one file instead of manually change them across each page-->
-  <script src="loadComponents.js"></script>
   </head>
   <body>
     
-    <div id="header-container"></div>
+    <div id="header-container">
+<div class="header">
+    <img id="bannerisda" src="images/Isda_with_Zelda_flowers.png" title="Isda petting Zelda" alt="isda a goblin, petting a orange kitty named Zelda">
+    <img src="images/title.png" id="title_image" title="hand drawn title" alt="3maqi, welcome to my site :3">
+</div>
+
+  <nav id="desktop">
+   <ul>
+      <li><a href="index.html">Home</a></li>
+       <li><a href="devlog.html">Devlog</a></li>
+          <li><a href="todo.html">To-Do-List</a></li>
+          <li><a href="journal.html">Journal</a></li>
+          <li><a href="art.html">Art</a></li>
+          <li><a href="experiments.html">Experiments</a></li>
+       <li><a href="https://3maqi.atabook.org/">Sign my guest book!</a></li> 
+       </ul>    
+  </nav>
+ 
+ <!-- this button appears when changing to mobile navigation-->
+  <!-- i used this guide: https://www.w3schools.com/howto/howto_js_collapsible.asp-->
+  <button class="collapsible">Menu</button>
+  <nav id="mobile">
+   <ul>
+      <li><a href="index.html">Home</a></li>
+       <li><a href="devlog.html">Devlog</a></li>
+          <li><a href="todo.html">To-Do-List</a></li>
+          <li><a href="journal.html">Journal</a></li>
+          <li><a href="art.html">Art</a></li>
+          <li><a href="experiments.html">Experiments</a></li>
+       <li><a href="https://3maqi.atabook.org/">Sign my guest book!</a></li> 
+       </ul>    
+  </nav>
+</div><!--header end-->
 
 <div class="row"> <!--contains main content and sidebar-->
     <!-- main content start -->
@@ -19,6 +50,29 @@
      <section>
      <h1>Devlog</h1>
      <p>here is where i will write like big changes ive added to the page, maybe ill embed some screenshots so I can see how my site has changed overall</p>
+   </section>
+   <section>
+    <!--write and take screenshots tomorrow-->
+    <h2>New background! 5/6/2025</h2>
+    <figure><img class="screenshot" src="images\screenshots\Screenshot_6-5-2025_22038_localhost.jpeg"><figcaption>site with watercolor background</figcaption></figure>
+    <figure><img class="screenshot" src="images\seamless-texture-green-watercolor.jpg"><figcaption>new watercolor background</figcaption></figure>
+    <p>i also change the way i handle the sidebar, header, and footer (or components). I noticed when clicking though the page that it would flash alot, and this was because i was loading them in after the main content.</p>
+    <p>which basically cause the main content to shift for a second before the components loaded in.</p>
+    <p>i do alot of scripting for my work, so i figured a good solution would be to have a script go in and add the new changes directly to the hmtl file. So now all the elements will load in at the same time.</p>
+    <p>so the downside is i have to remember to run the script, but the upside is no more flashing, and i dont have to use some random framework either. Honestly im trying to avoid frameworks because i just dont feel like learning it.
+      also, I also just dont want to be using a framework that might not have a ton of support either.
+    </p>
+    <h3>Flash issue vs solution</h3>
+    <figure><img class="screenshot" src="images\screenshots\flashing_issue.gif"><figcaption>javascript flashing issue</figcaption></figure>
+    <figure><img class="screenshot" src="images\screenshots\no_flashing.gif"><figcaption>powershell script solution</figcaption></figure>
+    <p>but ya i do not recommend loading elements for your page with javascript, or if you do, do it for main content, and not headers or sidebars</p>
+    <h3>Changes</h3>
+    <ul>
+      <li>added powershell script to update each page with a header, footer, and sidebar components</li>
+      <li>removed javascript that loaded components (and causing flashing issue)</li>
+      <li>new background. Watercolor image i found, and then edited to match theme color</li>
+      <li>made sections background transparent so you can see the watercolor design</li>
+    </ul>
    </section>
 
   <section>
@@ -168,12 +222,69 @@
   </div>
 <!-- main content end -->
 
-<!-- sidebar bar start -->
-<div id="sidebar-container"></div>
+<div id="sidebar-container">
+<div class="aside">
+    <section id="about_me_sidebar">
+    <img id="profile_pic" src='images/profile_pic.png' title="isda drawing i made in 2023" alt="Drawing of 3maqi, a goblin in a tracksuit"/>
+     <ul>
+    <li>pen name: 3maqi</li>
+    <li>pronouns: she/her</li>
+    <li>Born: 1999 </li>
+    <li>Status: Single</li>
+    <li>Pet: My cat Zelda </li>
+    </ul>
+    </section>
+   <section id="websites_links_sidebar">
+       <p> cool websites: </p>
+       <ul>
+         <li><a href="https://www.makewordart.com/" target="_blank">Make Word Art</a></li>
+         <li><a href="https://neocities.org/tutorials" target="_blank">Neocities Html/css tutorials</a></li>
+         <li><a href="https://cari.institute/aesthetics" target="_blank">Consumer Aesthetics Research Institute</a></li>
+      </ul>
+    </section>
+    <section id="buttons_sidebar">
+    <p> buttons</p>
+    <!-- if any of these button links are broken lmk! but hopefully they should all work -->
+    <a href="https://goblin-heart.net/" target="_blank"><img src="images\buttons\gg-button.gif" alt="button to goblin-heart site" title="goblin-heart.net"></a>
+    <a href="https://ne0nbandit.art/" target="_blank"><img src="images\buttons\nbbanner.png" alt="button to neOnbandit site" title="ne0nbadit.art"></a>
+    <a href="https://cloverbell.neocities.org/" target="_blank"><img src="images\buttons\cloverbell.gif" title="cloverbell.neocities.org"></a> 
+    <a href="https://frutigeraeroarchive.org/" target="_blank" ><img src="images\buttons\frutigeraeroarchive_button.png" alt="88x31 - Frutiger Aero Archive" title="Frutiger Aero Archive Button" style="border: none"></a>
+    <a href="https://blamensir.neocities.org" target="_blank"><img src="images\buttons\saint.gif" title="blamensir's banner"></a>
+    <a href="https://colrana.neocities.org" target="_blank"><img src="images\buttons\col_button.gif" title="colrana" alt="A button for colrana's website."></a>
+    <a href="https://pocketbroto.com/" target="_blank"><img src="images\buttons\pocketbutton.png" title="Pocket Broto" alt="Pocket Broto's site"></a>
+    <a href="https://bevweb.neocities.org" target="_blank"><img src="images\buttons\omgimabutton.png" title="Bev Web" alt="Bev Web's site"></a>
+    </section>
+    <section id="socials">
+     <p>my socials</p>
+     <ul>
+     <!-- i might link my instagram one day, as it has most of my art. but honestly I want to like grab alot of art FROM it and repost here instead -->
+       <li><a href="https://neocities.org/site/3maqi" target="_blank">Neocities profile</a></li>
+       <li><a href="https://www.furaffinity.net/user/msfurryart/" target="_blank">Furaffinity</a></li>
+       <li><a href="https://steamcommunity.com/profiles/76561198077325145/" target="_blank">Steam</a></li>
+       <li><a href="discordapp.com/users/.3mmaqwe" target="_blank">Discord</a></li>
+     </ul>
+    </section>
+    </div>
+</div><!-- side bar end -->
+
   </div> <!-- end of sidebar and main content-->
 
   <!-- footer -->
- <div id="footer-container"></div>
+ <div id="footer-container">
+<footer>
+    <p id="date">Page last updated: </p>
+    <p>Visitors: <span id="hitcount"></span></p>
+    <a href="https://neocities.org" target="_blank"><img src="images/neocities.png" alt="Site hosted by Neocites"></a>
+    </footer>
+    <noscript>Your browser does not support JavaScript!</noscript>
+</div><!--footer container end-->
  
+<script src="loadComponents.js"></script>
   </body>
 </html>
+
+
+
+
+
+

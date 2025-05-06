@@ -11,6 +11,37 @@ https://pocketbroto.com/en/home - i really like the colors on this page and love
 
 */
 
+/*theme colors *
+
+button colors/ dark color: #4A5E4C;
+button hover color: #2a362c;
+header and footer color: #ADDFB3;
+section color: #bdf3c4;
+
+
+
+
+
+
+*/
+
+:root{
+ 
+--dark-color: #4A5E4C;
+--hover-color:#2a362c;
+--light-color:#ADDFB3;
+
+}
+
+body {
+  color: #171e18;
+  font-family: Helvetica, Verdana;
+  width: 75%;
+  margin: auto;
+  background-color: #4A5E4C;
+  background-image: url("images/seamless-texture-green-watercolor.jpg");
+  background-attachment: fixed;
+}
 
 
 * {
@@ -41,13 +72,7 @@ https://pocketbroto.com/en/home - i really like the colors on this page and love
 }
 
 
-body {
-  color: #171e18;
-   background-color: #4A5E4C;
-  font-family: Helvetica, Verdana;
-  width: 75%;
-  margin: auto;
-}
+
 
 figure{
   max-width: 100%;
@@ -73,10 +98,10 @@ button {
   margin: 0;
   padding: 14px 16px;
   overflow: hidden;
-   background-color: #4A5E4C;
+   background-color: var(--dark-color);
    border-style: double;
   border-width: thick;
-  border-color: #ADDFB3;
+  border-color: var(--light-color);
   color: white;
   cursor: pointer;
   
@@ -87,7 +112,7 @@ button a, button a:visited {
   text-decoration: none;
 }
  button:hover {
-  background-color: #2a362c;
+  background-color: var(--hover-color);
 }
 
 
@@ -180,7 +205,7 @@ nav li a:hover {
 .main {
   float: left;
   width: 75%;
-  background-color: #4A5E4C;
+  background-color:transparent;
   padding-left: 5px;
   padding-right: 5px;
 }
@@ -190,7 +215,7 @@ nav li a:hover {
 .aside {
   float: left;
   width: 25%;
-  background-color: #4A5E4C;
+  background-color:transparent;
   padding-right: 5px;
 }
 
@@ -203,14 +228,14 @@ nav li a:hover {
 }
 
 .row {
-  background-color:#4A5E4C;;
+  background-color:transparent;
 }
 
 
 
 /* Add a card effect for articles */
 section {
-  background-color: #bdf3c4;;
+  background-color: #bdf3c4;
   border-radius: 25px;
   padding: 15px;
   border-style: double;
@@ -228,11 +253,13 @@ section {
 
 footer {
   margin: 15px 0; 
-  border-radius: 25px;
   padding: 5px;
+  border-radius: 25px;
   text-align: center;
   background-color: #ADDFB3;
-  margin-top: 5px;
+  border-style: double;
+  border-width: thick;
+  border-color: #4A5E4C;
 }
 
 /* button expermiments class */
