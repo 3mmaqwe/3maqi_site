@@ -72,7 +72,17 @@ body {
 }
 
 
-
+hr{
+  height:2px;
+  border-style: double;
+  border-width: thick;
+  border-color: #4A5E4C;
+  border-right-style: none;
+  border-left-style: none;
+  border-bottom-style:none;
+  color: #4A5E4C;
+  background-color: transparent;
+}
 
 figure{
   max-width: 100%;
