@@ -1,0 +1,21 @@
+body {
+    background-image: url("../images/cat_background/OQ5DF90.jpg");
+    background-attachment: fixed;
+    display: grid;
+    place-items: center;
+    font-family:Arial;
+}
+main {
+  margin-top:200px;
+  border: 3px solid black;
+   background: rgba(255, 255, 255, 0.518);
+  backdrop-filter: blur(10px);
+  padding: 10px;
+}
+
+img {
+  width: 200px;
+}
+li{  
+   list-style-type: "😸 ";
+ }
