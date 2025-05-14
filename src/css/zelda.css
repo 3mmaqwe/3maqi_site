@@ -19,3 +19,16 @@ img {
 li{  
    list-style-type: "😸 ";
  }
+
+ /*mobile styling */
+ @media screen and (max-width: 800px) {
+  body{
+     place-items: center normal;
+ }
+ br {
+  display:none;
+ }
+ main{
+   margin-top:10px;
+ }
+  }
