@@ -58,6 +58,8 @@ body {
 }
 
 #profile_pic{
+  height:auto;
+  width:100%;
   border-radius: 25px;
 }
 
@@ -85,10 +87,12 @@ hr{
 }
 
 figure{
-  max-width: 100%;
   display: inline-block;
   margin: 2.5%;
 }
+
+
+/* image sizing class */
 
 .small_img{
   width:300px;
@@ -103,9 +107,36 @@ figure{
   width: 600px;
 }
 
-.watercolor{
-  width: 400px;
+
+
+.isda { 
+   width: 400px !important;
+  height: auto;
 }
+
+
+/*watecolor grid */
+.watercolor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; /* Adjust spacing as needed */
+  margin: 20px 0;
+}
+
+.watercolor-grid figure {
+  margin: 0;
+  text-align: center;
+}
+
+.watercolor-grid img.watercolor {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 10px; /* Optional: rounded corners */
+}
+
+
+
 
 button {
   border-radius: 25px;
@@ -148,12 +179,6 @@ a:visited {
   border-style: double;
   border-width: thick;
   border-color: #4A5E4C;
-}
-
-
-img {
-    max-width: 100%;
-    height: auto;
 }
 
 
@@ -317,6 +342,7 @@ footer {
   #bannerisda, #title_image{
     width: 200px;
   }
+
   figure img{
     width:400px;
   }
@@ -350,4 +376,11 @@ footer {
     /* i might just make an about me page tbh instead of having it in the sidebar*/
     /* same for website links - i think it be nice to have like a page to sort links */
   } 
+  /*makes grid display go away on mobile*/
+  .watercolor-grid {
+    display: block;
+  }
+  .watercolor-grid figure {
+    margin-bottom: 20px;
+  }
 }

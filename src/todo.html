@@ -14,10 +14,63 @@ my css and javascript are in seperate documents, feel free to steal and take stu
     <title>3maqi</title>
     <link rel="preload" href="images/seamless-texture-green-watercolor.jpg" as="image">
     <link href="style.css?v=initial" rel="stylesheet" type="text/css" media="all">
-</head>
-<body>
-  
-<div id="header-container">
+    <style>
+      /* styling for this page */
+      .todo-flex {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+        align-items: stretch;
+      }
+
+      .todo-main {
+        flex: 1;
+      }
+
+      .main {
+        flex: 1 1 0%;
+        min-width: 0;
+        width: auto !important;
+        max-width: 100% !important;
+      }
+
+      #todo-nav-section {
+        width: 220px;
+        box-sizing: border-box;
+        overflow-y: auto;
+      }
+
+      #todo-nav-section[style] {
+        float: none !important;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .row {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      #neocities, #main, #art, #completed {
+        display: none;
+      }
+
+      #sidebar-todo a.active {
+        font-weight: bold;
+        color: #fff;
+        background: #4A5E4C;
+        border-radius: 6px;
+        padding: 2px 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header-container">
 <div class="header">
     <img id="bannerisda" src="images/Isda_with_Zelda_flowers.png" title="Isda petting Zelda" alt="isda a goblin, petting a orange kitty named Zelda">
     <img src="images/title.png" id="title_image" title="hand drawn title" alt="3maqi, welcome to my site :3">
@@ -30,7 +83,7 @@ my css and javascript are in seperate documents, feel free to steal and take stu
           <li><a href="todo.html">To-Do-List</a></li>
           <li><a href="journal.html">Journal</a></li>
           <li><a href="art.html">Art</a></li>
-          <li><a href="experiments.html">Experiments</a></li>
+          <li><a href="Links.html">Links</a></li>
           <li><a href="a\drawbox.html">Drawbox</a></li>
        <li><a href="https://3maqi.atabook.org/">Sign my guest book!</a></li> 
        </ul>    
@@ -46,167 +99,140 @@ my css and javascript are in seperate documents, feel free to steal and take stu
           <li><a href="todo.html">To-Do-List</a></li>
           <li><a href="journal.html">Journal</a></li>
           <li><a href="art.html">Art</a></li>
-          <li><a href="experiments.html">Experiments</a></li>
+          <li><a href="Links.html">Links</a></li>
           <li><a href="a\drawbox.html">Drawbox</a></li>
        <li><a href="https://3maqi.atabook.org/">Sign my guest book!</a></li> 
        </ul>    
   </nav>
 </div><!--header end-->
 
-<div class="row"> <!--contains main content and sidebar-->
-    <!-- main content start -->
-   <div class="main">
-    <section>
-      <h1>To Do List Page</h1>
-      <hr>
-      <p> this is my to do list page. I think i might eventually make different sections of to lists for like pages too. I would love to see cool suggestions for improvements in my guestbox as well!</p>
-    </section>
-    <section>
-      <h2>reminders for me!</h2>
-      <ul>
-        <li>never hotlink! always host images, gifs, and other media in your site</li>
-        <li>this page will always be a work in progress. Your page's style will come with time</li>
-        <li>dont be afraid to make some pages that look radically different from other parts of this site!</li>
-        <li>stop staying up so late to work on this LOL</li>
-        <li>do not tell work people and family members about this site. Or if you do make sure to remove the journal & mentions of furry art LOL</li>
-        <li>make sure this website is accessible. Make sure that images have titles and alt text.</li>
-        <li>you are always learning!</li>
-      </ul>
-    </section>
+    <div class="todo-flex">
+      <main class="main">
+        <div>
+          <section>
+            <h1>To Do List Page</h1>
+            <hr>
+            <p> this is my to do list page. I think i might eventually make different sections of to lists for like pages too. I would love to see cool suggestions for improvements in my guestbox as well!</p>
+          </section>
 
-      <section>
-       <h2>main website to do list: </h2>
-       <hr>
-       <p>here is like a generalize to do list for my whole website / to do dump list! sometimes ill have an idea and kinda having here helps me keep track of it!</p>
-        <ul>
-          <li>Kitchen page - document food i try, food i make!</li>
-          <li>reformate devlog & journal. It be nice to have like a sidebar of different entries, and then when u click the link it loads that entry?</li>
-          <li>link to other goblin pages in neocites!</li>
-          <li>maybe some pages with their own style/ layout? would be a good way to practice more :3</li>
-          <li>find more buttons to add to my button section :3</li>
-          <li>page for media I like (anime, games, movies, music)</li>
-          <li>add webmastery page - good to have reminders on how i did stuff, and also to help others</li>
-          <li>learn javascript. Rn i really rely heavely on guides and copoliot, it would nice to be a bit more knowledgable</li>
-          <li>page for links?</li>
-          <li>what do i do when i have too many pages to fit in the nav bar :o? look into how other ppl lay it out maybe</li>
-          <li>make date last updated a bit more human readable. It be nice to have it formatted in am & pm instead of miltary time</li>
-          <li>add this <a href="https://virtualobserver.moe/ayano/comment-widget">Comment widget</a> into my website</li>
-        </ul>
-        <h3>Website Navigation ideas and things to do:</h3>
-        <ul>
-          <li>custom navigation buttons - hand draw each one - sorta like how i have the title written out</li>
-          <li>maybe sub-navigation bars within different pages? for example it might be nice to seperate art things</li>
-          <li>add pagenation for pages with longer content</li>
-        </ul>
-   </section>
-   <section>
-    <h2>Art to do list:</h2>
-    <hr>
-    <p>here link ideas for art projects, and css styling i want to do for this site!</p>
-    <ul>
-      <li>add custom drawing headers for each page. For example todo list can have isda writing on paper</li>
-        <ul>
-          <li>ill have to add a script to switch out each image too, or maybe ill have the header static on some pages?</li>
-        </ul>
-      <li>make button with static name, so if I change the image peoples images change on their sites as well</li>
-      <li>make sidebar more stylized. I want it to stand out a bit more, and not be the same as the sectioning styling</li>
-      <li>make my own button - maybe when I have more of a style down ill do this</li>
-      <li>make a little counter image/boarder!</li>
-      <li>better layout for images</li>
-      <li>stop hard coding width for fig images, and have the sizes change when switch to mobile</li>
-      <li>mobile friendly layout for images</li>
-      <li>add some gifs / make some gifs for this page. </li>
-    </ul>
-   </section>
-   <section>
-    <h2>Completed List!</h2>
-    <hr>
-    <p>its nice to have a list of things you have completed as well! shows all the progress and effort put into this page!</p>
-    <h3>things ive completed in no particular order:</h3>
-    <ul>
-      <li>added a another button to encourage people to sign my guest book</li>
-      <li>download the buttons i find, instead of hotlinking to the sites i get them from</li>
-      <li>created art page</li>
-      <li>added a journal section</li>
-      <li>added a todo list page</li>
-      <li>added a navigation bar</li>
-        <ul>
-          <li>styled navigation bar</li>
-          <li>made links work on local computer & on public site</li>
-          <li>made navigation bar mobile responsive</li>
-          <li>added menu button that is collapsible and only appears when screen is 800px or less</li>
-        </ul>
-      <li>made site github deployable</li>
-      <li>added vistor counter</li>
-      <li>added last updated info</li>
-      <li>figured out how to have sidebar background color fill to bottom of the page</li>
-      <li>fixed sidebar</li>
-      <li>add more unique header / website logo </li>
-      <li><del>embed the sidebar. its annoying to have to update it across pages</del></li>
-      <li><del>embed the header, and footer</del></li>
-      <ul>
-        <li>removed javascript that loaded the sidebar,footer, and header</li>
-        <li>added a powershell script that updates each html file directly to prevent site flashing</li>
-      </ul>
-      <li>added watercolor background, edited it to match theme colors</li>
-    </ul>
-   </section>
-  </div>
-<!-- main content end -->
+          <section id="reminders" class="todo-section">
+            <h2>reminders for me!</h2>
+            <hr>gi
+            <ul>
+              <li>never hotlink! always host images, gifs, and other media in your site</li>
+              <li>this page will always be a work in progress. Your page's style will come with time</li>
+              <li>dont be afraid to make some pages that look radically different from other parts of this site!</li>
+              <li>stop staying up so late to work on this LOL</li>
+              <li>do not tell work people and family members about this site. Or if you do make sure to remove the journal & mentions of furry art LOL</li>
+              <li>make sure this website is accessible. Make sure that images have titles and alt text.</li>
+              <li>make pages with their own style/ layout! its a good way to practice more and try out different layouts & styling :3</li>
+              <li>you are always learning!</li>
+            </ul>
+          </section>
 
-<div id="sidebar-container">
-<div class="aside">
-    <section id="about_me_sidebar">
-    <img id="profile_pic" src='images/profile_pic.png' title="isda drawing i made in 2023" alt="Drawing of 3maqi, a goblin in a tracksuit"/>
-     <ul>
-    <li>pen name: 3maqi</li>
-    <li>pronouns: she/her</li>
-    <li>Born: 1999 </li>
-    <li>Status: Single</li>
-    <li>Pet:<a href="a\zelda.html">my cat zelda</a></li>
-    </ul>
-    </section>
-   <section id="websites_links_sidebar">
-       <h3>cool websites</h3>
-       <hr>
-       <ul>
-         <li><a href="https://www.makewordart.com/" target="_blank">Make Word Art</a></li>
-         <li><a href="https://neocities.org/tutorials" target="_blank">Neocities Html/css tutorials</a></li>
-         <li><a href="https://cari.institute/aesthetics" target="_blank">Consumer Aesthetics Research Institute</a></li>
-      </ul>
-    </section>
-    <section id="buttons_sidebar">
-    <h3>buttons</h3>
-    <hr>
-    <!-- if any of these button links are broken lmk! but hopefully they should all work -->
-    <a href="https://goblin-heart.net/" target="_blank"><img src="images\buttons\gg-button.gif" alt="button to goblin-heart site" title="goblin-heart.net"></a>
-    <a href="https://ne0nbandit.art/" target="_blank"><img src="images\buttons\nbbanner.png" alt="button to neOnbandit site" title="ne0nbadit.art"></a>
-    <a href="https://cloverbell.neocities.org/" target="_blank"><img src="images\buttons\cloverbell.gif" title="cloverbell.neocities.org"></a> 
-    <a href="https://frutigeraeroarchive.org/" target="_blank" ><img src="images\buttons\frutigeraeroarchive_button.png" alt="88x31 - Frutiger Aero Archive" title="Frutiger Aero Archive Button" style="border: none"></a>
-    <a href="https://blamensir.neocities.org" target="_blank"><img src="images\buttons\saint.gif" title="blamensir's banner"></a>
-    <a href="https://colrana.neocities.org" target="_blank"><img src="images\buttons\col_button.gif" title="colrana" alt="A button for colrana's website."></a>
-    <a href="https://pocketbroto.com/" target="_blank"><img src="images\buttons\pocketbutton.png" title="Pocket Broto" alt="Pocket Broto's site"></a>
-    <a href="https://bevweb.neocities.org" target="_blank"><img src="images\buttons\omgimabutton.png" title="Bev Web" alt="Bev Web's site"></a>
-    </section>
-    <section id="socials">
-     <h3>my socials</h3>
-     <hr>
-     <ul>
-     <!-- i might link my instagram one day, as it has most of my art. but honestly I want to like grab alot of art FROM it and repost here instead -->
-       <li><a href="https://neocities.org/site/3maqi" target="_blank">Neocities profile</a></li>
-       <li><a href="https://www.furaffinity.net/user/msfurryart/" target="_blank">Furaffinity</a></li>
-       <li><a href="https://steamcommunity.com/profiles/76561198077325145/" target="_blank">Steam</a></li>
-       <li><a href="discordapp.com/users/.3mmaqwe" target="_blank">Discord</a></li>
-     </ul>
-    </section>
+          <section id="neocities" class="todo-section">
+            <h2>neocites to do list:</h2>
+            <p>these are just some ideas for me to be more active in the neocities community!</p>
+            <li>join a minecraft server connected to neocites - <a href="https://melonking.net/melon?z=/frames/minecraft">like melons minecraft server?</a></li>
+            <li>make my own button - maybe when I have more of a style down ill do this</li>
+            <li>after I make a banner - join the <a href="http://neocreatives.byethost5.com/" target="_blank">art webring</a></li>
+          </section>
+
+          <section id="main" class="todo-section">
+            <h2>main website to do list: </h2>
+            <hr>
+            <p>here is like a generalize to do list for my whole website / to do dump list! sometimes ill have an idea and kinda having here helps me keep track of it!</p>
+            <ul>
+              <li>Kitchen page - document food i try, food i make!</li>
+              <li>move experiments to a subpage - maybe change that bar into a like "other links page" or something</li>
+              <li>reformate devlog & journal. It be nice to have like a sidebar of different entries, and then when u click the link it loads that entry?</li>
+              <li>link to other goblin pages in neocites!</li>
+              <li>find more buttons to add to my button section :3</li>
+              <li>page for media I like (anime, games, movies, music)</li>
+              <li>add webmastery page - good to have reminders on how i did stuff, and also to help others</li>
+              <li>learn javascript. Rn i really rely heavely on guides and copoliot, it would nice to be a bit more knowledgable</li>
+              <li>page for links?</li>
+              <li>what do i do when i have too many pages to fit in the nav bar :o? look into how other ppl lay it out maybe</li>
+              <li>add this <a href="https://virtualobserver.moe/ayano/comment-widget">Comment widget</a> into my website</li>
+            </ul>
+            <h3>Website Navigation ideas and things to do:</h3>
+            <ul>
+              <li>custom navigation buttons - hand draw each one - sorta like how i have the title written out</li>
+              <li>maybe sub-navigation bars within different pages? for example it might be nice to seperate art things</li>
+              <li>add pagenation for pages with longer content</li>
+            </ul>
+          </section>
+
+          <section id="art" class="todo-section">
+            <h2>Art to do list:</h2>
+            <hr>
+            <p>here link ideas for art projects, and css styling i want to do for this site!</p>
+            <ul>
+              <li>add custom drawing headers for each page. For example todo list can have isda writing on paper</li>
+              <ul>
+                <li>ill have to add a script to switch out each image too, or maybe ill have the header static on some pages?</li>
+              </ul>
+              <li>make sidebar more stylized. I want it to stand out a bit more, and not be the same as the sectioning styling</li>
+              <li>make a little counter image/boarder!</li>
+              <li>mobile friendly layout for images</li>
+              <li>add some gifs / make some gifs for this page. </li>
+            </ul>
+          </section>
+
+          <section id="completed" class="todo-section">
+            <h2>Completed List!</h2>
+            <hr>
+            <p>its nice to have a list of things you have completed as well! shows all the progress and effort put into this page!</p>
+            <h3>things ive completed in no particular order:</h3>
+            <ul>
+              <li>better layout for images - using css grid function</li>
+              <li>stopped hard coding width for fig images, and have the sizes change when switch to mobile</li>
+              <li>made date last updated a bit more human readable</li>
+              <li>added a another button to encourage people to sign my guest book</li>
+              <li>download the buttons i find, instead of hotlinking to the sites i get them from</li>
+              <li>created art page</li>
+              <li>added a journal section</li>
+              <li>added a todo list page</li>
+              <li>added a navigation bar</li>
+              <ul>
+                <li>styled navigation bar</li>
+                <li>made links work on local computer & on public site</li>
+                <li>made navigation bar mobile responsive</li>
+                <li>added menu button that is collapsible and only appears when screen is 800px or less</li>
+              </ul>
+              <li>made site github deployable</li>
+              <li>added vistor counter</li>
+              <li>added last updated info</li>
+              <li>figured out how to have sidebar background color fill to bottom of the page</li>
+              <li>fixed sidebar</li>
+              <li>add more unique header / website logo </li>
+              <li><del>embed the sidebar. its annoying to have to update it across pages</del></li>
+              <li><del>embed the header, and footer</del></li>
+              <ul>
+                <li>removed javascript that loaded the sidebar,footer, and header</li>
+                <li>added a powershell script that updates each html file directly to prevent site flashing</li>
+              </ul>
+              <li>added watercolor background, edited it to match theme colors</li>
+            </ul>
+          </section>
+        </div>
+      </main>
+      <section id="todo-nav-section">
+        <div id="sidebar-todo">
+          <h2>To Do lists:</h2>
+          <ul>
+            <li><a href="#" data-entry="reminders">Reminders</a></li>
+            <li><a href="#" data-entry="neocities">Neocities To Do</a></li>
+            <li><a href="#" data-entry="main">Main Website To Do</a></li>
+            <li><a href="#" data-entry="art">Art To Do</a></li>
+            <li><a href="#" data-entry="completed">Completed List</a></li>
+          </ul>
+        </div>
+      </section>
     </div>
-</div><!-- side bar end -->
 
- <!-- row end -->
- </div>
-
- <!-- footer -->
- <div id="footer-container">
+    <!-- footer -->
+    <div id="footer-container">
 <footer>
     <p id="date">Page last updated: </p>
     <p>Visitors: <span id="hitcount"></span></p>
@@ -214,23 +240,34 @@ my css and javascript are in seperate documents, feel free to steal and take stu
     </footer>
     <noscript>Your browser does not support JavaScript!</noscript>
 </div><!--footer container end-->
-  
-  
-  <!-- moved my scripts to its own file -->
- 
-<noscript>Your browser does not support JavaScript!</noscript>
-<script src="loadComponents.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('#sidebar-todo a[data-entry]');
+        const sections = document.querySelectorAll('.todo-section');
+
+        links.forEach(link => {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Hide all sections
+            sections.forEach(sec => sec.style.display = 'none');
+            // Remove active class from all links
+            links.forEach(a => a.classList.remove('active'));
+            // Show the selected section
+            const entryId = this.getAttribute('data-entry');
+            const section = document.getElementById(entryId);
+            if (section) section.style.display = 'block';
+            // Highlight the active link
+            this.classList.add('active');
+          });
+        });
+
+        // Show the first section and highlight the first link by default
+        if (sections.length > 0) sections[0].style.display = 'block';
+        if (links.length > 0) links[0].classList.add('active');
+      });
+    </script>
+    <script src="loadComponents.js"></script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
 

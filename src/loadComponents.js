@@ -46,7 +46,63 @@ coll[nav].addEventListener("click", function() {
 }
 
                     /// end of nav bar code
-                    
+  //watecolor gallery
+  document.querySelectorAll('.watercolor, .isda').forEach(img => {
+  img.addEventListener('click', function() {
+    // Create overlay
+    const overlay = document.createElement('div');
+    overlay.style.position = 'fixed';
+    overlay.style.top = 0;
+    overlay.style.left = 0;
+    overlay.style.width = '100vw';
+    overlay.style.height = '100vh';
+    overlay.style.background = 'rgba(0,0,0,0.8)';
+    overlay.style.display = 'flex';
+    overlay.style.alignItems = 'center';
+    overlay.style.justifyContent = 'center';
+    overlay.style.zIndex = 10000;
+    overlay.addEventListener('click', () => document.body.removeChild(overlay));
+
+    // Create large image
+    const bigImg = document.createElement('img');
+    bigImg.src = img.src;
+    bigImg.style.maxWidth = '90vw';
+    bigImg.style.maxHeight = '90vh';
+    bigImg.style.borderRadius = '10px';
+    bigImg.style.boxShadow = '0 0 20px #000';
+
+    overlay.appendChild(bigImg);
+    document.body.appendChild(overlay);
+  });
+});                
+
+// to-do nav bar code
+document.addEventListener('DOMContentLoaded', function() {
+  const links = document.querySelectorAll('#sidebar-todo a[data-entry]');
+  const sections = document.querySelectorAll('.todo-section');
+
+  links.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      // Hide all sections
+      sections.forEach(sec => sec.style.display = 'none');
+      // Remove active class from all links
+      links.forEach(a => a.classList.remove('active'));
+      // Show the selected section
+      const entryId = this.getAttribute('data-entry');
+      const section = document.getElementById(entryId);
+      if (section) section.style.display = 'block';
+      // Highlight the active link
+      this.classList.add('active');
+    });
+  });
+
+  // Show the first section and highlight the first link by default
+  if (sections.length > 0) sections[0].style.display = 'block';
+  if (links.length > 0) links[0].classList.add('active');
+});
+
+
 
            
          
