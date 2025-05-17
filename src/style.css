@@ -310,7 +310,7 @@ footer {
 
 
 /* plz hide the nav bar ;-; */
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 1001px) {
   #mobile{
     display: none !important;
   }
@@ -318,7 +318,7 @@ footer {
 
 /* Responsive layout for mobile devices */
 /*a ton of people surf the internet on only their phone!*/
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
  .aside, .main {   
     width: 100%;
     padding: 0;
