@@ -17,12 +17,17 @@ make sure to run the following command in src file in terminal: python -m http.s
 <link rel="preload" href="images/seamless-texture-green-watercolor.jpg" as="image">
  <link href="style.css?v=initial" rel="stylesheet" type="text/css" media="all">
  <style>
-  #cellphone{
+  .imageWrap{
     display:flex;
+    
   }
-  #cellPic{
+  .text{
+    flex-basis: 100%;
+  }
+  .wrapImage{
       height: auto;
       width: 100%;
+      flex-basis: 100%;
     
   }
 
@@ -99,8 +104,8 @@ make sure to run the following command in src file in terminal: python -m http.s
       <p>The breaking point for me, was when at 2 in the morning, I had found out from my friend V, that Z was calling her non-stop. I had to call Z. When I orignally wrote this entry I had written out dialogue for the phone call. I decided to remove that.
         I don't really want to keep such an accurate record of a call that was very disturbing to me. In summary though my sister was cycling though emotions within seconds, going from angry, to happy to weeping.
       </p>
-      <div id="cellphone">
-        <div>
+      <div class="imageWrap">
+        <div class="text">
          <p>After the call i just filled with a overwhelming amount of sadness, despair, and grief. My sister was just not her self. I couldnt stop crying and had to call 988 for support just to calm down.</p>
        <p>i called my mom later the next day and found out that she had to sleep beside Z the whole night. Later my mom and dad had figure out that Z has been in a manic episode ever since she got back from the hospital. It explained
         why she had been acting so out of character as of lately. 
@@ -118,7 +123,7 @@ make sure to run the following command in src file in terminal: python -m http.s
        
        </div>
         <div>
-        <img src="images\Zcall.png" id="cellPic">
+        <img src="images\Zcall.png" class="wrapImage">
        </div>
         
       </div>
@@ -131,38 +136,50 @@ make sure to run the following command in src file in terminal: python -m http.s
     <section>
       <h2>I moved this weekend - 5/11/2025</h2>
       <hr>
-      <p>so this weekend i moved to my first (solo) apartment! I had family and friends help me move and omg I could have not done it without them. firstly, I moved to a 3rd story apartment with no elevator, and it would have been
+     
+      
+
+
+        <div class="imageWrap">
+            <div class="text">
+                 <p>so this weekend i moved to my first (solo) apartment! I had family and friends help me move and omg I could have not done it without them. firstly, I moved to a 3rd story apartment with no elevator, and it would have been
         impossible to move one my own!
         Secondly, literally some of my furniture is just too big for me to lift on my own.
         We had to take some of the furniture apart too, and at one point we literally had to hoise up a couch with rope because it wouldnt fit up the stairs to my apartment. My friends also helped reassemble furniture that we took apart for the move.
         My dad even came out as well to help. It just feels so nice to have so many caring people in my life :)! I was really worried with this new move I would feel lonely, but if any thing i feel a sense of 
         apprication for my life. Im really grateful for the wonderful people im surrounded by, the opportunities that my family and friends support me with, and just moving was a really validating way of realizing it.</p>
-
-        <h3>heres a list of things i am grateful for:</h3>
-        <ul>
-          <li>none of my things broke during the move</li>
-          <li>my family and friends all being super supportive and helpful during the move</li>
-          <li>Zelda my cat has not freaked out and hid this time</li>
-          <ul>
-            <li>last time i moved she hid in my house and we could not find her LOL</li>
-          </ul>
-          <li>My parents came again the next day to help me:</li>
-          <ul>
-            <li>unpack and move furniture to the right rooms</li>
-            <li>Buy things for my house</li>
-            <li>just mentally & physically help me get things done. I was so overwhelmed by the amount of boxes needed to be unpacked</li>
-            </ul>
-            <li>Myself for packing things slowly, getting internet before i moved, and scheduling/cordnating people to help me move</li>
-          </ul>
-            
-        </ul>
       
-      <p>It was a very exhausting day, but it feels good to be able to accomplish so much, and be exhausted! Sometimes i feel like with my job, i dont really get a physical fatigue. Maybe i need to find a hobby that give me that 
+        <p>It was a very exhausting day, but it feels good to be able to accomplish so much, and be exhausted! Sometimes i feel like with my job, i dont really get a physical fatigue. Maybe i need to find a hobby that give me that 
         physical fatigue. I used to do weight lifting for that, but honestly I kinda have come to dread it. I enjoy working out when its with friend, but going to a gym solo style is just feels uneasy tbh. I kinda wanna either
         find a way to move my body that doesnt make me feel socially uneasy, or maybe find a group workout thing to do?
         Or maybe start like painting while standing again.
       </p>
       <p>but ya, now i finally have internet again in my new house. Thank god because my ass is chronically online, plus i need internet as I do work from home for my job.</p>
+            </div>
+            <div>
+               <img src="images\box.png" class="wrapImage">
+            </div>
+        </div>
+
+       
+      <h3>heres a list of things i am grateful for:</h3>
+                    <ul>
+                      <li>none of my things broke during the move</li>
+                      <li>my family and friends all being super supportive and helpful during the move</li>
+                      <li>Zelda my cat has not freaked out and hid this time</li>
+                      <ul>
+                        <li>last time i moved she hid in my house and we could not find her LOL</li>
+                      </ul>
+                      <li>My parents came again the next day to help me:</li>
+                      <ul>
+                        <li>unpack and move furniture to the right rooms</li>
+                        <li>Buy things for my house</li>
+                        <li>just mentally & physically help me get things done. I was so overwhelmed by the amount of boxes needed to be unpacked</li>
+                        </ul>
+                        <li>Myself for packing things slowly, getting internet before i moved, and scheduling/cordnating people to help me move</li>
+                      </ul>
+                        
+                    </ul>
       
       <p>feeling grateful & joyful</p>
       <p><em>-3maqi</em></p>
