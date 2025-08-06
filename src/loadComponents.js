@@ -20,6 +20,7 @@ xhttp.onreadystatechange = function() {
             var date_obj = new Date(site_data.info.last_updated)
         }
         document.getElementById("hitcount").innerHTML = num_str;
+       // document.getElementById("hitcount_big").innerHTML = num_str;
     }
 };
 

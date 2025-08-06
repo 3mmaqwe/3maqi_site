@@ -1,8 +1,8 @@
 # Define the paths to the component files and the directory containing HTML files
-$headerFile = "c:\3maqi_site\src\components\header.html"
-$sidebarFile = "c:\3maqi_site\src\components\sidebar.html"
-$footerFile = "c:\3maqi_site\src\components\footer.html"
-$htmlDirectory = "c:\3maqi_site\src"
+$headerFile = "Z:\3maqi_site\src\components\header.html"
+$sidebarFile = "Z:\3maqi_site\src\components\sidebar.html"
+$footerFile = "Z:\3maqi_site\src\components\footer.html"
+$htmlDirectory = "Z:\3maqi_site\src"
 
 # Check if all component files exist
 if (-Not (Test-Path $headerFile)) {

@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="images\isda_noboarder.png">
     <title>3maqi</title>
     <link rel="preload" href="images/seamless-texture-green-watercolor.jpg" as="image">
     <link href="style.css?v=initial" rel="stylesheet" type="text/css" media="all">
-    <!-- i have files that auto load for footer, header and sidebar, so that i can just change one file instead of manually change them across each page-->
- 
-  </head>
-  <body>
-  
-    <div id="header-container">
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser-arcade-physics.min.js"></script>
+    <style>
+        #game{
+            margin: auto;
+        }
+        canvas {
+display : block;   
+margin : auto;
+}
+    </style>
+</head>
+<body>
+  <div id="header-container">
 <div class="header">
     <img id="bannerisda" src="images/Isda_with_Zelda_flowers.png" title="Isda petting Zelda" alt="isda a goblin, petting a orange kitty named Zelda">
     <img src="images/title.png" id="title_image" title="hand drawn title" alt="3maqi, welcome to my site :3">
@@ -51,39 +58,22 @@
   <div class="row">
     <div class="main">
       <section>
-        <h1>Art Page</h1>
-        <p>place to show some of my art! ill probably be messing around with different layouts but I wanted to actually start this page</p>
-        <p>Click the image to see a bigger display :)</p>
+        <h1>My First Phaser Game</h1>
+        <hr>
+          <p>Just verifying this will work on neocities. Will look better on desktop</p> 
         </section>
         <section>
-            <h2>Art of isda</h2>
-            <p>Isda is a DnD character I made in 2023, and also kinda has become my self-insert art! I really havent had any oc's for a long time, so having one again is very fun :)</p>
-            <figure><img class="isda" src="images\isda_noboarder.png"><figcaption>Isda favicon</figcaption></figure>
-            <figure><img  class="isda" src="images\Isda_with_Zelda_flowers.png"><figcaption>Isda with zelda</figcaption></figure>
-            <figure><img  class="isda" src="images\profile_pic.png"><figcaption>Isda jacket pfp 2023</figcaption></figure>
-             <figure><img  class="isda" src="images\isda_2023.png"><figcaption>Isda DND character art 2023</figcaption></figure>
+            <div id="game"></div>
         </section>
         <section>
-            <h2>figure drawing art</h2>
-            <p>most of my drawing has been done at <a href="https://www.platformchicago.com/" target="_blank">platform studios</a> in chicago</p>
-            <p>i have so many so im just putting my personal favorites here. I might make subpages honestly later</p>
-            <p>pretty much all of theses are of live models, painted with watercolor!</p>
-            <div class="watercolor-grid">
-              <figure><img class="watercolor" src="images\figure_drawing\04_2025_figureart.JPEG"><figcaption>two 15 min poses 2025</figcaption></figure>
-              <figure><img class="watercolor" src="images\figure_drawing\flower_hair.JPEG"><figcaption>two 10 min poses 2025</figcaption></figure>
-              <figure><img class="watercolor" src="images\figure_drawing\blue_protrait.JPEG"><figcaption>blue close up 2025</figcaption></figure>
-              <figure><img class="watercolor" src="images\figure_drawing\IMG_1115.JPEG"><figcaption>long pose 2025</figcaption></figure>
-              <figure><img class="watercolor" src="images\figure_drawing\IMG_0971.JPEG"><figcaption>some shorter poses 2025</figcaption></figure>
-              <figure><img class="watercolor" src="images\figure_drawing\IMG_1828(3).JPEG"><figcaption>15 min pose, focus on top half of body 2025</figcaption></figure>
-              <figure><img class="watercolor" src="images\figure_drawing\IMG_1822(1).JPEG"><figcaption>30 min pose of hair 2025</figcaption></figure>
-            </div>
-           
-
-
-
+            <h2>What is this?</h2>
+            <hr>
+            <p>Despite this looking like a gif, its actually a javascript game. Id call this a zero player game since you cant actually <em>"play it"</em></p>
+            <p>The javascript framker its using the run this is called <a href="https://phaser.io/" target="_blank">Phaser</a>. It's a frontend game engine thats been around for a while.</p>
+            <p> <a href="devlog.html#MyFirstPhaserGame">I wrote a devlog talking more about it here</a></p>
         </section>
     </div>
-<!-- sidebar bar start -->
+    <!-- sidebar bar start -->
 <div id="sidebar-container">
 <div class="aside">
     <section id="about_me_sidebar">
@@ -122,7 +112,6 @@
     </section>
     </div>
 </div><!-- side bar end -->
-
 </div>
 
 <!-- footer -->
@@ -137,20 +126,56 @@
   <!-- moved my scripts to its own file -->
 
   <script src="loadComponents.js"></script>
-  </body>
+
+    <script>
+    class Example extends Phaser.Scene
+    {
+        preload ()
+        {
+            this.load.setBaseURL('https://labs.phaser.io');
+
+            this.load.image('sky', 'assets/skies/space3.png');
+            this.load.image('logo', 'assets/sprites/phaser3-logo.png');
+            this.load.image('red', 'assets/particles/red.png');
+        }
+
+        create ()
+        {
+            this.add.image(400, 300, 'sky');
+
+            const particles = this.add.particles(0, 0, 'red', {
+                speed: 100,
+                scale: { start: 1, end: 0 },
+                blendMode: 'ADD'
+            });
+
+            const logo = this.physics.add.image(400, 100, 'logo');
+
+            logo.setVelocity(100, 200);
+            logo.setBounce(1, 1);
+            logo.setCollideWorldBounds(true);
+
+            particles.startFollow(logo);
+        }
+    }
+
+    const config = {
+        type: Phaser.AUTO,
+        width: 800,
+        height: 600,
+         parent: 'game',
+        scene: Example,
+        physics: {
+            default: 'arcade',
+            arcade: {
+                gravity: { y: 200 }
+            }
+        }
+    };
+
+    const game = new Phaser.Game(config);
+    </script>
+
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

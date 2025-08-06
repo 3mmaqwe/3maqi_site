@@ -15,3 +15,7 @@ to update footer, header, and sidebar run the following script:
  i change it so that i can still change footer, and header, and sidebar in once place but
  now its done by replace the text via scripting (powershell), as dynamically loading the html was causing flashing issues.
 
+I added a submodule called Phaser so i can start making web games. Maybe if i really fall in love with one site ill just move it over to its own page
+but for now ill just have live here. I also made a backup of my site without the submodule
+
+More about submodules here: https://git-scm.com/book/en/v2/Git-Tools-Submodules
