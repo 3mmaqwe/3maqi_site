@@ -1,18 +1,25 @@
-<!---this is also like a template page as well :3-->
-
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="images\isda_noboarder.png">
     <title>3maqi</title>
     <link rel="preload" href="images/seamless-texture-green-watercolor.jpg" as="image">
     <link href="style.css?v=initial" rel="stylesheet" type="text/css" media="all">
-  </head>
-  <body>
-  
-    <div id="header-container">
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser-arcade-physics.min.js"></script>
+    <style>
+        #game{
+            margin: auto;
+        }
+        canvas {
+        display : block;   
+        margin : auto;
+        }
+    </style>
+</head>
+<body>
+  <div id="header-container">
 <div class="header">
     <img id="bannerisda" src="images/Isda_with_Zelda_flowers.png" title="Isda petting Zelda" alt="isda a goblin, petting a orange kitty named Zelda">
     <img src="images/title.png" id="title_image" title="hand drawn title" alt="3maqi, welcome to my site :3">
@@ -51,45 +58,19 @@
   <div class="row">
     <div class="main">
       <section>
-        <h1>My Links/ site tree</h1>
+        <h1>Fishing game</h1>
         <hr>
-        <p>ya know the basic site tree, also just housing links on my site that arent on the navigation bar</p>
-          <h2>on nav bar:</h2>
-          <ul>
-          <li><a href="index.html">Home</a></li>
-         <li><a href="devlog.html">Devlog</a></li>
-          <li><a href="todo.html">To-Do-List</a></li>
-          <li><a href="journal.html">Journal</a></li>
-          <li><a href="art.html">Art</a></li>
-          <li><a href="Links.html">Links</a></li>
-          <li><a href="a\drawbox.html">Drawbox</a></li>
-          <li><a href="https://3maqi.atabook.org/">Sign my guest book!</a></li>
-          </ul>
-          <h2>not on nav bar:</h2>
-          <ul>
-            <li><a href="experiments.html">Experiments</a></li>
-            <li><a href="a\zelda.html">Zelda's Shrine page</a></li>
-          </ul>
-          <h3>Phaser links</h3>
-          <ul>
-            <li><a href="MyFirsPhaserGame.html">My First Phaser Game</a></li>
-            <li><a href="phaser3-tutorial-src\part1.html">First Phaser Platformer</a></li>
-            <li><a href="FishingGaming.html">Fishing Game</a></li>
-          </ul>
+          <p>Will look better on desktop</p> 
         </section>
- <section id="websites_links_sidebar">
-       <h2>Other Website links</h2>
-       <hr>
-       <p>heres just some cool website links! ill probably expand this later into different sections as i collect more links</p>
-       <ul>
-         <li><a href="https://www.makewordart.com/" target="_blank">Make Word Art</a></li>
-         <li><a href="https://neocities.org/tutorials" target="_blank">Neocities Html/css tutorials</a></li>
-         <li><a href="https://cari.institute/aesthetics" target="_blank">Consumer Aesthetics Research Institute</a></li>
-         <li><a href="https://vamp1.neocities.org/resources" target="_blank">Collection of Website Resources</a></li>
-         <li><a href="https://drawbox.nekoweb.org/" target="_blank">drawbox.nekoweb.org</a></li>
-         <li><a href="https://meoqin.neocities.org/shinybuttons">imvu button maker!</a></li>
-      </ul>
-    </section>
+        <section>
+            <div id="game"></div>
+        </section>
+        <section>
+            <h2>What is this?</h2>
+            <hr>
+           <p>just a title screen for now</p>
+           <p>mainly just experimenting with tween animations</p>
+        </section>
     </div>
     <!-- sidebar bar start -->
 <div id="sidebar-container">
@@ -151,23 +132,143 @@
   <!-- moved my scripts to its own file -->
 
   <script src="loadComponents.js"></script>
-  </body>
+
+    <script>
+  class Example extends Phaser.Scene
+{
+   
+
+    preload ()
+    {
+        this.load.image('bg','images/GameAssets/title.png')
+        this.load.image('pic', 'images/GameAssets/titleText.png');
+        this.load.image('fish','images/GameAssets/fish.png')
+    }
+
+    create ()
+    {
+
+      var pic;
+      var fish;
+      var fish2;
+      var fish3;
+      var fish4;
+        this.add.image(400,300,'bg');
+        fish3 = this.add.image(400,300,'fish').setTint(0x00fff0).setFlipY(true);
+        fish = this.add.image(400,300,'fish');
+        fish2 = this.add.image(400,300,'fish').setTint(0xffff00).setFlipX(true);
+        fish4 = this.add.image(400,300,'fish').setTint(0xb000ff);
+        
+        pic = this.add.image(400,300, 'pic');
+
+        this.tweens.add({
+            targets: fish,
+            x: [900,-250],
+            y: [100, 300, 300, 400],
+            duration: 7000,
+            // rotation: 2,
+            // angle: 20,
+            yoyo:false,
+            scale: [0.5,1],
+            flipX: false,
+            flipY: false,
+            repeat:-1,
+            ease: 'Cubic'
+            // https://docs.phaser.io/phaser/concepts/tweens
+        });
+
+
+         this.tweens.add({
+            targets: fish3,
+
+            x: [600,-100],
+            y: [0, 300, 300, 400],
+            duration: 7000,
+            // rotation: 2,
+            // angle: 20,
+            yoyo:false,
+            scale: [0.2],
+            flipX: false,
+            flipY: false,
+            repeat:-1,
+            ease: 'Linear'
+            // https://docs.phaser.io/phaser/concepts/tweens
+        });
+
+
+
+          this.tweens.add({
+            targets: fish2,
+            x: [1,800],
+            y: [1, 800],
+            duration: 5000,
+            // rotation: 2,
+            // angle: 20,
+            scale: [0.4,0.7],
+            flipX: false,
+            flipY: true,
+            yoyo:false,
+            repeat:-1,
+            ease: 'Power'
+            
+            // https://docs.phaser.io/phaser/concepts/tweens
+        });
+
+          this.tweens.add({
+            targets: fish4,
+            x: [1000,400],
+            y: [1, 1000],
+            duration: 3000,
+            // rotation: 2,
+            // angle: 20,
+            scale: [0.4,0.7],
+            flipX: false,
+            flipY: true,
+            yoyo:false,
+            repeat:-1,
+            ease: 'Power'
+            
+            // https://docs.phaser.io/phaser/concepts/tweens
+        });
+        
+
+        // title
+       this.tweens.add({
+            targets: pic,
+            x: 400,
+            y: [200, 300, 250, 300],
+            duration: 4000,
+            yoyo:true,
+            repeat:-1,
+            ease: 'Bounce'
+            // https://docs.phaser.io/phaser/concepts/tweens
+        });
+       
+    }
+
+    update ()
+    {
+    
+    }
+}
+
+const config = {
+    type: Phaser.WEBGL,
+    parent: 'phaser-example',
+    width: 800,
+    height: 600,
+    parent: 'game',
+   // backgroundColor: '#2d2d88',
+    scene: Example
+};
+
+const game = new Phaser.Game(config);
+                      
+                    
+    </script>
+
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
