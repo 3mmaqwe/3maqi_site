@@ -30,17 +30,22 @@ section color: #bdf3c4;
 --dark-color: #4A5E4C;
 --hover-color:#2a362c;
 --light-color:#ADDFB3;
-
+--section-color:#bdf3c4;
+--body-color:#171e18;
+ cursor: url('images/isda_cusor.cur'), auto;
 }
 
 body {
-  color: #171e18;
+  color: var(--body-color);
   font-family: Helvetica, Verdana;
   width: 75%;
   margin: auto;
-  background-color: #4A5E4C;
+  background-color: var(--dark-color);
   background-image: url("images/seamless-texture-green-watercolor.jpg");
   background-attachment: fixed;
+  cursor: url('images/isda_cusor.cur'), auto;
+  
+  
 }
 
 
@@ -148,22 +153,27 @@ button {
   border-width: thick;
   border-color: var(--light-color);
   color: white;
-  cursor: pointer;
+ /* cursor: pointer; */
+  
+  cursor: url('images/isda_cusor_Pointer.cur'), pointer;
   
 }
 
 button a, button a:visited {
   color:white;
   text-decoration: none;
+  cursor: url('images/isda_cusor_Pointer.cur'), pointer; 
 }
  button:hover {
   background-color: var(--hover-color);
+  cursor: url('images/isda_cusor_Pointer.cur'), pointer;
 }
 
 
 
 a {
   color: #1e3620;
+  cursor: url('images/isda_cusor_Pointer.cur'), pointer;
 }
 a:visited {
   color: #402c47;
