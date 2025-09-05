@@ -18,7 +18,7 @@ button hover color: #2a362c;
 header and footer color: #ADDFB3;
 section color: #bdf3c4;
 
-
+I might want to add more mobile friendly display for webrings when viewed on mobile
 
 
 
@@ -49,6 +49,8 @@ body {
 }
 
 
+
+
 * {
   box-sizing: border-box;
 }
@@ -71,6 +73,14 @@ body {
  #template{
         display:none;
       }
+
+  /* to center a webring link */    
+  #center {
+    padding-top: 10px;
+    margin: auto;
+    width: 50%;
+   text-align: center;
+}
 
 /* adds a boarder image around only text */
 /* also if ur using this class make sure to put <br> tags after */
@@ -332,7 +342,7 @@ footer {
 
 /* Responsive layout for mobile devices */
 /*a ton of people surf the internet on only their phone!*/
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
  .aside, .main {   
     width: 100%;
     padding: 0;
