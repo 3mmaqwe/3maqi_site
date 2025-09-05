@@ -19,3 +19,12 @@ I added a submodule called Phaser so i can start making web games. Maybe if i re
 but for now ill just have live here. I also made a backup of my site without the submodule
 
 More about submodules here: https://git-scm.com/book/en/v2/Git-Tools-Submodules
+
+
+if css isnt updating on localhost server: 
+
+1. Force Browser Refresh
+
+Perform a hard refresh to bypass the browser cache:
+
+Windows/Linux: Press Ctrl + F5 or Ctrl + Shift + R.
