@@ -68,6 +68,10 @@ body {
   border-radius: 25px;
 }
 
+ #template{
+        display:none;
+      }
+
 /* adds a boarder image around only text */
 /* also if ur using this class make sure to put <br> tags after */
 #board_img_test{
