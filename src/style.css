@@ -110,7 +110,6 @@ figure{
   margin: 2.5%;
 }
 
-
 /* image sizing class */
 
 .small_img{
@@ -308,6 +307,10 @@ section {
   display: flow-root;
 }
 
+.warning {
+  background-color:#f3bebe;
+  border-color:#5e4a4a;
+}
 
  li{  
    list-style-type: "✦ ";
