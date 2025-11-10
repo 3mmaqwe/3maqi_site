@@ -1,0 +1,107 @@
+
+/* minecraft font */
+@font-face {
+  font-family: MinecraftDefault;
+  src: url(MinecraftDefault-Regular.ttf);
+  font-style: normal;
+}
+@font-face{
+    font-family: MinecraftDefault;
+    src: url(MinecraftDefault-Bold.ttf);
+    font-weight:bold;
+}
+@font-face{
+     font-family: MinecraftDefault;
+    src: url(MinecraftDefault-italics.ttf);
+    font-style: italic;
+}
+
+body{
+    background-image: url(images/13878215-grass-block-side_l.jpg);
+    background-repeat: repeat;
+     display: grid;
+    place-items: center;
+    font-family: MinecraftDefault;
+}
+
+
+/* tile set backgrounds */
+.stone{
+  background-image: url(images/BlockSprite_stone.png);
+    background-repeat: repeat;
+}
+.moss{
+    background-image: url(images/BlockSprite_moss-block.png);
+    background-repeat: repeat;
+}
+
+.oak-planks{
+    background-image: url(images/BlockSprite_oak-planks.png);
+    background-repeat: repeat;
+}
+/*grass first row, and dirt rest of rows */
+.grass{
+    background-image: url(images/BlockSprite_grass-block.png), url(images/BlockSprite_dirt.png);;
+    background-repeat: repeat-x, repeat;
+    color:white; /* make font more readable */
+}
+
+.dirt{
+     background-image: url(images/BlockSprite_dirt.png);
+    background-repeat: repeat;
+    color:white; /* make font more readable */
+}
+
+.MCScreenshots{
+    display: flex;
+    flex-wrap: wrap;
+   /* grid-template-columns: repeat(4, 1fr); */
+    width: 90%;
+    img {
+            max-width:600px;
+            height: auto;
+            
+        }
+    }
+ 
+/* makes it so figcaption does not extend beyond the photo*/
+/*credit to: https://frontendmasters.com/blog/the-figcaption-problem/ */    
+figure {
+  inline-size: fit-content;
+  margin-inline: auto;
+  figcaption {
+    contain: inline-size;
+    background-image: url(images/BlockSprite_stone.png);
+    background-repeat: repeat;
+  }
+}
+ 
+
+.title{
+    font-size: 70px;
+    color:white;
+}
+
+section{
+  
+     padding: 10px;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+     margin:10px;
+}
+
+main {
+  padding: 10px;
+}
+
+
+ /*mobile styling */
+ @media screen and (max-width: 800px) {
+  body{
+     place-items: center normal;
+ }
+
+ .title{
+    font-size: 40px;
+    color:white;
+}
+}

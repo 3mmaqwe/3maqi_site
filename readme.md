@@ -28,3 +28,10 @@ if css isnt updating on localhost server:
 Perform a hard refresh to bypass the browser cache:
 
 Windows/Linux: Press Ctrl + F5 or Ctrl + Shift + R.
+
+
+Cool resource sites:
+[icons8.com](https://icons8.com/icons)
+this sites has alot of cool and free icons to choose from :D 
+[minecraft.wiki](https://minecraft.wik)
+has alot of assets i use for my minecraft blog
