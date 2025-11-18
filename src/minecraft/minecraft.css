@@ -22,6 +22,7 @@ body{
      display: grid;
     place-items: center;
     font-family: MinecraftDefault;
+    cursor: url('images/Diamond_Sword_JE3_BE3.cur'), auto;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -51,12 +52,17 @@ h1,h2,h3,h4,h5,h6{
 .moss a:hover{
     color:rgb(203, 203, 203);
     text-shadow: 2px 2px rgba(0, 0, 0, 0.19);
+    cursor: url('images/Diamond_Sword_JE3_BE3.cur'), pointer;
 
+}
+a{
+     cursor: url('images/Diamond_Sword_JE3_BE3.cur'), pointer;
 }
 
 .moss a, moss a:visited {
     color:white;
     text-shadow: 2px 2px rgba(0, 0, 0, 0.19);
+    cursor: url('images/Diamond_Sword_JE3_BE3.cur'), pointer;
 }
 
 .oak-planks{

@@ -33,6 +33,7 @@ I might want to add more mobile friendly display for webrings when viewed on mob
 --section-color:#bdf3c4;
 --body-color:#171e18;
  cursor: url('images/isda_cusor.cur'), auto;
+
 }
 
 body {
@@ -49,6 +50,86 @@ body {
 }
 
 
+
+/* minecraft font */
+@font-face {
+  font-family: MinecraftDefault;
+  src: url(minecraft/MinecraftDefault-Regular.ttf);
+  font-style: normal;
+}
+@font-face{
+    font-family: MinecraftDefault;
+    src: url(minecraft/MinecraftDefault-Bold.ttf);
+    font-weight:bold;
+}
+@font-face{
+     font-family: MinecraftDefault;
+    src: url(minecraft/MinecraftDefault-italics.ttf);
+    font-style: italic;
+}
+
+.minecraft{
+   background-image: url(minecraft/images/BlockSprite_grass-block.png), url(minecraft/images/BlockSprite_stone.png);
+    background-repeat: repeat-x, repeat;
+  cursor: url('minecraft/images/Diamond_Sword_JE3_BE3.cur'), auto !important;
+  font-family: MinecraftDefault;
+    color:white; /* make font more readable */
+    border-radius: 0px;
+  padding: 15px;
+  border-style: none;
+  border-width: thick;
+  border-color: white;
+  
+}
+.minecraft a{
+  background-image: url(minecraft/images/BlockSprite_moss-block.png);
+    background-repeat: repeat;
+  color:rgb(203, 203, 203);
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.19);
+}
+
+.minecraft img{
+  cursor: url('minecraft/images/Diamond_Sword_JE3_BE3.cur'), auto !important;
+  background-image:none !important;
+}
+.minecraft a{
+  cursor: url('minecraft/images/Diamond_Sword_JE3_BE3.cur'), auto !important;
+  background-image:none !important;
+}
+
+.minecraft h2{
+  font-size: 2.1em; 
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.19);
+}
+
+.minecraft hr{
+  background-image: url(minecraft/images/ItemSprite_diamond.png);
+  background-repeat: space;
+}
+
+.minecraft button{
+   font-family: MinecraftDefault;
+    border-style: none;
+    font-size: 2em; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   background-image: url(minecraft/images/BlockSprite_moss-block.png);
+   border-radius: 25px;
+    cursor: url('minecraft/images/Diamond_Sword_JE3_BE3.cur'), auto !important;
+}
+
+.minecraft button a, .minecraft button a:visited {
+    color:white;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.19);
+  text-decoration: none;
+  cursor: url('minecraft/images/Diamond_Sword_JE3_BE3.cur'), auto !important;
+}
+ .minecraft button:hover {
+    color:rgb(168, 168, 168);
+    font-size: 2.1em; 
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.19);
+  background-image: url(minecraft/images/BlockSprite_moss-block.png);
+  cursor: url('minecraft/images/Diamond_Sword_JE3_BE3.cur'), auto !important;
+}
 
 
 * {
@@ -224,9 +305,26 @@ nav li {
   border-right: thick double #ADDFB3;
 }
 
+nav li:last-child a:hover {
+  border-right: none;
+  float:right;
+   font-family: MinecraftDefault;
+    cursor: url('images/isda_cusor_Pointer.cur'), pointer;
+}
+
+
 nav li:last-child {
   border-right: none;
   float:right;
+   font-family: MinecraftDefault;
+   cursor: url('minecraft/images/Diamond_Sword_JE3_BE3.cur'), auto !important;
+}
+nav li:last-child a:hover {
+  border-right: none;
+  float:right;
+   font-family: MinecraftDefault;
+   cursor: url('minecraft/images/Diamond_Sword_JE3_BE3.cur'), auto !important;
+
 }
 
 nav li a {
