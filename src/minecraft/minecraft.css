@@ -15,12 +15,14 @@
     src: url(MinecraftDefault-italics.ttf);
     font-style: italic;
 }
-
+* {
+  box-sizing: border-box;
+} 
 body{
     background-image: url(images/13878215-grass-block-side_l.jpg);
     background-repeat: repeat;
-     display: grid;
-    place-items: center;
+     /* display: grid;
+    place-items: center; */
     font-family: MinecraftDefault;
     cursor: url('images/Diamond_Sword_JE3_BE3.cur'), auto;
 }
@@ -85,15 +87,24 @@ a{
 .MCScreenshots{
     display: flex;
     flex-wrap: wrap;
-   /* grid-template-columns: repeat(4, 1fr); */
-    width: 90%;
-    img {
-            max-width:600px;
-            height: auto;
-            
-        }
+    padding: 0 4px;
+  
+}
+
+    .column {
+        flex: 33%;
+        max-width: 33%;
+        padding: 0px 4px;
+        
     }
  
+    .column img{
+            margin-top: 8px;
+            vertical-align: middle;
+            max-width:100%;
+        }
+
+
 /* makes it so figcaption does not extend beyond the photo*/
 /*credit to: https://frontendmasters.com/blog/the-figcaption-problem/ */    
 figure {
@@ -143,4 +154,18 @@ main {
     width: 100%;
 
 }
+
+.column {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
+
+/* small desktop screen */
+ @media screen and (max-width: 1400px) {
+    .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+
+ }
