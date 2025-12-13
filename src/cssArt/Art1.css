@@ -1,0 +1,107 @@
+
+
+body{
+    width: 100%;
+    background-image: none;
+    background: white;
+}
+
+#theArt{
+    position: relative;
+    
+  
+
+}
+
+#title{
+    position: absolute;
+      padding: 3em;
+      padding-bottom: 0;
+}
+
+.info{    
+ padding: 1em;
+  
+ border-style: solid;
+ background: rgba(255, 255, 255, 0.3) 
+
+}
+
+#cheating{
+   width: 50%;
+   filter:opacity(0%);
+ 
+
+}
+
+#img1{
+    position: absolute;
+    width: 50%;
+ 
+    float:left;
+ 
+
+}
+#img1R{
+    position: absolute; 
+     -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+    right: 0;
+    width: 50%;
+    object-fit: fill;
+
+
+}
+#img2{
+    position: absolute; 
+    left: 2em;
+    width: 50%;
+     filter: hue-rotate(200deg) opacity(50%);
+
+}
+#img2R{
+    position: absolute; 
+    float:right;
+    -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+    right: 2em;
+    width: 50%;
+     filter: hue-rotate(200deg) opacity(50%);
+
+}
+#img3{
+    position: absolute; 
+    left: 4em;
+    top:2em;
+    width: 50%;
+     filter: hue-rotate(90deg) opacity(20%);
+
+}
+#img3R{
+    position: absolute; 
+    float:right;
+        -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+    right: 4em;
+    top:2em;
+    width: 50%;
+     filter: hue-rotate(90deg) opacity(20%);
+
+}
+
+#img4{
+    position: absolute; 
+    left: 6em;
+    width: 50%;
+     filter: hue-rotate(-200deg) opacity(10%);
+}
+
+#img4R{
+    position: absolute; 
+    float:right;
+        -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+    right: 6em;
+    width: 50%;
+     filter: hue-rotate(-200deg) opacity(10%);
+}

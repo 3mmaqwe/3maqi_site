@@ -305,25 +305,20 @@ nav li {
   border-right: thick double #ADDFB3;
 }
 
-nav li:last-child a:hover {
-  border-right: none;
-  float:right;
-   font-family: MinecraftDefault;
-    cursor: url('images/isda_cusor_Pointer.cur'), pointer;
-}
+
 
 
 nav li:last-child {
   border-right: none;
   float:right;
    font-family: MinecraftDefault;
-   cursor: url('minecraft/images/Diamond_Sword_JE3_BE3.cur'), auto !important;
+   cursor: url('minecraft/images/Diamond_Sword_JE3_BE3.cur'), auto;
 }
 nav li:last-child a:hover {
   border-right: none;
   float:right;
    font-family: MinecraftDefault;
-   cursor: url('minecraft/images/Diamond_Sword_JE3_BE3.cur'), auto !important;
+   cursor: url('minecraft/images/Diamond_Sword_JE3_BE3.cur'), auto;
 
 }
 
@@ -464,6 +459,11 @@ footer {
     border-bottom: none;
 
   }
+  nav li:last-child a:hover{
+  float: none;
+  }
+
+
   #bannerisda, #title_image{
     width: 200px;
   }
@@ -508,4 +508,8 @@ footer {
   .watercolor-grid figure {
     margin-bottom: 20px;
   }
+
+  .screenshot{
+  width: 100%;
+}
 }

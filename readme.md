@@ -29,6 +29,8 @@ Perform a hard refresh to bypass the browser cache:
 
 Windows/Linux: Press Ctrl + F5 or Ctrl + Shift + R.
 
+to view localhost site on mobile: 10.0.0.11:8000
+[how to view site on mobile](https://www.geeksforgeeks.org/techtips/access-localhost-on-mobile-browsers/)
 
 Cool resource sites:
 [icons8.com](https://icons8.com/icons)
