@@ -201,9 +201,9 @@ async function fetchImages() {
         div.classList.add("image-container");
 
         div.innerHTML = `
-                    <img src="${imgUrl}" alt="drawing">
+                    <img src="${imgUrl}" alt="drawing" class="drawbox">
                     <p>${timestamp}</p>
-                    <p><span>By: <span>${author}</p?
+                    <p><span>By: <span>${author}</p>
                 `;
         gallery.appendChild(div);
       }
@@ -212,6 +212,38 @@ async function fetchImages() {
     console.error("Error fetching images:", error);
     document.getElementById("gallery").textContent = "Failed to load images.";
   }
+
+  // lets drawbox images get bigger when clicked
+  document.querySelectorAll('.drawbox').forEach(img => {
+  img.addEventListener('click', function() {
+    // Create overlay
+    const overlay = document.createElement('div');
+    overlay.style.position = 'fixed';
+    overlay.style.top = 0;
+    overlay.style.left = 0;
+    overlay.style.width = '100vw';
+    overlay.style.height = '100vh';
+    overlay.style.background = 'rgba(0,0,0,0.8)';
+    overlay.style.display = 'flex';
+    overlay.style.alignItems = 'center';
+    overlay.style.justifyContent = 'center';
+    overlay.style.zIndex = 10000;
+    overlay.addEventListener('click', () => document.body.removeChild(overlay));
+
+    // Create large image
+    const bigImg = document.createElement('img');
+    bigImg.src = img.src;
+    bigImg.style.maxWidth = '90vw';
+    bigImg.style.maxHeight = '90vh';
+    bigImg.style.borderRadius = '10px';
+    bigImg.style.boxShadow = '0 0 20px #000';
+
+    overlay.appendChild(bigImg);
+    document.body.appendChild(overlay);
+  });
+}); 
 }
 
 fetchImages();
+
+ 

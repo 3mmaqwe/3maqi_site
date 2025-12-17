@@ -443,15 +443,84 @@ footer {
   display: none;
 }
 
+/* styling for my journal images */
+ .imageWrap{
+    display:flex;
+    
+  }
+  .text{
+    flex-basis: 100%;
+  }
+  .wrapImage{
+      height: auto;
+      width: 100%;
+      flex-basis: 100%;
+  }
+  .box{
+    float: right;
+    height: 30%;
+    width: 30%;
+  }
+
+  .box_radius_right{
+    float: right;
+    width: 50%;
+    border-radius: 25px;
+    margin-left: 10px;
+
+  }
+   .box_radius_left{
+    float: left;
+    width: 50%;
+    border-radius: 25px;
+    margin-right: 10px;
+
+  }
+
+
 
 
 /* plz hide the nav bar ;-; */
-@media screen and (min-width: 1001px) {
-  #mobile{
-    display: none !important;
+ .imageWrap{
+    display:flex;
+    
   }
+  .text{
+    flex-basis: 100%;
+  }
+  .wrapImage{
+      height: auto;
+      width: 100%;
+      flex-basis: 100%;
+  }
+  .box{
+    float: right;
+    height: 30%;
+    width: 30%;
+  }
+
+
+  /* for BIG screens*/
+@media screen and (min-width: 1800px) {
   
+  .box_radius_right{
+    float: right;
+    width: 30%;
+    border-radius: 25px;
+    margin-left: 10px;
+
+  }
+   .box_radius_left{
+    float: left;
+    width: 30%;
+    border-radius: 25px;
+    margin-right: 10px;
+
+  }
+
 }
+
+
 
 @media screen and (max-width: 1200px) {
   .screenshot_big{
