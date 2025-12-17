@@ -106,7 +106,7 @@ canvas.addEventListener("mousemove", draw, false);
 canvas.addEventListener("mouseup", stop, false);
 canvas.addEventListener("mouseout", stop, false);
 
-function Restore() {
+function Undo() {
   if (start_index <= 0) {
     Clear();
   } else {
@@ -245,5 +245,15 @@ async function fetchImages() {
 }
 
 fetchImages();
+// allow crtl z to UNDO!
+function keyPressHandler(e) {
+      var evtobj = window.event ? window.event : e;
+
+      if (evtobj.ctrlKey && evtobj.keyCode == 90) {
+          Undo();
+      }
+}
+
+window.addEventListener('keydown', keyPressHandler);
 
  
