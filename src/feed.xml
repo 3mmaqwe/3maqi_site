@@ -9,6 +9,15 @@
         <language>en-us</language>
 
 
+		
+		 <item>
+			<title>Photography</title>
+			<link>https://3maqi.neocities.org/photo.html</link>
+			<description>I added a page for my photography. I uploaded some photos I took on 35mm film</description>
+			<pubDate>Fri, 02 Jan 26 17:49:06 -0500</pubDate>
+		</item>	
+
+
 		 <item>
 			<title>Crtl Z</title>
 			<link>https://3maqi.neocities.org/a/drawbox</link>
@@ -21,19 +30,6 @@
 			<link>https://3maqi.neocities.org/journal.html#:~:text=Coffea%20and%20blog%20layouts%20%2D%2012/26/2025</link>
 			<description>I talk about Coffee. I also fixed draw box, so if u click on the image you can see it pop up.</description>
 			<pubDate>Tue, 16 Dec 25 24:57:06 -0500</pubDate>
-		</item>
-
-		<item>
-			<title>Cool Css art: Art1</title>
-			<link>https://3maqi.neocities.org/cssArt/Art1.html</link>
-			<description>I decided to make a little art piece by experiment with css filters, relative and absolute positioning</description>
-			<pubDate>Sat, 13 Dec 25 20:06:10 -0500</pubDate>
-		</item>
-        <item>
-			<title>Anime, offically Created a RSS Feed and a few bug fixes</title>
-			<link>https://3maqi.neocities.org/devlog.html#:~:text=Anime%20isda%2C%20Trippy%20Art%20and%20RSS%20feed%20%2D%2012/13/2025</link>
-			<description>I created a RSS feed and a new anime drawing of idsa! read about it in my lastest devlog</description>
-			<pubDate>Sat, 13 Dec 25 20:06:06 -0500</pubDate>
 		</item>
 
 	</channel>
