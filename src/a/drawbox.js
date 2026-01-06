@@ -98,9 +98,9 @@ function getY(event) {
     : event.targetTouches[0].pageY - canvas.offsetTop;
 }
 
-canvas.addEventListener("touchstart", start, false);
-canvas.addEventListener("touchmove", draw, false);
-canvas.addEventListener("touchend", stop, false);
+canvas.addEventListener("touchstart", start, { passive: false });
+canvas.addEventListener("touchmove", draw, { passive: false });
+canvas.addEventListener("touchend", stop, { passive: false });
 canvas.addEventListener("mousedown", start, false);
 canvas.addEventListener("mousemove", draw, false);
 canvas.addEventListener("mouseup", stop, false);
@@ -190,6 +190,8 @@ async function fetchImages() {
     gallery.innerHTML = "";
     rows.reverse().forEach((row) => {
       const columns = row.split(",");
+      console.log("Row:", row);
+      console.log("Columns:", columns);
       if (columns.length < 2) return;
 
       const timestamp = columns[0].trim();
@@ -198,7 +200,10 @@ async function fetchImages() {
       const approved =columns[3].trim().replace(/"/g, "");
       const myComment =columns[4].trim().replace(/"/g, "");
 
+      console.log("Parsed - URL:", imgUrl, "Approved:", approved, "Author:", author);
+
       if (imgUrl.startsWith("http") && approved=="TRUE") {
+        console.log("Loading image:", imgUrl);
         const div = document.createElement("div");
         div.classList.add("image-container");
 
