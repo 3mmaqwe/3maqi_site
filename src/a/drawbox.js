@@ -164,7 +164,7 @@ document.getElementById("submit").addEventListener("click", async function () {
     });
 
     statusText.textContent = "Upload successful!";
-    alert("Image uploaded and submitted successfully ☻");
+    alert("Image uploaded and submitted successfully! It will post once I approve the image :)");
     location.reload();
   } catch (error) {
     console.error(error);
@@ -195,15 +195,18 @@ async function fetchImages() {
       const timestamp = columns[0].trim();
       const imgUrl = columns[1].trim().replace(/"/g, "");
       const author =columns[2].trim().replace(/"/g, "");
+      const approved =columns[3].trim().replace(/"/g, "");
+      const myComment =columns[4].trim().replace(/"/g, "");
 
-      if (imgUrl.startsWith("http")) {
+      if (imgUrl.startsWith("http") && approved=="TRUE") {
         const div = document.createElement("div");
         div.classList.add("image-container");
 
         div.innerHTML = `
-                    <img src="${imgUrl}" alt="drawing" class="drawbox">
+                    <img src="${imgUrl}" alt="drawing" class="drawbox" title="${myComment}">
                     <p>${timestamp}</p>
                     <p><span>By: <span>${author}</p>
+                    
                 `;
         gallery.appendChild(div);
       }

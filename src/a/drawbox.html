@@ -12,6 +12,11 @@
             border: 1px solid black;
             cursor: crosshair;
         }
+        .drawbox_con{
+            float: left;
+            padding: 20px;
+        }
+       
         #gallery {
             display: flex;
             flex-wrap: wrap;
@@ -39,37 +44,53 @@
             border-radius: 5px;
 
         }
-        #des{
+        .des{
             background:#addfb35d;
             width: 500px;
             padding:5px;
             margin-bottom: 5px;
             border-radius: 5px;
         }
+        
 
-        @media screen and (max-width: 500px){
+        @media screen and (max-width: 1500px){
                
                 body{
                     width:90%;
                 }
-                #controls, #des{
-                    width:100%;
-                }
+               
+                .drawbox_con{
+                 float: none;
+           
+              }
         }
 
+         @media screen and (max-width: 1500px){
+             #controls, #des{
+                    width:100%;
+                }
+
+
+         }
+            
+
+        
      </style>
 </head>
 <body>
 
-   <div>
-    <h1>DRAWBOX</h1> 
-    <div id="des">
+   
+    
+   
+    <div class="drawbox_con">
+        <h1>DRAWBOX</h1> 
+    <div class="des">
     <p>Draw me a picture!</p>
     <p>I might add some daily doodles as well :D</p>
     </div>
-   
+    <div class="drawbox">
     <form action="..\index.html" method="get">
-        <button type="submit" formtarget="_blank" title="drawbox!">back to home</button>
+        <button type="submit"  title="drawbox!">back to home</button>
        </form>
     <hr>    
     <canvas id="drawboxcanvas" width="500px" height="500px"></canvas>
@@ -107,12 +128,21 @@
     <br>
     </div>
     
+    
     <button onclick="Undo()" title="you can also do crtl+z">Undo</button>
     <button onclick="Clear()" title="clear button">Clear</button>
     <button id="submit">Submit drawing</button>
-    <p>having trouble submitting? you can manually upload the image using this <a href="https://forms.gle/aaWMSQ8LUEwz8U4b6" target="_blank">form</a></p>
-    <p>I also recommend drawing on a computer or larger screen.</p>
     <p id="status"></p>
+    </div>
+
+    <div class="des">
+         <p>having trouble submitting? you can manually upload the image using this <a href="https://forms.gle/aaWMSQ8LUEwz8U4b6" target="_blank">form</a></p>
+        <p>I also recommend drawing on a computer or larger screen.</p>
+        <p>To prevent spam I now have to approve an image for it to be posted.</p>
+        <p>ive also commented on some of the images, hover over it to see em!</p>
+
+    </div>
+    </div>
     <hr>
     <h1>Submitted Drawings ☻</h1>
     <hr>

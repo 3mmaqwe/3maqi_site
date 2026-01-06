@@ -8,7 +8,14 @@
         <category>Art</category>
         <language>en-us</language>
 
-
+ 	    <item>
+			<title>Drawbox moderation</title>
+			<link>https://3maqi.neocities.org/a/drawbox.html</link>
+			<description>I added moderation to my drawbox to prevent spam, and also added some comments on some of the images.
+			<![CDATA[<a href="https://3maqi.neocities.org/devlog.html#:~:text=Drawbox%20moderation%20and%20comments%20%2D%2001/05/2026">Devlog here</a>.]]>
+			</description>
+			<pubDate>Mon, 05 Jan 26 19:44:06 -0500</pubDate>
+		</item>	
 		
 		 <item>
 			<title>Photography</title>
