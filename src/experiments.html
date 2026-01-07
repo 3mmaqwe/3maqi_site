@@ -99,6 +99,25 @@
   background-image: linear-gradient(to right,#D52D00,#EF7627,#FF9A56,white,#D162A4,#B55690,#A30262)
 }
 
+
+
+/* counting */
+body {
+  counter-reset: section theEnd;
+}
+
+.counting ::before {
+  counter-increment: section;
+  content: "Silly counter " counter(section) ": ";
+  color: CadetBlue;
+}
+
+.counting ::after {
+  counter-increment: theEnd;
+  content: " meow " counter(section) " meow";
+  color: DodgerBlue;
+}
+
  </style>
   </head>
   <body>
@@ -146,8 +165,9 @@
       <section>
         <h1>Experiments Page</h1>
         <hr>
-          <p>Here just sorta a playground for me to make goofy things, such as just playing around with css, javascript, and html</p> 
-          <p>this pages colors and shapes and sizes may change! just a fair warning. Also this page might not be super mobile friendly</p>
+          <p>Here just sorta a playground for me to make goofy things, such as just playing around with css, javascript, and html. this pages colors and shapes and sizes may change! just a fair warning. This page is not mobile friendly</p>
+          <p>I do my web development in edge, so things might look different to you if you are using a different browser!!</p>
+          <p>Huge shout out to my favorite website resource <a href="https://www.w3schools.com/">w3schools.com</a>, I really enjoy the examples the site has, they are super helpful when it comes to understanding how css, html, and javascript work</p>
         </section>
 
         <section id="silly_buttons" >
@@ -238,6 +258,28 @@
        
 
         
+        </section>
+       
+
+        <section>
+           <h2>im counting :O</h2>
+        <hr>
+        <div class="counting">
+          <p>so this is just me literally looking a css things i didnt know existed</p>
+          <p>css has a counting function??! pretty crazy</p>
+          <p>im not super sure how I would use this functionality, but its cool to know that it exists!</p>
+          <p>erm you can learn about at <a href="https://www.w3schools.com/css/css_counters.asp">www.w3schools.com/css/css_counters.asp</a></p>
+          <p>oml every element within this div gets to count so silly <strong> mega silly</strong></p>
+          <p>I am<span>so<span>silly</span>pilled</span>hehe</p>
+          <h3>some things on my desk~</h3>
+          <ol>
+            <li>smart water computer clock lamp</li>
+            <li>tired eyes, coins, and fruit gummies</li>
+            <li>remote, leather purse, white hands</li>
+          </ol>
+          <a href="https://www.w3schools.com/tags/ref_colornames.asp"> did you know there are 140 named colors you can use on the web? pretty neat</a>
+          <p>ok im done :3 bye bye!</p>
+        </div>
         </section>
 
 
