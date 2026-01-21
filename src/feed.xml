@@ -1,66 +1,63 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
+  <channel>
+    <title>3maqi's Rss Feed</title>
+    <link>https://3maqi.neocities.org/</link>
+    <description>rss feed for 3maqi's Blog</description>
+    <category>Art</category>
+    <language>en-us</language>
 
-	<channel>
-	<title>3maqi's Rss Feed</title>
-		<link>https://3maqi.neocities.org/</link>
-		<description>rss feed for 3maqi's Blog</description>
-        <category>Art</category>
-        <language>en-us</language>
+    <item>
+      <title>Reflections, Ramblings, and Reading</title>
+      <link>https://3maqi.neocities.org/journal.html#:~:text=Reflections%2C%20Ramblings%20and%20Reading%20%2D%2001/20/2026</link>
+      <description>New Journal Entry: Reflections, Ramblings, and Reading</description>
+      <pubDate>Tue, 20 Jan 2026 22:25:30 -0500</pubDate>
+    </item>
 
+    <item>
+      <title>Furry Art</title>
+      <link>https://3maqi.neocities.org/FurryArt.html</link>
+      <description>added a furry art page to show people at fursquared!</description>
+      <pubDate>Wed, 14 Jan 2026 00:10:30 -0500</pubDate>
+    </item>
 
-		<item>
-			<title>Reflections, Ramblings, and Reading</title>
-			<link>https://3maqi.neocities.org/journal.html#:~:text=Reflections%2C%20Ramblings%20and%20Reading%20%2D%2001/20/2026</link>
-			<description>New Journal Entry: Reflections, Ramblings, and Reading</description>
-			<pubDate>Tue, 20 Jan 26 22:25:30 -0500</pubDate>
-		</item>	
+    <item>
+      <title>Experiments with Silly Counters</title>
+      <link>https://3maqi.neocities.org/experiments.html</link>
+      <description>I wanted to just play around a css thing ive never used before. So I tested out counters</description>
+      <pubDate>Wed, 07 Jan 2026 01:51:30 -0500</pubDate>
+    </item>
 
+    <item>
+      <title>Drawbox moderation</title>
+      <link>https://3maqi.neocities.org/a/drawbox.html</link>
+      <description><![CDATA[
+I added moderation to my drawbox to prevent spam, and also added some comments on some of the images.
+<a href="https://3maqi.neocities.org/devlog.html#:~:text=Drawbox%20moderation%20and%20comments%20%2D%2001/05/2026">Devlog here</a>.
+]]></description>
+      <pubDate>Mon, 05 Jan 2026 19:44:06 -0500</pubDate>
+    </item>
 
-		<item>
-			<title>Furry Art</title>
-			<link>https://3maqi.neocities.org/FurryArt.html</link>
-			<description>added a furry art page to show people at fursquared!</description>
-			<pubDate>Wed, 14 Jan 26 00:10:30 -0500</pubDate>
-		</item>	
+    <item>
+      <title>Photography</title>
+      <link>https://3maqi.neocities.org/photo.html</link>
+      <description>I added a page for my photography. I uploaded some photos I took on 35mm film</description>
+      <pubDate>Fri, 02 Jan 2026 17:49:06 -0500</pubDate>
+    </item>
 
-		<item>
-			<title>Experiments with Silly Counters</title>
-			<link>https://3maqi.neocities.org/experiments.html</link>
-			<description>I wanted to just play around a css thing ive never used before. So I tested out counters</description>
-			<pubDate>Wed, 07 Jan 26 01:51:30 -0500</pubDate>
-		</item>	
+    <item>
+      <title>Crtl Z</title>
+      <link>https://3maqi.neocities.org/a/drawbox.html</link>
+      <description>I added Crtl Z as a short cut to undo in drawbox</description>
+      <pubDate>Wed, 17 Dec 2025 16:55:06 -0500</pubDate>
+    </item>
 
- 	    <item>
-			<title>Drawbox moderation</title>
-			<link>https://3maqi.neocities.org/a/drawbox.html</link>
-			<description>I added moderation to my drawbox to prevent spam, and also added some comments on some of the images.
-			<![CDATA[<a href="https://3maqi.neocities.org/devlog.html#:~:text=Drawbox%20moderation%20and%20comments%20%2D%2001/05/2026">Devlog here</a>.]]>
-			</description>
-			<pubDate>Mon, 05 Jan 26 19:44:06 -0500</pubDate>
-		</item>	
-		
-		 <item>
-			<title>Photography</title>
-			<link>https://3maqi.neocities.org/photo.html</link>
-			<description>I added a page for my photography. I uploaded some photos I took on 35mm film</description>
-			<pubDate>Fri, 02 Jan 26 17:49:06 -0500</pubDate>
-		</item>	
+    <item>
+      <title>Coffea</title>
+      <link>https://3maqi.neocities.org/journal.html#:~:text=Coffea%20and%20blog%20layouts%20%2D%2012/26/2025</link>
+      <description>I talk about Coffee. I also fixed draw box, so if u click on the image you can see it pop up.</description>
+      <pubDate>Tue, 16 Dec 2025 23:57:06 -0500</pubDate>
+    </item>
 
-
-		 <item>
-			<title>Crtl Z</title>
-			<link>https://3maqi.neocities.org/a/drawbox</link>
-			<description>I added Crtl Z as a short cut to undo in drawbox</description>
-			<pubDate>Wed, 17 Dec 25 16:55:06 -0500</pubDate>
-		</item>
-
-		 <item>
-			<title>Coffea</title>
-			<link>https://3maqi.neocities.org/journal.html#:~:text=Coffea%20and%20blog%20layouts%20%2D%2012/26/2025</link>
-			<description>I talk about Coffee. I also fixed draw box, so if u click on the image you can see it pop up.</description>
-			<pubDate>Tue, 16 Dec 25 24:57:06 -0500</pubDate>
-		</item>
-
-	</channel>
+  </channel>
 </rss>
