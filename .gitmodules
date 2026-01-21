@@ -1,3 +1,0 @@
-[submodule "src/Phaser/phaser"]
-	path = src/Phaser/phaser
-	url = https://github.com/phaserjs/phaser.git
