@@ -12,6 +12,12 @@ to update footer, header, and sidebar run the following script:
     .\update-components.ps1
 
 
+to compress images run this:
+./compress.ps1
+
+this will make image files a bit smaller
+
+
  i change it so that i can still change footer, and header, and sidebar in once place but
  now its done by replace the text via scripting (powershell), as dynamically loading the html was causing flashing issues.
 
