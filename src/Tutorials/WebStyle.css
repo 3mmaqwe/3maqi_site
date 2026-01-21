@@ -1,0 +1,56 @@
+
+/* 
+hi this is the css for my Tutorial area! 
+I wanted to have a similar but slighty different look here
+
+I want to have a page to put resources, tools my own tutorials, and also link to tutorials I personally used - I also want to expand it to not just have things for coding or webmastery, but also things around my hobbies
+
+I feel very inspired by: https://petrapixel.neocities.org/coding/ page for coding
+I also like the simplicity that sad-girl has: https://sadgrl.online/guides/
+*/
+
+:root{
+ 
+--dark-color: #4A5E4C;
+--hover-color:#2a362c;
+--light-color:#ADDFB3;
+--section-color:#bdf3c4;
+--body-color:#171e18;
+ 
+}
+
+
+body{
+  background-color: var(--dark-color);
+  background-image: url("../images/GreenWatercolorBackgroundWebMaster_small.png");
+  background-attachment: fixed;
+}
+
+
+/* grid code */
+
+.container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template:
+    "header header"
+    "sidebar main"
+    "sidebar footer"
+    / 1fr 3fr;
+}
+
+header { grid-area: header; }
+aside { grid-area: sidebar; }
+main { grid-area: main; }
+footer { grid-area: footer; }
+
+
+@media (max-width: 800px) {
+  .container {
+    grid-template:
+      "header"
+      "aside"
+      "main"
+      "footer";
+  }  
+}
