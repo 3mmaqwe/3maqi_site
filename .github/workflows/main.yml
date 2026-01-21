@@ -12,17 +12,8 @@ jobs:
   runs-on: ubuntu-latest
   steps: 
   - uses: actions/checkout@v4 # grabs your repository's files
-   # Add this new step for CSS versioning
-  - name: Update CSS versions
-    run: |
-     SHORT_SHA=$(git rev-parse --short HEAD)
-     echo "Current commit hash: $SHORT_SHA"
-     echo "Files to process:"
-     find . -type f -name "*.html" -ls
-     find . -type f -name "*.html" -exec sed -i "s/style\.css?v=initial/style.css?v=$SHORT_SHA/" {} +
-     echo "After replacement:"
-     grep -r "style.css?v" .
-     
+   
+ 
   - name: Deploying to Neocities # deploys them to neocities
     uses: bcomnes/deploy-to-neocities@v1.1.21
     with:
