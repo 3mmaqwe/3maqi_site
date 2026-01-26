@@ -5,77 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="..\images\isda_noboarder.png">
     <title>DRAWBOX</title>
-     <link href="../style.css" rel="stylesheet" type="text/css" media="all">
-     <style>
-        * {box-sizing: border-box;}
-        canvas {
-            border: 1px solid black;
-            cursor: crosshair;
-        }
-        .drawbox_con{
-            float: left;
-            padding: 20px;
-        }
-       
-        #gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .image-container {
-            border: 1px solid #1e3620;
-            padding: 5px;
-            max-width: 200px;
-            text-align: center;
-            border-radius: 5px;
-
-        }
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-        #controls{
-            background:#addfb3ba;
-            width:500px;
-            padding: 5px;
-            margin-top:5px;
-            margin-bottom:5px;
-            border-radius: 5px;
-
-        }
-        .des{
-            background:#addfb35d;
-            width: 500px;
-            padding:5px;
-            margin-bottom: 5px;
-            border-radius: 5px;
-        }
-        
-
-        @media screen and (max-width: 1500px){
-               
-                body{
-                    width:90%;
-                }
-               
-                .drawbox_con{
-                 float: none;
-           
-              }
-        }
-
-         @media screen and (max-width: 1500px){
-             #controls, #des{
-                    width:100%;
-                }
-
-
-         }
-            
-
-        
-     </style>
+     <!--link href="../style.css" rel="stylesheet" type="text/css" media="all" -->
+     <link href="drawbox.css" rel="stylesheet" type="text/css" media="all">
 </head>
 <body>
 
@@ -84,15 +15,17 @@
    
     <div class="drawbox_con">
         <h1>DRAWBOX</h1> 
-    <div class="des">
-    <p>Draw me a picture!</p>
-    <p>I might add some daily doodles as well :D</p>
+    <div class="des" id="des1">
+        <p>Draw me a picture! If you want to leave me a written note instead, please sign my guest book :)</p>
     </div>
-    <div class="drawbox">
-    <form action="..\index.html" method="get">
-        <button type="submit"  title="drawbox!">back to home</button>
-       </form>
-    <hr>    
+    <div class="TheCanvas">
+        <nav>
+            <ul>
+                <li><a href="../index">Back Home</a></li>
+                <li><a href="../art.html"> 3maqi's Art</a></li>
+                <li><a href="https://3maqi.atabook.org/">My Guestbook</a></li>
+            </ul>
+        </nav>
     <canvas id="drawboxcanvas" width="500px" height="500px"></canvas>
     <br>
     <div onclick="change_color(this)" style="background:red" class="stroke-color"></div>
@@ -123,7 +56,7 @@
     </select>
     <br><br>
     <label for="Name"><strong>Your Name:</strong></label>
-    <input type="text" oninput="user_name = this.value" required>
+    <input type="text" oninput="user_name = this.value" required maxlength="30">
     <br>
     <br>
     </div>
@@ -138,9 +71,10 @@
     <div class="des">
          <p>having trouble submitting? you can manually upload the image using this <a href="https://forms.gle/aaWMSQ8LUEwz8U4b6" target="_blank">form</a></p>
         <p>I also recommend drawing on a computer or larger screen.</p>
-        <p>To prevent spam I now have to approve an image for it to be posted.</p>
+        <p>To prevent spam I now have to approve an image for it to be posted. For a more lengthy info: <a href="rules.html">rules list</a></p>
         <p>ive also commented on some of the images, hover over it to see em!</p>
-
+         <p>Make your own Drawbox page: <a href="https://drawbox.nekoweb.org/">drawbox.nekoweb.org</a></p>
+       
     </div>
     </div>
     <hr>
@@ -150,6 +84,6 @@
     <hr>
     <br>
     <script src="drawbox.js"></script>
-    <p>Make your own Drawbox page: <a href="https://drawbox.nekoweb.org/">drawbox.nekoweb.org</a></p>
+   
 </body>
 </html>

@@ -38,7 +38,11 @@ const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/" + GOOGLE_FORM_ID + 
 let canvas = document.getElementById("drawboxcanvas");
 let context = canvas.getContext("2d");
 context.fillStyle = "white";
-context.fillRect(0, 0, canvas.width, canvas.height);
+
+
+  context.fillRect(0, 0, canvas.width, canvas.height);
+
+
 
 let restore_array = [];
 let start_index = -1;
@@ -200,10 +204,12 @@ async function fetchImages() {
       const approved =columns[3].trim().replace(/"/g, "");
       const myComment =columns[4].trim().replace(/"/g, "");
 
-      console.log("Parsed - URL:", imgUrl, "Approved:", approved, "Author:", author);
+
+      // uncomment out for debuggingS
+      //console.log("Parsed - URL:", imgUrl, "Approved:", approved, "Author:", author);
 
       if (imgUrl.startsWith("http") && approved=="TRUE") {
-        console.log("Loading image:", imgUrl);
+       // console.log("Loading image:", imgUrl);
         const div = document.createElement("div");
         div.classList.add("image-container");
 
