@@ -25,6 +25,7 @@ body{
     place-items: center; */
     font-family: MinecraftDefault;
     cursor: url('images/Diamond_Sword_JE3_BE3.cur'), auto;
+    font-size:Large;
 }
 
 h1,h2,h3,h4,h5,h6{
