@@ -163,6 +163,25 @@ body {
    text-align: center;
 }
 
+/* Status Cafe Styling*/
+#statuscafe {
+    padding: .5em;
+    background-color: var(--light-color);
+    border: thick double #4A5E4C;
+    border-radius: 25px;
+ 
+}
+#statuscafe-username {
+    margin-bottom: .5em;
+}
+#statuscafe-content {
+    margin: 0 1em 0.5em 1em;
+}
+
+#guestbook {
+  float: right;
+}
+
 /* adds a boarder image around only text */
 /* also if ur using this class make sure to put <br> tags after */
 #board_img_test{
@@ -521,9 +540,12 @@ footer {
 }
 
 
-
+/*small screens but not mobile */
 @media screen and (max-width: 1200px) {
   .screenshot_big{
+  width: 100%;
+}
+body{
   width: 100%;
 }
 
