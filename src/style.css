@@ -39,7 +39,7 @@ I might want to add more mobile friendly display for webrings when viewed on mob
 body {
   color: var(--body-color);
   font-family: Helvetica, Verdana;
-  width: 75%;
+  width: 80%;
   margin: auto;
   background-color: var(--dark-color);
   background-image: url("images/seamless-texture-green-watercolor.jpg");
@@ -49,8 +49,36 @@ body {
   
 }
 
+/* Journal Links */
+.journalLinks
+   {
+    width: 100%;
+    padding: 10px;
+}
+.journalLinks th{
+  text-align: left;
+}
 
+.journalLinks a:hover{
+  color:var(--body-color);
+}
 
+.journalLinks td{
+  padding: 10px;
+}
+.journalLinks th:last-child, td:last-child{
+   text-align: right;
+}
+
+.journalLinks tr:nth-child(even) {
+  background-color: var(--light-color);
+}
+
+ #cold{
+     background-color: #bdebf3;
+      border-color: #4a525e;
+  }
+  
 /* minecraft font */
 @font-face {
   font-family: MinecraftDefault;
@@ -384,6 +412,13 @@ nav li a:hover {
   padding-right: 5px;
 }
 
+/*for content in which I dont want the sidebar */
+.main_small{
+  width:100%;
+   background-color:transparent;
+  padding-left: 5px;
+  padding-right: 5px;
+}
 
 /* Right column */
 .aside {
@@ -521,6 +556,7 @@ footer {
 
   /* for BIG screens*/
 @media screen and (min-width: 1800px) {
+
   
   .box_radius_right{
     float: right;

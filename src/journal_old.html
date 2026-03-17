@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<!--- hi im 3maqi here is my bad code
+
+some links for me that i use:
+my guestbook control page: https://atabook.org/control/general
+
+my css and javascript are in seperate documents, feel free to steal and take stuff i dont mind :)
+
+make sure to run the following command in src file in terminal: python -m http.server 8000 to test 
+-->
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images\isda_noboarder.png">
+    <title>3maqi</title>
+<link rel="preload" href="images/seamless-texture-green-watercolor.jpg" as="image">
+ <link href="style.css?v=initial" rel="stylesheet" type="text/css" media="all">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<style>
+  #cold{
+     background-color: #bdebf3;
+      border-color: #4a525e;
+  }
+</style>
+<body>
+  
+  <div id="header-container">
+<div class="header">
+    <img id="bannerisda" src="images/Isda_with_Zelda_flowers.png" title="Isda petting Zelda" alt="isda a goblin, petting a kitty named Zelda">
+    <img src="images/title.png" id="title_image" title="hand drawn title" alt="3maqi, welcome to my site :3">
+</div>
+
+  <nav id="desktop">
+   <ul>
+      <li><a href="index.html">Home</a></li>
+       <li><a href="devlog.html">Devlog</a></li>
+          <li><a href="todo.html">To-Do-List</a></li>
+          <li><a href="journal.html">Journal</a></li>
+          <li><a href="art.html">Art</a></li>
+           <li><a href="photo.html">Photography</a></li>
+          <li><a href="Links.html">Links</a></li>
+          <li><a href="a\drawbox.html">Drawbox</a></li>
+          <li><a href="minecraft/index.html">Minecraft Shrine</a></li> 
+       </ul>    
+  </nav>
+ 
+ <!-- this button appears when changing to mobile navigation-->
+  <!-- i used this guide: https://www.w3schools.com/howto/howto_js_collapsible.asp-->
+  <button class="collapsible">Menu</button>
+  <nav id="mobile">
+   <ul>
+      <li><a href="index.html">Home</a></li>
+       <li><a href="devlog.html">Devlog</a></li>
+          <li><a href="todo.html">To-Do-List</a></li>
+          <li><a href="journal.html">Journal</a></li>
+          <li><a href="art.html">Art</a></li>
+          <li><a href="photo.html">Photography</a></li>
+          <li><a href="Links.html">Links</a></li>
+          <li><a href="a\drawbox.html">Drawbox</a></li>
+       <li><a href="minecraft/index.html">Minecraft blog</a></li>
+       </ul>    
+  </nav>
+</div><!--header end-->
+
+<div class="row"> <!--contains main content and sidebar-->
+    <!-- main content start -->
+   <div class="main_small">
+   
+  <section>
+    <h1>Journal</h1>
+    <hr>
+    <p>Place to store like some journal writings. This is the list format. I might retire this at some point but wanted to leave it up for now/
+    </p>
+    <p>I also have <a href="notes/index.html">notes</a> which is less narrative I suppose and a bit more unorganized.</p>
+    <p> I am not a writer nor do I claim to be good at writing! but I thank you for taking time to read the entries from my wandering mind.</p>
+    </section>
+    <!--just a template for me to use for Journal entries, is hidden-->
+   <section id="template">
+      <h2>title - 00/00/0000</h2>
+      <hr>
+      <p>content</p>
+
+   </section>
+
+
+   <section>
+      <h2>Where do i go from here - 02/19/2026</h2>
+      <hr>
+      <p>A big problem I often come upon, is completing something big i worked to - like for example most recently selling art work at a convention, and then finding myself not knowing what to do next. I had a similar feeling after getting
+        my first job, the aftermath of traveling to italy, or completing my college degree. It is not a unique experience to me of course, its something that I would say plagues most adults, young and old. Despite the ordinary feeling
+        of it, I still want to talk about it? Maybe in a way to just debrief me from it. if that makes any sense.
+      </p>
+      <p>When I sold my art at furfest, I thought that more people would interact with my site, but mostly the opposite happened, it seemed that no one wanted to interact with my site. I was left very disappointed to be quite honest. I imagined myself getting
+        more guestbook comments, and cute doodles made by many people. I had the realization that outside of the neocities, most people rarely interact with the internet outside of social media. I even had many people come up to me and demanded to know
+        when I would sign up for a certain social media for them. "Never, I want to stop signing up for social medias" was the response I would give them. Even my friend, who is a writer, would prefer to host her writings on substack, instead
+        of having a site or blog to post her writings on. It seems that webmasters, and bloggers are a bit of a dying breed.<br>
+        I just assumed I guess that people would have the same excitement for my site, that I have for it, and other personal blogs. Instead I feel that people have forgotten that blogs had ever existed. Which I suppose makes sense. I have friends who 
+        never have interacted with forums, people who before social media stuggled to use the internet. Now that the internet has become social media, its hard to visualize what it would be like without it.
+      </p>
+      <p>After selling my art, and having so little people interact with my site, I feel that the relationship with my site, and my art has changed. Im not a person who likes change. I hate when the colors of the walls change color, when the drink I get
+        tastes different somewhere else. So, even when change is good, or neutral, I get thrown off. Now im left with extra prints, a dying void that I type to and a pessimistic and a slight misanthrope feeling about how people interact with the internet.<br>
+        <br>
+        <em title="holy shit its the title's name">Where do i go from here?</em>
+      </p>
+      <img src="images\HAMMcover.webp" class="box_radius_left" title="I have mixed feelings about the coverart. I don't hate it, but not sure if i LOVE it either. I suppose it was good enough for me to
+      buy it though" alt="How Artists Make Money & How Money Makes Artists - By David Berry">
+      <h3>Making Money from my Art</h3>
+      
+      <p>I like the idea of making money from my art, it was fun to make sales selling stickers, prints and a handful of commissions. I got some ideas for more prints to make, and it so funny how uninterested people were in buying my figure art prints. I think later
+        on Ill like make a statistic somewhere on my site to keep track of what sold well, and things like that. So, its not all negative. Plus, it was fun to buy other art, and trade stickers and such as well. But while people were buying my art, I realized how
+        money can influence the work you create. A lot of my art is not done from "the soul", which is fine, I don't think that my art carries the weight of the devine or is life changing. Not to say my work is souless, but I think traditional art, compared to
+        pottery, or fiber work - for example, has a strange loftyness to it. That you have this other idea which many people have told me - in which in order to create art you need to have this "creative" soul. Which I also think is a silly notion, for one I don't
+        see myself as a creative person. Yet, I can make art and paint. I think making art is like any other skill, in which you just have to work on it, to get good at it? <br>
+        Anyways, was going on a bit of a tangent. What I meant to say, was I was thinking about how while I was selling my stickers, and prints, I was think how sales would affecting what art I want to make and create for future shows. Which, is not a bad thing,
+        I just never really had any feedback before. Prior to this convention, I really had only made art for me, practice, and the occasional commission for a friend. Getting actual live feedback from paying customers was in itself just not something
+        I had experienced before.
+      </p>
+      
+      <p>Later that week, it was 60°F in chicago, which in February is such a nice warm tempature. So, I left my house and took a short walk to enjoy the weather. I also brought a book with so I could read it outside. While on my walk, I noticed a new bookstore
+        had opened up. I found a really cool book called <a href="https://thedavidberry.com/how-artists-make-money" target="_blank">How Artists Make Money & How Money Makes Artists - By David Berry</a> Ive only read a few chapters so far, but its really
+        interesting to see the history of art and patronage of the arts. I think some artists pretend to not be interested in money, or to even talk about it is taboo, but I think its important to talk about it. Ive spent money buying art, ive spent money taking classes,
+        spent money to take classes in italy, and ive spent money buy art materals, rented an art studio, I spend money paying models to draw. Why is it so taboo for me to talk about if I make it? Why am I allow to spend money on art, but not to talk about making it?<br>
+        Its so strange. 
+      </p>
+      <p>
+        Im not saying all money and art are equal of course. Nor am I defending evil that comes with imperalist capitalism. I just want to be able to speak more freely about the commerance of art. Speaking of commerance. I had a conversation about free college when I was on a date a while ago.
+        He had off-handled say "oh well we should pay for useful degrees, not degrees for ballerinas." For some reason, that stung for me. I am a person who does believe that education should be more accessible to everyone. In some ways, limiting what a person 
+        can study, feels inaccessabile. I also found it funny that it was someone who does film for a living saying that, because im sure someone might make the same claim for his degree as well. Free or at least cheaper college is still an ideal Id like to have
+        but it make me think about how people will use "the arts" to discredit the idea of free/cheaper college. Which isn't inheritly wrong. Maybe arts shouldn't have been pushed into colleges to begin with and taught as 
+        <a href="https://www.westwoodbuildersmt.com/post/the-disappearing-craft-why-skilled-trades-and-artisans-are-on-the-decline">apprenticeship</a> instead. Or at the very least I think that art education has gotten wildly too expensive for most people.
+      </p>
+      <h3>Where Do I go</h3>
+      <p>beneath my wild tangents about money and art, I suppose my underlining feeling is I don't know what the next stage is for me with selling my art. I never went to art school, so I really don't have much experience or knowledge when it comes to commerances of art. I 
+        do want to sell my art, and I do want to make more art to sell, but I don't really have a solid plan for that I guess. Probably have to sit myself down and make a roadmap or something. I have so many leftover prints and stickers, and as much as I don't
+        mind hoarding them, I think it would be better for me to sell and give away them. Maybe Ill get a book later that focuses more on how to sell your art instead about just talking about money and how it makes an artist lol.
+      </p>
+      <p>oh last unrelated note I keep getting emails asking to help me with seo its so funny LOL. ok bye!</p>
+
+
+   </section>
+
+   <section id="cold">
+      <h2>its cold in my house- 01/30/2026</h2>
+      <hr>
+        <img src="images\journal\cold.png" class="box_radius_left">
+      <p>its really cold in my house! burrrrrrrr. i think when it heats up ill make this journal look a little blue, like ice, for fun.</p>
+      <p>anyways the reason it is cold is that my furance broke. I am actually typing while wearing gloves right now. its doable but feels a bit goofy. my fingers feel a bit fatter and slopperyer or wahater and omg im making so many typeos as well. 
+        ill keep hhem here bc its funny and shwos my frstuggles with tpying whaile wearing golives. im so usedt to backspafeing to fix it but i think its funny to leave it in. i am going to draw my outfit for this blog too i tik that would be unnyf
+        my cat likes to hit my face wtih her tail when she ocomes on my dsk. whip wamp. my friencs have coiuned it as "average zelda lore" lolol.
+      </p>
+      <p>I made a drawing of myself. I was wearing a beany, gloves, a warm jacket, sweatpants and fuzzy socks. My nose was so cold at the time too. Its kinda of scary how fast my house loses heat in chicago!</p>
+      <h3>Furnace is fixed</h3>
+      <p>ok so thankfully i got my furnace fix. Now Im able to actually type on my computer without my gloves. Where I live, Chicago, has been super snowy as of late. Maybe Ill take some pics and post em sometime. Its been so snowy here though, that ive
+        had to cancel plans multiple times because of how intense the snow has gotten. I don't mind the snow though, I dont really get out a ton, and I feel way less guilty when the weather is shitty haha. In the summer when I rot inside my house, I definitely feel
+        more guilty about it. In that way, I enjoy winter. 
+      </p>
+      <h3>FurFest</h3>
+      <p>in unrelated, but important news, ill be going to <a href="https://fursquared.com/">fursquard</a>- a furry convention -  and selling art over the weekend. This is super exciting to me because I have actually made prints of my work! ive actually never have
+      gotten prints made before! I have a friend named M, who runs the art studio I figure paint at, and he also does graphic printing, so its cool to know someone who can print things for me :) There is a very high chance I will have overstock,
+    but all the more reason to then apply to more art shows and art cons! Its also nice that I can market myself as "a watercolor artist", when I was younger I didn't really have one medium that I was like quite interested in, so its fun to have large enough
+  body of work to actually have a portfolio. I do want to sell my art prehaps online too, but maybe not directly on this site. Maybe setting up an esty or ebay or something. idk lol at the end of the day my art is a hobby, so Im not in a huge rush to make money, my
+day job pays very well so Its not something to worry about atm. Id probably just use the money for investing in more art materials, or maybe paying off student loans? hmm not sure I guess it depends how well sales go as well.</p>
+   </section>
+       
+    
+
+<section>
+  <h2>Reflections, Ramblings and Reading - 01/20/2026</h2>
+      <hr>
+      <p>So I guess ive been reflecting on my site as of late. I feel like i have learned, and seen a lot more of what my site can look and feel like. At least to when I first started. I also have gotten a lot more foot traffic then I thought I
+        would when I entered a contest for my site. Which is cool of course don't get me wrong! I just never really expected to even get more then 300 views or so to be quite honest. I dont think I even really planned to spend this much time on my site either.
+        Plus it being the new year, its always creates a space in which your reflective I suppose. I always find myself reflecting after the year ends more. December can be quite a busy month, So January leads me to just have more time to myself as well.
+      </p>
+      <p>I never really made any new years resolutions. However, I keep finding new ones to do. For one, I have started reading again. I used to read all the time in middle school, and it was the one thing I really prided myself on. I never suffered from "gifted
+        kid" burnout growing up - math was really hard for me, I had trouble spelling even basic words, my writing was difficult to read as well, and I never learned my times tables. I think reading was really the only thing I didnt stuggle with. I think art and reading
+        were really my only two things I felt a bit prideful of. When i entered high school though I kinda stopped reading for fun. Maybe the rise social media and the smart phone may have been partly at play. But I don't really like have a concerte memory
+        of me like giving up reading persay. Its just a hobby of mine that I kinda lost. So It's really been a joy picking up and reading again. Its not really even that I started reading in 2026 - I have a earlier journal entry talking about it if you scroll down bit in 2025.
+        But i guess now since its 2026 I have made the offical new years resolution to read! I just finished the book <em>"Howl's Moving Castle"</em>, and I really enjoyed it!
+      </p>
+      <h3>Kinokuniya</h3>
+      <p>
+        When my cousins were visiting me and my family, we went to <a href="https://mitsuwa.com/">Mitsuwa Marketplace</a> in the suburbs - its a really big grocery store, but it also has a food court, and other small vendors. Inside Mitsuwa is a book store called <a href="https://usa.kinokuniya.com/" target="_blank">Kinokuniya</a>. Its a bookstore
+        that has anime, books, stationary - from japan. My cousins are really into anime so they really wanted to go check it out. Ive been to Mitsuwa many times, and now that I live in chicago, its not really as novel to me as it used to be - but I thought it would be
+        cool to check out the book store. Plus my mom wanted to make ramen for the family, so I needed to go to get ingredents for that.
+      </p>
+      <p>At the store I bought a few things. An Art book by the illustrator <a href="https://mateuszurbanowicz.com/" target="_blank">Mateusz Urbanowicz</a> titled: <em><a href="https://mateuszurbanowicz.com/imaginary-storefronts/">Toyko Storefronts - The Artworks of Mateusz Urbanowicz</a></em> which I didnt realize I bought it at the only us store that sells it :o!
+        If you (the reader) didnt already know, I do a lot of watercolor paintings, so i thought it would be a good idea to get a nice art book with watercolor illustations as inspiration and also guidance for my own practice. I really like art books as well, its something
+        I want to build a large collection of. I think it would be cool to have enough to have a mini library one day. I was always frustrated when i would go to my local library and there were like no art books at all! An additional bonus thing as well is just discovering this artist.
+        I feel like its only social media where I find new artists, so its just cool to find an amazing watercolor artist in a bookstore of all places! His site that I linked before is also a good resource as well, I will def being checking that out more as well.
+        <br>
+      I also got <a href="https://en.wikipedia.org/wiki/Frieren">Frieren Beyond the Journey's End</a>- Book 1 & 2 - story by Kanehito Yamada and art by Tsukasa Abe. There were more books then that, but I didnt want to get all 9 books before making sure I liked reading the first 2. I also don't want to spoil the most recent season to myself haha (also the books are 11.99 each ;-;). Season 2 just came out!</p>
+      <p>
+        The last book I got was <a href="https://en.wikipedia.org/wiki/Howl%27s_Moving_Castle_(novel)">Howl's Moving Castle</a> by <a href="http://www.dianawynnejones.com/">Diana Wynee Jones</a>. One of my favorite movies is <a href="https://en.wikipedia.org/wiki/Howl%27s_Moving_Castle_(film)">Howl's Moving Castle</a>,
+        and I thought it would be fun to read the orignal book! reading the book, it was kinda funny to find out how many creative changes the movie had made. For one, in the movie, Sophie's sisters are just a footnote - barely having any plot relvance at all.
+        where in the book, both the sisters are much more fleshed out and actively contribute to the plot. Also, some how howl is even more meledramatic and moody then in the movie omg. its so funny. Sophie is also really sassy and bossy in the best way. The story
+        its self is also just very different. I still really like the movie, dont get me wrong, but I actually think i like the book even more to be honest!
+        <br><br>
+        I might honestly re-read the book again, and the movie and write a more fleshed out post comparing the the two.
+      </p>
+      <p>Diana Wynne Jones has also written over 40 books, so I do want to check out other stories that she has written. I also just found out there are 2 additional books in howl's moving castle, so that is on my reading list. Maybe I need to make book list.
+        I already have a movie list on my phone. I think it might be cute to move over my watch list to my site at some point. Maybe with a table, so I can like add my thoughts about the movie too.
+      </p>
+      <h3>Reading to avoid doomscrolling</h3>
+      <p>A big theme of my life recently has been slowly reducing the amount of time I spend doomscrolling. Reading has been a great outlet for that. I think eventually I want to delete my instagram tbh. I don't really feel a reason to use it now that I have my site.
+        I also want to get rid of tiktok too. As much as its fun to stay on top of memes and trends, I just really have hit a breaking point. Ive been using social media since I was 13 years old, and I used to really enjoy it! but now im sick of it. It didnt feel also 
+        so consuming and attention draining. I mean doomscrolling wasn't even a term when i was high school! However, i also realize that so many events, news, and artists primary use social media to inform. I tried to find a way to subscribe to two different event site, 
+        and neither even have news letters anymore! Its all social media. Very frustating. I think the only social media I might keep is facebook. It kinda feels the oldest and takes up the least amount of time in my life lol. Also is the most web friendly social media site
+        compared to instagram and tiktok.
+      </p>
+      <p>Writing this took me down a rabbit hole,  and now I want to explore even more from Mateusz Urbanowic and Diana Wynee Jones. Im really happy I brought theses books! </p>
+      <p>ok bye!! thanks for reading my journal today :)</p>
+</section>
+    
+   <section class="entry">
+      <h2>Coffea - 12/26/2025</h2>
+      <hr>
+      <p>I find myself yet another day in which this evening there is nothing to do but to figure out how to entertain myself. Normally I would also have the labor of figuring out what to eat for dinner as well, but past me was kind enough
+        to save leftovers for me, and buy veggies for me to boil - thanks past me. While I was eating my leftovers this evening I had remembered a conversation I had with one of my coworkers over lunch. I had told him how disconnected I feel from the 
+        things we consume daily. One thing I had realized was that I have no idea how coffee is grown. I didnt even know what kinda of plant it came from. What it from a tree, a bush, vines? I actually had no image in my mind on how they grew, on how it looked. But yet Ive had coffee, and so many
+        people in the US consume it daily. Coffee was a mystery to me. Many things that I eat everyday, are a mystery to me. 
+      </p>
+      <p>To answer my own question (and to find something to entertain me that is not mindless doomscrolling) I looked it up. What is a coffee plant, how does it grow? I realized that i dont even know the name of the plant that produces coffee. Maybe this is very 
+        silly to thoses aware of the whole process of making coffee. Its not that im unaware of ANY plants and how they grow. I used to live by corn and soy fields, have gone to my share fare of orchards and have observed my mom grow varies plants in her backyard.
+        I just had this fixation with coffee in particular because for one, you can only ever by it preroasted. So I do not even know what a bean looked like preroasted. From where that bean came from? no fuckin idea. Plus, coffee is not grown in the us (outside of hawaii),
+        so its not like I could just like stumble upon a farm that grows it. 
+      </p>
+      <h3>Coffea</h3>
+       <img src="images\journal\Coffea.jpg" class="box_radius_left">
+      <p>No, that is not a mispelling of Coffee. The name of the <strong>tree</strong> that grows coffee cherries (and the beans inside the cherry) is called <em>Coffea.</em> I was like so starstuck when I saw a picture of that the tree branch look liked. 
+      The fruit that it comes from has such a lovely red color, and the way the berries sit and grow on the tree so bunched together, and the leaves shape!</p>
+      <p>i also found a cool youtube video called <a href="https://youtu.be/1qfjLCOXMMg?si=pyxjIkJc38AjrIsS">Make a Cup of Coffee Starting From Scratch | Coffea arabica</a> that showed from harvest to cup of coffee, the process of making coffee. I think the coolest
+      part of the video was seeing how pale white the beans are before roasting it.</p>
+      <p>I think learning about the Coffea tree, and seeing the process of how it was made, helped me feel a bit less disconnected to world around me. I feel like there are so many things that I just absolutely know very little about. I feel a great amount
+        of disconnect to the things I interact with, the things i eat, the places i go to. So, maybe I should try to understand them a bit better to ground myself. Maybe its the byproduct of living in such a industrialized place. Not to say we should abandon
+      the industrialize world. I very much enjoy the internet and all the other luxuries I am lucky to have.</p>
+      <p>I do still feel disconnected. another one of my many confusing feelings. I seem to have alot of thoses. I do feel better then when I wrote my last journal, however so thats good. I do find myself just zoning into my phone alot too, and I could see that contributing to the feeling
+        of disconnection.
+      </p>
+     
+     
+   </section>
+
+    <section class="entry">
+      <h2>feeling tender - 12/07/2025</h2>
+      <hr>
+      <p>I find myself feeling more tender as of late. I am overwhelmed by things that would not have done so a year ago, I find my social battery is much lower, and I feel quicker to tears and sadness. I am also annoyed by things and irritated by things that
+        I feel before I would be able to tolerate better. Im not quite sure what has happened that triggered this. Maybe its a casecade of things? Finding myself wanted to stay inside as well, and not do anything has been theme as well. Its very frusrating
+        because I thought I was doing better? I thought I had "cracked the code" and had mastered socialization and my emotions. But lately a bulldozer had taken the bricks and foundations I had setup and tore everything down. At first I thought maybe it was 
+        a family emergency that had triggered this bulldozing, but now thats its over and my family is fine, you would figure I would ALSO feel fine. So I feel like there is something else that is going on a well. But Im not quite sure what it is and I find that 
+        incrediably frustrating.
+      </p>
+      <p>My body is suffering along side my mind. I had a terrible reaction yesterday while out clubing, with acid constantly traveling up my throat. My period came after a stressful family emegrency. I got sick from eating strawberries and felt nausous at work.
+        Prehaps GERD is getting so bad that its mentally draining me. Im not so sure. Eating (and drinking) bring me confort and joy, and to have both of thoses thing now to cause me distress is an compound issue.
+      </p>
+      <p>I also am dreading how booked my weekends and plans have become. Sometimes I wish I was more of a loser so I had less people who would want to plan things with me. Or idk I feel like a few months ago I found myself wanting to make more friends, and now I feel
+        overwhelmed, annoyed, frustrated. Its none of my friends faults. I really do care for them. but I sorta want to recluse myself and move at a slower pace. God I ate some pizza to eat something and now my stomach hurts again FUCK.
+      </p>
+      <p>I also crave a more intimate relationship - platonic or not. I had a very intense friendship a while ago and I kinda miss that. Not that a partner would fix my issues. Prehaps its is more like larger socialization can be a lot for me rn. I also just kinda miss
+        doing really simple hangouts. I did have a nice movie hangout today and that was pretty nice.
+      </p>
+      <p>I wish I knew how to fix it. People keep saying "oh its seasonal depression time" and yada yada but at least to me, this tenderism, is not just seasonal depression. I want to find a more artistical way to describe it without having to go to 
+        to similes and metaphors. Or at least I would prefer a metaphor. I find them much more cool and interesting then a simile.. Like to better label the cause of my tenderness. To name the beast or thing or event that caused it to surface. But maybe its
+        hard to name something that you can't really see or even quite understand. I probably need to be more patient to try to understand what is going on.
+      </p>
+      <p>Maybe part of it is this intense feeling to try to label and make sense of everything. Its a very human desire. Oh god ive gotten so off topic but thats ok. I just kinda wanted to write something for my blog, and not do anything too intensive for it.
+        I felt like writing my feelings, esp since ive beening feeling emotions more intensely that writing would be helpful. im not if it has been. In a way i just feel like its a "awww woe is me. boo hoo i am depressed blah blah blah". Maybe I just want my
+        feeling to be more important and special then just "depression". Or something else then depresssion that is deeply personal to only me. Tenderism, feeling tender, feeling tenderly. 
+      </p>
+      <h3>I have never been good with words</h3>
+      <p>maybe I just dont have the right understand to name it, beyond the vague artist term of tender. Depression could also just feel overplayed to me. Maybe its a mixture of autistic burnout, quarter life crisis, seasonal depression, late-stage capitalism,
+        and interpersonal family issues that have turned into a beast beyond the word depression. I have felt depressed before. Its not like I am immune to it. But it feels just different. Once again I never have been good with words, so prehaps I just 
+        dont have the right word. So for now Its just Tender.
+      </p>
+      <p>I dont really feel like doing a cheesy sign off atm. But I am tired, and I dont want to keep thinking about this any more.</p>
+   </section>
+
+    <section class="entry">
+      <h2>Deleted my LinkedIn, changing my FB Name - 09/14/2025</h2>
+      <hr>
+      <p><strong>TW: Death, Assassination, Fascism, Charlie Kirk, deportation, ice</strong></p>
+      <p>I decided to delete my LinkedIn today, and change my FB name.</p>
+      <p>Why? Because republicans are encouraging employers to firing people over charlie kirk related posts & comments that celebrate his death/ assassination - <a href="https://apnews.com/article/charlie-kirk-workplace-speech-firing-29717a8612ccedebabc7cba29e7ef627" target="_blank">and many people have already been fired</a>. Theres even a site, <a href="charliesmurderers.com" target="_blank" title="A site used to dox people">Charliesmurders.com</a>, made in order to report and document people who are "supporting policial violence".</p>
+      
+      <p>I havent made a public post to celebrate his death, but I have def made some comments about it that could be viewed as "celebrating" his death. But ya I figured its time to make it less easy for someone to dox me. I might even up deleting my fb if things 
+        seem to get even worse, or at least abandon it / interact with less. A year ago, I dont think I would have felt I needed to delete my LinkedIn, or been worried about being doxxed for my political beliefs. I wonder what will happen in another year? how much more will fascism progress in america. 
+      </p>
+      <p> Its getting scary here. Trump has been threating to deploy troops to chicago, and already ice raids are happening here. In my neighbor, posters are plastered on the windows of every business, telling you what to do if ice shows up, in english and spanish. Ive also seen posters telling non-white citizens to make sure to carry documentation to prove cizitenship or legal residency at all times.  I often wonder how effective theses posters even are. Will ice agents respect peoples rights, will they respect our dignity? it seems that peoples rights are being throwed out the door, and seeing how police treat us, I have little hope that ice agents would be any better.</p>
+
+      <p>Im glad I can post to this site about this. I dont think I could on any site where I am publically known. It is also frustrating though. Social media become the perfect weapon to expose, and dox someone. Its frustrating that I basically, am self-censoring myself. I fear for my livelyhood, and thereforth have to post my thoughts under an unknown penname. Many of my friends have also done the same thing, changing their names on FB, or using a alt account. My friend who I mentioned before who moved to the UK, said they will probably bring a burner phone when they come back to visit the US.</p>
+
+      <p>but ya, kinda awkward that fascism is here.</p>
+      <p><em>-3maqi</em></p>
+
+   </section>
+
+    
+   <section class="entry">
+      <h2>Learning the Ocarina, The Stereo Realist, and Rolleinar Lens Filter Set - 09/05/2025</h2>
+      <hr>
+      <img src="images/My_Ocarina.jpg" class="box_radius_right">
+      <p>Ive been exploring other hobbies as of late. I went to the Bistol Ren Faire about 3~ weeks ago and bought myself an Ocarina. I thought it be fun to learn an instrument, and its a bit less complicated then the piano or the guitar. Its fun I can actually play
+        a scale, I've memorized the song "happy birthday", and can actually read sheet music (very poorly but still)! I still need to memorize sharp/ flat notes still, and build up my confident in playing the low B and A note on it. I have two small booklets full of songs with 
+        just basic finger charts for the notes as well. I think eventually it would be nice to memorize a few more songs from the booklets :)!
+      </p>
+      <h3>The Stereo Realist</h3>
+      
+      <p>I also went to a local second hand shop in my home town. its one of those places that kinda hand select items to sell, so a bit more thought into what comes in then for example, goodwill or savors. I saw there was a retro camera, retro lightmeter,
+         and camera filters for sale. The prices seems actually really cheap so I decided to buy it. I later found out the lens i bought and the camera are NOT compatable at all... lol. Also the way the camera works is.. interesting as well. most cameras just take
+         one photo at a time, on one film frame at a time. This camera that i brought though is meant to take 3d images.
+      </p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Stereo_Realist.jpg/330px-Stereo_Realist.jpg" class="box_radius_left">
+      <p> According to the <cite><a href="https://en.wikipedia.org/wiki/Stereo_Realist" target="_blank">wikipedia</a></cite> entry for this camera, The Stereo Realist, takes 2 photos at a time, for the purpose of creating a 3d image. 
+      </p>
+      <p>heres more info about <a href="https://en.wikipedia.org/wiki/Stereo_camera" target="_blank">stereo cameras</a> from wikipedia:</p>
+        <blockquote cite="https://en.wikipedia.org/wiki/Stereo_camera">
+          "A stereo camera is a type of camera with two or more lenses with a separate image sensor or film frame for each lens.
+           This allows the camera to simulate human binocular vision, and therefore gives it the ability to capture three-dimensional images, a process known as stereo photography"
+        </blockquote>
+        <p>pretty crazy huh. I actually dont really know how to operate it at all. I have used retro cameras in the past, but its been years since ive done it. I plan to go to a camera store later today and hopefully someone at the shop can help me load the film and figure out how to take photos.... Otherwiser i suppose youtube would 
+          work too. but having someone show you hands on is very helpful :). Plus I think they also develop film too so that would be cool resource to learn more about.
+        </p>
+        <h4>Rolleinar Lens Filter Set</h4>
+        <p>the lens case I bought is a small leather case of different filters used for old camera called the <a href="https://en.wikipedia.org/wiki/Rolleiflex" target="_blank">Rolleiflex.</a> Its kinda the bigger and insane find. I wont disclose how much I paid for it
+          just because i dont really want anyone to know until I get it checked out. 
+          I see sets like this that are retailing for almost <strong>1k...</strong> Im not entirely sure what do to about it. it might be too expensive for any place to want to buy it from me? i think I might also get that appraised as well from the camera store.
+        idk if i cant see a good reason to sell the lens, I might sell the Stereo realist and get the correct camera for the lens instead. Either way I just want take 35mm photos :p!!</p>
+
+        <p>im excited to explore my new hobbies either way, and I plan to post about it more later for sure!!</p>
+        <p><em>-3maqi</em></p>
+
+   </section>
+
+   
+
+
+    <section class="entry">
+      <h2>Longing for books, and short essays - 07/27/2025</h2>
+      <hr>
+      <p>
+        Ive actually have been reading again. I've been reading the book called: 
+        <a href="https://i-n-g-a.com/products/lets-become-fungal-mycelium-teachings-and-the-arts-based-on-conversations-with-indigenous-wisdom-keepers-artists-curators-feminists-and-mycologists" target="_blank">"Lets Become Fungal! Mycelium Teachings and the Arts"</a>
+        recommended to me by the bookstore owner of <a href="https://i-n-g-a.com/pages/about" target="_blank">Inga.</a> When I commute to work on the train ive been reading it bit by bit. What really excites me about this book in general is just having an idea
+        and topic thats explored more indepthly then I feel I get when i go on the internet. The internet has really made everything so bite sized. Ideas and topics that are surface level, quick to understand and very summerized. I blame social media, to be honest.
+        posts aren't made to hold more then a thought or two - videos lengths can only be so long, a photo is quickly replaced with the next one, no time to breath with one. So, reading this book, has kinda reminded me that the internet, and world hasn't always been
+        this way. Its exciting! I want to more then ever disconnect from the endless doom scroll. I want to read strange short essays on the internet, to read more niche books. Ive been longing for books, and I feel like the book,  
+        <a href="https://i-n-g-a.com/products/lets-become-fungal-mycelium-teachings-and-the-arts-based-on-conversations-with-indigenous-wisdom-keepers-artists-curators-feminists-and-mycologists" target="_blank">"Lets Become Fungal! Mycelium Teachings and the Arts"</a>, has
+        awaken that in me.
+      </p>
+      <p>Reading this book has also exposed me to things outside of the curated, and somewhat snake-like, algorithm of social media. Learning about the indigenous farms of latin america for example. This isnt something I get on my social media feed.
+        I want to find more books, that free me from the chains and restriction of social media. To read more about things that just would never find itself way to me otherwise.
+      </p>
+      <p>As Senku from dr.stone would say: <br>
+       <em>"this is exhilarating, get excited."</em> 
+      </p>
+       <p><em>-3maqi</em></p>
+    </section>
+  
+
+    <section class="entry">
+      <h2>I moved this weekend - 05/11/2025</h2>
+      <hr>
+           <img src="images\box.png" class="box">
+                 <p>so this weekend i moved to my first (solo) apartment! I had family and friends help me move and omg I could have not done it without them. firstly, I moved to a 3rd story apartment with no elevator, and it would have been
+        impossible to move one my own!
+        Secondly, literally some of my furniture is just too big for me to lift on my own.
+        We had to take some of the furniture apart too, and at one point we literally had to hoise up a couch with rope because it wouldnt fit up the stairs to my apartment. My friends also helped reassemble furniture that we took apart for the move.
+        My dad even came out as well to help. It just feels so nice to have so many caring people in my life :)! I was really worried with this new move I would feel lonely, but if any thing i feel a sense of 
+        apprication for my life. Im really grateful for the wonderful people im surrounded by, the opportunities that my family and friends support me with, and just moving was a really validating way of realizing it.</p>
+        
+      
+        <p>It was a very exhausting day, but it feels good to be able to accomplish so much, and be exhausted! Sometimes i feel like with my job, i dont really get a physical fatigue. Maybe i need to find a hobby that give me that 
+        physical fatigue. I used to do weight lifting for that, but honestly I kinda have come to dread it. I enjoy working out when its with friend, but going to a gym solo style is just feels uneasy tbh. I kinda wanna either
+        find a way to move my body that doesnt make me feel socially uneasy, or maybe find a group workout thing to do?
+        Or maybe start like painting while standing again.
+      </p>
+      <p>but ya, now i finally have internet again in my new house. Thank god because my ass is chronically online, plus i need internet as I do work from home for my job.</p>
+      <h3>heres a list of things i am grateful for:</h3>
+                    <ul>
+                      <li>none of my things broke during the move</li>
+                      <li>my family and friends all being super supportive and helpful during the move</li>
+                      <li>Zelda my cat has not freaked out and hid this time</li>
+                      <ul>
+                        <li>last time i moved she hid in my house and we could not find her LOL</li>
+                      </ul>
+                      <li>My parents came again the next day to help me:</li>
+                      <ul>
+                        <li>unpack and move furniture to the right rooms</li>
+                        <li>Buy things for my house</li>
+                        <li>just mentally & physically help me get things done. I was so overwhelmed by the amount of boxes needed to be unpacked</li>
+                        </ul>
+                        <li>Myself for packing things slowly, getting internet before i moved, and scheduling/cordnating people to help me move</li>
+                      </ul>
+                        
+                    </ul>
+                      
+      
+      <p>feeling grateful & joyful</p>
+      <p><em>-3maqi</em></p>
+    
+    </section>
+
+    <section class="entry">
+      <h2>My friend is moving to the UK - 05/01/2025</h2>
+      <hr>
+      <p>My friend is moving to the UK for a job and its a bit tough ngl. She is one of my closest friends. Ive known her since I was in grade school. She's leaving today, and it doesnt feel real. i keep thinking like oh, ill see her tomorrow, no worries.
+        The reality is that she is going to be across the world. The worst thing is I havent cried. Im not sure why to be honest. Maybe its because I already cried when a different friend left to switzerland, and it got all mixed up with those emotions.
+       <br> Regardless, its gonna be strange. She has been such a huge part of my life, to have her go is,<em> life changing.</em> 
+      </p>
+      <p>Its not the first time someone has left me, but I just feel a bit empty now. Maybe ive been working on this site to destract me from it all.</p>
+      <p>ya. thanks for reading</p>
+      <p><em>-3maqi</em></p>
+    </section>
+   
+
+  </div>
+<!-- main content end -->
+ </div>
+
+ <!-- footer -->
+ <div id="footer-container">
+<footer>
+    <p> - <span id="date">Site last updated: </span> - <wbr> Total Visitors: <span id="hitcount"></span> - <wbr> <a href="mailto:emma@3maqi.art">Email Me!</a></p>
+     <p><small>Site Founded: Apr 22, 2025</small></p>
+    </footer>
+    <noscript>Your browser does not support JavaScript!</noscript>
+</div><!--footer container end-->
+<script src="loadComponents.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
