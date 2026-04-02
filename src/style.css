@@ -629,7 +629,7 @@ body{
 /* Responsive layout for mobile devices */
 /*a ton of people surf the internet on only their phone!*/
 @media screen and (max-width: 1050px) {
- .aside, .main {   
+ .aside, .main, .main_small {   
     width: 100%;
     padding: 0;
   }
