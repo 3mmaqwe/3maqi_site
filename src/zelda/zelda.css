@@ -12,10 +12,13 @@ main {
   backdrop-filter: blur(10px);
   padding: 10px;
 }
-
-img {
+.ZeldaImage{
+  width: 100%;
+}
+.ZeldaImage img{
   width: 200px;
 }
+
 li{  
    list-style-type: "😸 ";
  }

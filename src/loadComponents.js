@@ -1,8 +1,13 @@
 
 
-// Last modified date
+// Last modified date 
 const date = new Date(document.lastModified);
-    document.getElementById("date").innerHTML += date.toDateString();
+var theDate =  document.getElementById("date");
+//added so only runs if that document has the element
+if (theDate != null){
+    theDate.innerHTML += date.toDateString();
+}
+    
 
 // Visitor counter
 var xhttp = new XMLHttpRequest();
@@ -20,8 +25,11 @@ xhttp.onreadystatechange = function() {
             var date_obj = new Date(site_data.info.last_updated)
         }
        
-        document.getElementById("hitcount").innerText = num_str;
-       // document.getElementById("hitcount_big").innerHTML = num_str;
+        var hitcounter =  document.getElementById("hitcount");
+        if (hitcounter != null){
+            hitcounter.innerText = num_str;
+        }
+      
     }
 };
 
@@ -47,10 +55,11 @@ coll[nav].addEventListener("click", function() {
 });
 }
 
+
                     /// end of nav bar code
   //watecolor gallery
   
-  document.querySelectorAll('.watercolor, .isda, .screenshot_big,  .box_radius_right,  .box_radius_left, .screenshot, .drawbox').forEach(img => {
+  document.querySelectorAll('.watercolor, .isda, .screenshot_big,  .box_radius_right,  .box_radius_left, .screenshot, .drawbox, .Journal-ImageGrid img, .ZeldaImage img').forEach(img => {
   img.addEventListener('click', function() {
     // Create overlay
     const overlay = document.createElement('div');

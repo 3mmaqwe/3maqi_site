@@ -39,7 +39,7 @@ I might want to add more mobile friendly display for webrings when viewed on mob
 body {
   color: var(--body-color);
   font-family: Helvetica, Verdana;
-  width: 80%;
+  width: 65%;
   margin: auto;
   background-color: var(--dark-color);
   background-image: url("images/seamless-texture-green-watercolor.jpg");
@@ -261,17 +261,21 @@ figure{
 }
 
 
+
 /*watecolor grid */
 .watercolor-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px; /* Adjust spacing as needed */
-  margin: 20px 0;
+  justify-content: center;
+  padding: 5px;
+  gap: 5px; /* Adjust spacing as needed */
 }
+
 
 .watercolor-grid figure {
   margin: 0;
   text-align: center;
+
 }
 
 .watercolor-grid img.watercolor {
@@ -281,7 +285,39 @@ figure{
   border-radius: 10px; /* Optional: rounded corners */
 }
 
+.grid3 {
+  grid-template-columns: repeat(3, 1fr);
 
+}
+.grid4 {
+  grid-template-columns: repeat(4, 1fr);
+
+}
+
+/*Journal Image Grid */
+.Journal-ImageGrid{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto ;
+  
+  display: grid;
+  
+  padding: 5px;
+  gap: 5px;
+  justify-content: center;
+   align-items: center;
+  
+}
+.Journal-ImageGrid img {
+  width: 100%;
+  height:auto;
+   margin: auto;
+ 
+}
+.Journal-ImageGrid figure{
+   margin: 0;
+  text-align: center;
+}
 
 
 button {
@@ -414,10 +450,13 @@ nav li a:hover {
 
 /*for content in which I dont want the sidebar */
 .main_small{
-  width:100%;
+  width:80%;
+  
    background-color:transparent;
   padding-left: 5px;
   padding-right: 5px;
+  margin-left: auto;
+    margin-right: auto ;
 }
 
 /* Right column */
@@ -577,7 +616,7 @@ footer {
 
 
 /*small screens but not mobile */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
   .screenshot_big{
   width: 100%;
 }
@@ -656,10 +695,18 @@ body{
   .watercolor-grid {
     display: block;
   }
+  .Journal-ImageGrid{
+    display: block;
+  }
   .watercolor-grid figure {
     margin-bottom: 20px;
   }
 
+  .watercolor-grid img.watercolor-small {
+    height: auto;
+  width: 100%;
+  border-radius: 10px; /* Optional: rounded corners */
+}
   .screenshot{
   width: 100%;
 }
