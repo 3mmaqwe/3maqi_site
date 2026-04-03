@@ -1,4 +1,4 @@
-$Dir = "src/images/figure_drawing"
+$Dir = "src/images/figure_drawing/2026"
 
 Get-ChildItem $Dir -File | ForEach-Object {
     $path = $_.FullName
