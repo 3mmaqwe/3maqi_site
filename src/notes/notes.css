@@ -1,0 +1,76 @@
+
+/*
+cool borders from: https://maxbittker.github.io/broider/
+
+green border color: 0,128,64
+*/
+body {
+   
+    border-image:  url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABUCAYAAAAcaxDBAAACQElEQVR4Aezc0W7DIAyF4axPtkfro+3Ntl0fi1rmOJSk/6RdOMQEPpBLpmqPo/rz/P49+B0a1EGrC/Bh9wPavOCALgfVepkN4PnzddzpV+erc5N2dqiAuCGgrqDkAyogbhhBtWYmNSPWSzmnuiPcLV99ZHwRVG4grAkAWvNK7wY0Jard8Ijv5XKOjP29vpLV3NfZ+7cm82OHNi8hoIA2CzR3xw6tgnIOrYp597NDPb+QDWgg8S4A6vmFbEADiXcBUM8vZAMaSLwL/+/y8u6u5yyN55533azk3V0nxg5VETMG1ATUdEBVxIwjqNYMjc0HXi69+BkSQS83470GDGjzegC6HDSrIVl784Df3l3ymcIObV4hQAFtFmjuLu5QrYlJzTjxu03NU13TXQRd89zbPgXQ5qUFtB20WjOzAWQ1N8vfvV29ZLzsUAFxQ0BdQckHVEDcEFBXUPIBFRA3BNQVlHxABcQN7wbqesT84rka0EhoXQHU4ovJgEYT6wrfbcr4knd3TWeHqogZA2oCajqgKmLGEVTPXRqbD7x7egS9+4xPnh+gzcCALgfNzmFZe/OAT+iutUt2aCvncQAKaLNAc3dxh2pNzM6h2q75zQPevbsIuvuINx8foM0LBGg7qNY8rYnVB7r51eetvj+ZHzu0eUEABbRZoLk7dugc6DAL0CHNXAOgc27DLECHNHMNgM65DbMAHdLMNQA65zbMAnRIM9fgf7cp/C1A/o/91dvVVecj7exQAXFDQF1ByQdUQNzwDwAA//83ktO0AAAABklEQVQDAFjGVHc9T9oeAAAAAElFTkSuQmCC") 28 /  28px / 0 round;
+    border-width:  28px;
+    border-style:  solid;
+    background-color: rgb(212, 216, 173);
+    padding: 1%;
+}
+
+
+    table {
+   
+    border-image:  url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAABTElEQVR4AeyYYQ7CIAyFpyfzaB7Nm2lI+s3tYVdm4EdRE/JsKcX3jS2Z1yXJ5/9Dqwt1vz2X7agKjhMTEt3SKN+PASw7ei31Qb8JiarjQqkMzWt8f1yW7dD5xnhColBpJLCWFeq7YYTXgrYvExLFOGRR8uhKz8hRh1Knuq6z563MJySqjojFWRhG5LRB4z4JiVZOOWOfz4yWd4udK5KQqOOkGymvEfuiTl1Couqk8W7UZaPixEQ5K5V2vvtPXrHERL1DBmFv/myefpBVlX7TERV/A0IIO60nIBqcGcd4vzT7W8fERMWJGRonnM1g38RElR2ONe/FARlv2e7dnz2L2oLERIuL7TBHlUCuUnsz0AVap/NBnJho4Oz9L52Rg360TuchrHknnpgojiGCkvf0W/LW7weImtPq+UfeU8iiXp3kJyYKCVScjwrTEH0BAAD//wC3LsAAAAAGSURBVAMA/zXkVWvU2XcAAAAASUVORK5CYII=") 14 /  14px / 0 round;
+    border-width:  14px;
+    border-style:  solid;
+    font-size: 1.25em;
+
+  }
+  img{
+   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+    margin: 0 auto;
+  }
+  /* i wanted a bigger font, bc the small text can hurt lol */
+  blockquote, p, a {
+    font-size: 1.25rem;
+  }
+
+   th {
+   
+   
+    border-image:  url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAqCAYAAADFw8lbAAAApUlEQVR4AezTQQqAMAxE0erJPJpH82ZKFh/caImdTc0IITStQZ9xbZNcflD1h7KoRdUC6n6eUYuqBdT9PKMWVQuo+3lGLaoWUPfzjFpULaDu97sZVQOl+1k0Tda5waIdoPR2YdF9O9s9sKPGOpkLij6JUd+PpUUkJTleSBQxXp0cehGsB3MB0SdJ5NgP1QjqH3MF0bG/OAtbQBSSmL+34Nxgnkb0AgAA//9Ugh5cAAAABklEQVQDAIA5MFW0xpDCAAAAAElFTkSuQmCC") 14 /  14px / 0 round;
+    border-width:  14px;
+    border-style:  solid;
+
+  }
+  
+  td {
+         border-bottom: 3px rgb(0,128,64) dotted;
+    padding: 5px;
+  }
+
+   h2,h3,h4,h5,h6{
+    color: rgb(0,128,64);
+   }
+  h1{
+    color: rgb(0,128,64);
+    border-bottom: 3px rgb(0,128,64) dotted;
+    padding: 5px;
+  }
+
+/* for beefy screens */
+@media screen and (min-width: 1800px) {
+    body {
+         width: 50%;
+         margin-top: 10%;
+        margin: 5% auto;
+        
+    }
+
+}
+/* so images arent huge on mobile */
+@media screen and (max-width: 800px){
+
+  img{
+     width:100%;
+  }
+}
