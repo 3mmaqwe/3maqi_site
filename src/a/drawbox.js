@@ -26,7 +26,7 @@ const DISPLAY_IMAGES = true;
 /*
         
         DONT EDIT BELOW THIS POINT IF YOU DONT KNOW WHAT YOU ARE DOING.
-        
+        https://docs.google.com/forms/d/e/1FAIpQLScoGz_QbDtoTdXdRmH5dDlIpCo2DNZY-LEg3SKhtHKNSlAcAw/formResponse
 */
 // my id
 const CLIENT_ID = "bfaaee57f0b78f1";

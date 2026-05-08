@@ -12,14 +12,15 @@
 				     `\\Â´Â´\Â¸.Â·Â´
         
 */
-const GOOGLE_FORM_ID = "1pnA5B-6yfcTS_SbzUzsj3-26EXVNbjU40w3QuzSP4H8";
+const GOOGLE_FORM_ID = "1FAIpQLSe0SOsjo9DTCoNWYzS_2XK9uBkQCQsOgmtNMrCeJA1ciYQLqg";
 const ENTRY_ID = "entry.1488240571";
 const GOOGLE_SHEET_ID = "1cWkdTasq-rY5XmerIga-lBclc9F2MO0R8mV4srwFbbw";
 const DISPLAY_IMAGES = true;
 /*
         
         DONT EDIT BELOW THIS POINT IF YOU DONT KNOW WHAT YOU ARE DOING.
-        
+        const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSe0SOsjo9DTCoNWYzS_2XK9uBkQCQsOgmtNMrCeJA1ciYQLqg/formResponse";
+
 */
 
 const CLIENT_ID = "bfaaee57f0b78f1";
