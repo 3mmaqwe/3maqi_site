@@ -4,31 +4,24 @@
         
         IF YOU HAVE ANY QUESTION, SUGGESTIONS, OR NEED HELP, PLEASE EMAIL ME AT drawbox@jhorn.net OR @MONKEYBATION on DISCORD *** This contact info might not be working anymore**
         
-				      /`·.¸
-				     /¸...¸`:·
-				 ¸.·´  ¸   `·.¸.·´)
-				: © ):´;      ¸  {
-				 `·.¸ `·  ¸.·´\`·¸)
-				     `\\´´\¸.·´
+				      /`Â·.Â¸
+				     /Â¸...Â¸`:Â·
+				 Â¸.Â·Â´  Â¸   `Â·.Â¸.Â·Â´)
+				: Â© ):Â´;      Â¸  {
+				 `Â·.Â¸ `Â·  Â¸.Â·Â´\`Â·Â¸)
+				     `\\Â´Â´\Â¸.Â·Â´
         
-
-
-https://docs.google.com/forms/d/e/1FAIpQLScoGz_QbDtoTdXdRmH5dDlIpCo2DNZY-LEg3SKhtHKNSlAcAw/viewform?usp=pp_url&entry.2109284117=eee&entry.1862726355=aaa
-
-https://docs.google.com/spreadsheets/d/1ktraLj0cL4rySe8eQsC892Bd0qsPlKtR6vk-Fmbb2BE/edit?usp=sharing
 */
-const GOOGLE_FORM_ID = "1FAIpQLScoGz_QbDtoTdXdRmH5dDlIpCo2DNZY-LEg3SKhtHKNSlAcAw";
-const ENTRY_ID = "entry.2109284117";
-const NAME_ID = "entry.1862726355";
-const GOOGLE_SHEET_ID = "1ktraLj0cL4rySe8eQsC892Bd0qsPlKtR6vk-Fmbb2BE";
+const GOOGLE_FORM_ID = "1pnA5B-6yfcTS_SbzUzsj3-26EXVNbjU40w3QuzSP4H8";
+const ENTRY_ID = "entry.1488240571";
+const GOOGLE_SHEET_ID = "1cWkdTasq-rY5XmerIga-lBclc9F2MO0R8mV4srwFbbw";
 const DISPLAY_IMAGES = true;
-
 /*
         
         DONT EDIT BELOW THIS POINT IF YOU DONT KNOW WHAT YOU ARE DOING.
         
 */
-// my id
+
 const CLIENT_ID = "bfaaee57f0b78f1";
 // old id 
 //const CLIENT_ID = "b4fb95e0edc434c";
@@ -37,26 +30,28 @@ const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/" + GOOGLE_FORM_ID + 
 
 let canvas = document.getElementById("drawboxcanvas");
 let context = canvas.getContext("2d");
-context.fillStyle = "white";
+const image = document.getElementById("paper");
+//context.drawImage(image, 10, 10);
 
 
-  context.fillRect(0, 0, canvas.width, canvas.height);
+function setCanvasSize () {
+   canvas.width = canvas.offsetWidth;
+   canvas.height = canvas.offsetWidth;
+   const image = document.getElementById("paper");
+   context.drawImage(image, 0, 0, canvas.height, canvas.width);
+     console.log("resizing canvas");
 
+   }
 
+window.addEventListener('resize', setCanvasSize);
+
+setCanvasSize();
 
 let restore_array = [];
 let start_index = -1;
 let stroke_color = "black";
 let stroke_width = "2";
 let is_drawing = false;
-
-//added stroke_join and Line_cap to modify line
-let stroke_join = "round";
-let line_cap = "round";
-
-
-//added username field as well
-let user_name = "anonymous";
 
 function change_color(element) {
   stroke_color = element.style.background;
@@ -74,8 +69,8 @@ function draw(event) {
   context.lineTo(getX(event), getY(event));
   context.strokeStyle = stroke_color;
   context.lineWidth = stroke_width;
-  context.lineCap = line_cap;
-  context.lineJoin = stroke_join;
+  context.lineCap = "round";
+  context.lineJoin = "round";
   context.stroke();
   event.preventDefault();
 }
@@ -102,16 +97,17 @@ function getY(event) {
     : event.targetTouches[0].pageY - canvas.offsetTop;
 }
 
-canvas.addEventListener("touchstart", start, { passive: false });
-canvas.addEventListener("touchmove", draw, { passive: false });
-canvas.addEventListener("touchend", stop, { passive: false });
+canvas.addEventListener("touchstart", start, false);
+canvas.addEventListener("touchmove", draw, false);
+canvas.addEventListener("touchend", stop, false);
 canvas.addEventListener("mousedown", start, false);
 canvas.addEventListener("mousemove", draw, false);
 canvas.addEventListener("mouseup", stop, false);
 canvas.addEventListener("mouseout", stop, false);
 
-function Undo() {
-  if (start_index <= 0) {
+function Restore() {
+  if (start_index <= 0 ) {
+    console.log("im running restore");
     Clear();
   } else {
     start_index--;
@@ -121,16 +117,13 @@ function Undo() {
 }
 
 function Clear() {
-  context.fillStyle = "white";
-  context.clearRect(0, 0, canvas.width, canvas.height);
-  context.fillRect(0, 0, canvas.width, canvas.height);
+ context.clearRect(0, 0, canvas.width, canvas.height);   
+ context.drawImage(image, 0, 0,canvas.height, canvas.width);
   restore_array = [];
   start_index = -1;
+  console.log("cleared drawing");
 }
 
-context.drawImage = function() {
-	console.warn("noo >:(");
-};
 
 document.getElementById("submit").addEventListener("click", async function () {
   const submitButton = document.getElementById("submit");
@@ -138,6 +131,7 @@ document.getElementById("submit").addEventListener("click", async function () {
 
   submitButton.disabled = true;
   statusText.textContent = "Uploading...";
+
 
   const imageData = canvas.toDataURL("image/png");
   const blob = await (await fetch(imageData)).blob();
@@ -159,7 +153,6 @@ document.getElementById("submit").addEventListener("click", async function () {
 
     const googleFormData = new FormData();
     googleFormData.append(ENTRY_ID, imageUrl);
-    googleFormData.append(NAME_ID,user_name);
 
     await fetch(GOOGLE_FORM_URL, {
       method: "POST",
@@ -168,12 +161,12 @@ document.getElementById("submit").addEventListener("click", async function () {
     });
 
     statusText.textContent = "Upload successful!";
-    alert("Image uploaded and submitted successfully! It will post once I approve the image :)");
+    alert("Image uploaded and submitted successfully â˜»");
     location.reload();
   } catch (error) {
     console.error(error);
     statusText.textContent = "Error uploading image.";
-    alert("Error uploading image or submitting to Google Form. \n try uploading your image here: https://forms.gle/aaWMSQ8LUEwz8U4b6 ");
+    alert("Error uploading image or submitting to Google Form.");
   } finally {
     submitButton.disabled = false;
   }
@@ -194,30 +187,20 @@ async function fetchImages() {
     gallery.innerHTML = "";
     rows.reverse().forEach((row) => {
       const columns = row.split(",");
-      console.log("Row:", row);
-      console.log("Columns:", columns);
       if (columns.length < 2) return;
 
       const timestamp = columns[0].trim();
       const imgUrl = columns[1].trim().replace(/"/g, "");
-      const author =columns[2].trim().replace(/"/g, "");
-      const approved =columns[3].trim().replace(/"/g, "");
-      const myComment =columns[4].trim().replace(/"/g, "");
+      const approved =columns[2].trim().replace(/"/g, "");
 
-
-      // uncomment out for debuggingS
-      //console.log("Parsed - URL:", imgUrl, "Approved:", approved, "Author:", author);
-
-      if (imgUrl.startsWith("http") && approved=="TRUE") {
-       // console.log("Loading image:", imgUrl);
+      // add && approved=="TRUE" if things start to get... bad 
+      if (imgUrl.startsWith("http") ) {
         const div = document.createElement("div");
         div.classList.add("image-container");
 
         div.innerHTML = `
-                    <img src="${imgUrl}" alt="drawing" class="drawbox" title="${myComment}">
+                    <img src="${imgUrl}"  class="drawbox" alt="drawing">
                     <p>${timestamp}</p>
-                    <p><span>By: <span>${author}</p>
-                    
                 `;
         gallery.appendChild(div);
       }
@@ -226,48 +209,16 @@ async function fetchImages() {
     console.error("Error fetching images:", error);
     document.getElementById("gallery").textContent = "Failed to load images.";
   }
-
-  // lets drawbox images get bigger when clicked
-  document.querySelectorAll('.drawbox').forEach(img => {
-  img.addEventListener('click', function() {
-    // Create overlay
-    const overlay = document.createElement('div');
-    overlay.style.position = 'fixed';
-    overlay.style.top = 0;
-    overlay.style.left = 0;
-    overlay.style.width = '100vw';
-    overlay.style.height = '100vh';
-    overlay.style.background = 'rgba(0,0,0,0.8)';
-    overlay.style.display = 'flex';
-    overlay.style.alignItems = 'center';
-    overlay.style.justifyContent = 'center';
-    overlay.style.zIndex = 10000;
-    overlay.addEventListener('click', () => document.body.removeChild(overlay));
-
-    // Create large image
-    const bigImg = document.createElement('img');
-    bigImg.src = img.src;
-    bigImg.style.maxWidth = '90vw';
-    bigImg.style.maxHeight = '90vh';
-    bigImg.style.borderRadius = '10px';
-    bigImg.style.boxShadow = '0 0 20px #000';
-
-    overlay.appendChild(bigImg);
-    document.body.appendChild(overlay);
-  });
-}); 
 }
 
 fetchImages();
-// allow crtl z to UNDO!
+
 function keyPressHandler(e) {
       var evtobj = window.event ? window.event : e;
 
       if (evtobj.ctrlKey && evtobj.keyCode == 90) {
-          Undo();
+          Restore();
       }
 }
 
 window.addEventListener('keydown', keyPressHandler);
-
- 

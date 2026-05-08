@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="draw and submit">
+      <link rel="stylesheet" href="Skyrim.css">
+        <title>Skyrim Quill Drawing</title>
+</head>
+ <header>
+        <h1>
+    Azdal's Skyrim Shrine
+       </h1>
+       <nav><a href="\index.html">back to 3maqi.art</a> | <a href="QuillDrawing.html">Skyrim Quill Drawing</a>| <a href="SkyrimNotes.html">Notes</a> | <a href="index.html">Skyrim Homepage</a></nav>
+    </header>
+<body onload="Clear()">
+    <div style="display:none;">
+        <img id="paper" width="canvas.width", height="canvas.height" src="skyimage\Paper.png">
+    </div>
+    <div class="flex">
+        <div class="leftSidebar">
+            <div class="title-bar">
+                <h1 id="title">DRAWBOX</h1>
+            </div>
+    <canvas id="drawboxcanvas"></canvas>
+    <br>
+    <div class="buttons">
+        <div onclick="change_color(this)" style="background:red" class="stroke-color"></div>
+    <div onclick="change_color(this)" style="background:blue" class="stroke-color"></div>
+    
+    <button onclick="Restore()"><i class="fa-solid fa-rotate-left"></i> Undo</button>
+    <button onclick="Clear()"><i class="fa-solid fa-trash-can"></i> Clear</button>
+    
+    <input type="color" oninput="stroke_color = this.value">
+    <label style="color:white" for="StrokeAmount"><strong>size:</strong></label>
+     <output style="color:white" name="StrokeAmount" id="StrokeAmount" for="Stokewidth">2</output>
+    <input  id="Strokewidth" name="Strokewidth" type="range" min="1" max="100" oninput="stroke_width = this.value; StrokeAmount.value=this.value" title="stroke width">
+    
+    <button id="submit" onclick="cooldownFunc()"><i class="fa-solid fa-arrow-up-from-bracket"></i> Submit drawing</button>
+        <p id="status"></p>
+    </div>
+    
+        </div>
+        <div class="rightSidebar">
+            <br><br><br>
+            <h2>What is this?</h2>
+            <p>This is a magical quill and paper. You can use it to transcript the world you wish to capture in skyrim. All Drawings made in this book can be view by all who touch it.</p>
+            <p><em>A few Rules to know:</em></p>
+            <ul>
+                <li>Please keep it to drawings of things within <a href="https://keizaal.com/">Keizaal Online</a>. If you wish to draw something off topic, please checkout my main site's <a href="/a/drawbox.html">drawbox</a></li>
+                <li>If you resize window, everything will be <b>GONE</b>, so be careful</li>
+                <li>Keep it SFW. No Spam, execessive gore. If people start abusing the rules I will probably disable the drawing and have a longer wait time to upload images</li>
+                <li>Low quality images (couple of lines, empty drawings) will be removed</li>
+                <li>Please do not use this to take notes. This is more so for illustrations your character wishes to make. For example: a map, a poster of an event, a illustration of a (person, place, thing, idea)</li>
+                <li>Please keep drawings within the context of skyrim RP.</li>
+                <li>OOC: This is a shoot off a program called drawbox. I have styled it to be skyrim themed! Thank you for using my drawing program :)</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="galleryContainer">
+        <h1>Submitted Drawings ☻</h1>
+        <div id="gallery">Loading images...</div>
+    </div>
+    
+    
+    <script src="QuillDrawing.js"></script>
+
+</body>
+</html>
+   
+    
+   
+  

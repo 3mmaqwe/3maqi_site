@@ -59,7 +59,7 @@ coll[nav].addEventListener("click", function() {
                     /// end of nav bar code
   //watecolor gallery
   
-  document.querySelectorAll('.watercolor, .isda, .screenshot_big,  .box_radius_right,  .box_radius_left, .screenshot, .drawbox, .Journal-ImageGrid img, .ZeldaImage img').forEach(img => {
+  document.querySelectorAll('.watercolor, .isda, .screenshot_big,  .box_radius_right,  .box_radius_left, .screenshot, .drawbox, .Journal-ImageGrid img, .ZeldaImage img, .journal_center').forEach(img => {
   img.addEventListener('click', function() {
     // Create overlay
     const overlay = document.createElement('div');

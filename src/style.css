@@ -49,35 +49,7 @@ body {
   
 }
 
-/* Journal Links */
-.journalLinks
-   {
-    width: 100%;
-    padding: 10px;
-}
-.journalLinks th{
-  text-align: left;
-}
 
-.journalLinks a:hover{
-  color:var(--body-color);
-}
-
-.journalLinks td{
-  padding: 10px;
-}
-.journalLinks th:last-child, td:last-child{
-   text-align: right;
-}
-
-.journalLinks tr:nth-child(even) {
-  background-color: var(--light-color);
-}
-
- #cold{
-     background-color: #bdebf3;
-      border-color: #4a525e;
-  }
   
 /* minecraft font */
 @font-face {
@@ -294,6 +266,16 @@ figure{
 
 }
 
+.grid2 {
+  grid-template-columns: repeat(2, 1fr);
+
+}
+/*
+
+Keep journal Related styling here.
+maybe ill make a second css styling page at some point...
+
+*/
 /*Journal Image Grid */
 .Journal-ImageGrid{
   width: 80%;
@@ -319,6 +301,78 @@ figure{
   text-align: center;
 }
 
+/* styling for my journal images */
+ .imageWrap{
+    display:flex;
+    
+  }
+  .text{
+    flex-basis: 100%;
+  }
+  .wrapImage{
+      height: auto;
+      width: 100%;
+      flex-basis: 100%;
+  }
+  .box{
+    float: right;
+    height: 30%;
+    width: 30%;
+  }
+
+  .box_radius_right{
+    float: right;
+    width: 50%;
+    border-radius: 25px;
+    margin-left: 10px;
+
+  }
+   .box_radius_left{
+    float: left;
+    width: 50%;
+    border-radius: 25px;
+    margin-right: 10px;
+
+  }
+
+  .journal_center {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+    margin: 0 auto;
+  }
+
+/* Journal Links */
+.journalLinks
+   {
+    width: 100%;
+    padding: 10px;
+}
+.journalLinks th{
+  text-align: left;
+}
+
+.journalLinks a:hover{
+  color:var(--body-color);
+}
+
+.journalLinks td{
+  padding: 10px;
+}
+.journalLinks th:last-child, td:last-child{
+   text-align: right;
+}
+
+.journalLinks tr:nth-child(even) {
+  background-color: var(--light-color);
+}
+
+ #cold{
+     background-color: #bdebf3;
+      border-color: #4a525e;
+  }
+  
 
 button {
   border-radius: 25px;
@@ -536,39 +590,6 @@ footer {
   display: none;
 }
 
-/* styling for my journal images */
- .imageWrap{
-    display:flex;
-    
-  }
-  .text{
-    flex-basis: 100%;
-  }
-  .wrapImage{
-      height: auto;
-      width: 100%;
-      flex-basis: 100%;
-  }
-  .box{
-    float: right;
-    height: 30%;
-    width: 30%;
-  }
-
-  .box_radius_right{
-    float: right;
-    width: 50%;
-    border-radius: 25px;
-    margin-left: 10px;
-
-  }
-   .box_radius_left{
-    float: left;
-    width: 50%;
-    border-radius: 25px;
-    margin-right: 10px;
-
-  }
 
 
 
