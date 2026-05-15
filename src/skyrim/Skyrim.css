@@ -216,10 +216,10 @@ h2{
 @media screen and (max-width: 1900px){
 
     body{
-        width: 90%;
+        width: 100%;
     }
 
     main{
-        width: 90%;
+        width: 100%;
     }
 }
