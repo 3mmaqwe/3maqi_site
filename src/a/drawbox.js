@@ -49,6 +49,8 @@ let start_index = -1;
 let stroke_color = "black";
 let stroke_width = "2";
 let is_drawing = false;
+let opacity = "1";
+
 
 //added stroke_join and Line_cap to modify line
 let stroke_join = "round";
@@ -76,6 +78,7 @@ function draw(event) {
   context.lineWidth = stroke_width;
   context.lineCap = line_cap;
   context.lineJoin = stroke_join;
+  context.globalAlpha = opacity;
   context.stroke();
   event.preventDefault();
 }
