@@ -436,7 +436,7 @@ nav ul {
   border-color: #ADDFB3;
 }
 
-nav li {
+nav ul li {
   list-style-type: none;
   float: left;
   border-right: thick double #ADDFB3;
@@ -459,7 +459,7 @@ nav li:last-child a:hover {
 
 }
 
-nav li a {
+nav ul li a {
   list-style-type: none;
   display: block;
   color: white;

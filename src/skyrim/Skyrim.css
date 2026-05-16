@@ -5,13 +5,12 @@
 
 body{
 
-    background-image: url("skyimage/background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url("skyimage/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   background-position: right top;
   background-attachment: fixed;
-
-     width: 70%;
+  width: 90%;
   margin: auto;
 }
 
@@ -29,6 +28,8 @@ main{
       padding: 30px;
       
 }
+
+
 
 /*Fonts
 Vineritic: https://www.dafontfree.net/viner-hand-itc-regular-font/f103172.htm
@@ -213,7 +214,7 @@ h2{
 
 
 
-@media screen and (max-width: 1900px){
+@media screen and (max-width: 1000px){
 
     body{
         width: 100%;
