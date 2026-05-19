@@ -29,7 +29,32 @@ main{
       
 }
 
+table {
+  font-family:Cyrodill;
+  border-collapse: collapse;
+  width: 80%;
+  margin:auto;
+}
 
+table caption{
+    font-size: 30px;
+}
+td, th {
+  border: 1px solid #24221c;
+  padding: 8px;
+}
+
+td{
+    font-family:vineritic;
+}
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #462807;
+  color: white;
+  letter-spacing: 3px;
+}
 
 /*Fonts
 Vineritic: https://www.dafontfree.net/viner-hand-itc-regular-font/f103172.htm
@@ -87,7 +112,7 @@ h2{
 }
 
 
- p,a, ul, li, ol {
+ p,a, ul, li, ol, td {
     font-family:vineritic;
     font-size: 20px;
     margin: 10px;
