@@ -14,23 +14,34 @@ body{
   margin: auto;
 }
 
+@font-face{
+    font-family: vineritic;
+  src: url(fonts/vineritc.ttf);
+  font-style: normal;
+}
+
+@font-face{
+    font-family: Cyrodill;
+  src: url(fonts/Cyrodiil.otf);
+  font-style: normal;
+}
 
 
-main{
-    
+
+main{   
      width: 50%;
       margin: auto;
       margin-top: 25px;
-    background-image: url("skyimage/Paper.png");
+     background-image: url("skyimage/Paper.png");
      background-size: cover;
-      background-repeat: no-repeat;
-      text-indent: 30px;
-      padding: 30px;
+     background-repeat: no-repeat;
+     text-indent: 30px;
+     padding: 50px;
       
 }
 
 table {
-  font-family:Cyrodill;
+   font-family:Cyrodill;
   border-collapse: collapse;
   width: 80%;
   margin:auto;
@@ -61,17 +72,6 @@ Vineritic: https://www.dafontfree.net/viner-hand-itc-regular-font/f103172.htm
 Cyrodiil: https://www.dafont.com/fr/cyrodiil.font
 */
 
-@font-face{
-    font-family: vineritic;
-  src: url(fonts/vineritc.ttf);
-  font-style: normal;
-}
-
-@font-face{
-    font-family: Cyrodill;
-  src: url(fonts/Cyrodiil.otf);
-  font-style: normal;
-}
 
 
 header{
@@ -86,7 +86,9 @@ header{
 
 h1, h2, h3, h4, h5, h6 {
         font-family:Cyrodill;
-        text-indent: 30px;
+
+        text-align: center;
+
 }
 
 h1 {
@@ -109,6 +111,11 @@ nav a:hover{
 h2{
     letter-spacing: 3px;
     font-size: 30px;
+}
+
+h3{
+    letter-spacing: 3px;
+    font-size: 25px;
 }
 
 
