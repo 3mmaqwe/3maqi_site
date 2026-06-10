@@ -10,7 +10,6 @@ body{
   background-size: cover;
   background-position: right top;
   background-attachment: fixed;
-  width: 90%;
   margin: auto;
 }
 
@@ -36,7 +35,7 @@ main{
      background-size: cover;
      background-repeat: no-repeat;
      text-indent: 30px;
-     padding: 50px;
+     padding: 70px;
       
 }
 
@@ -75,13 +74,14 @@ Cyrodiil: https://www.dafont.com/fr/cyrodiil.font
 
 
 header{
-    width:50%;
+   /* width:50%; */
 
     margin: auto;
     background-color:rgba(43, 42, 42, 0.562);
     border-style: ridge;
     border-color:grey;
     border-width: 5px;
+     text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -90,6 +90,7 @@ h1, h2, h3, h4, h5, h6 {
         text-align: center;
 
 }
+
 
 #pfp{
     width: 50%;
@@ -141,19 +142,22 @@ h3{
 * {box-sizing: border-box;}
         canvas {
             cursor: crosshair;
-            width: 800px;
-            height: 800px;
-            padding: 3px;       
+        width: 800px;
+        height: 800px;
+            padding: 3px;  
+             margin: 0 auto;    
+              justify-content: center;
         }
         #title{
             margin: 5px;
+            width: 800px;
     background-color:rgba(43, 42, 42, 0.562);
     border-style: ridge;
     border-color:grey;
     border-width: 5px;
         }
         .buttons {
-            text-align: center
+            text-align: center;
         }
 
         button {
@@ -195,25 +199,45 @@ h3{
             display: block;
         }
 
-        .flex {
-            display: flex;
+       .flex {
+          display: flex; 
             margin: 1em;
-            gap: 100px;
-        }
+            gap: 10px;
+           /* justify-content: center; */
+            width: 80%;
+            margin: auto;
+       }
 
         .leftSidebar {
+            /* 
             order: 1;
             box-shadow: inset -1px -1px #0a0a0a,inset 1px 1px #dfdfdf,inset -2px -2px grey,inset 2px 2px #fff;
+             justify-content: center;
             padding: 2px;
+            margin: auto;
+
+             flex: 3; */
+    order: 1;
+    flex: 3;
+    padding: 2px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
             
         }
 
         .rightSidebar {
+             flex: 1;
              background-image: url("skyimage/Paper.png");
      background-size: cover;
       background-repeat: no-repeat;
             order: 2;
             padding: 20px;
+             margin: 0;
+           /* justify-content: center; /* Horizontal center */
+        /*   max-width: 500px; */
         }
         
 
@@ -296,11 +320,13 @@ figure {
                 gap: 0;
             }
             .leftSidebar {
-                order: 2;
+                order: 1;
+                 flex: 1;
             }
     
             .rightSidebar {
-                order: 1;
+                order: 2;
+                 flex: 1;
             }
 
             ul {
@@ -319,6 +345,7 @@ figure {
         width: 100%;
     }
 
+
     main{
         width: 100%;
     }
@@ -331,6 +358,9 @@ figure {
         width: 80%;
         height: 80%;
     } 
+    .flex{
+        width: 100%;
+    }
 
     #about{
           columns: 1;
