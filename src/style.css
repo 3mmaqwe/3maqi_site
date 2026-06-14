@@ -373,7 +373,7 @@ maybe ill make a second css styling page at some point...
       border-color: #4a525e;
   }
   
-
+ 
 button {
   border-radius: 25px;
   margin: 0;
@@ -562,6 +562,17 @@ section {
   margin: 15px 0; 
   display: flow-root;
 }
+
+dt{
+  background-color: #99c19e;
+  border-radius: 15px;
+   padding: 15px;
+}
+
+dd{
+   padding: 15px;
+}
+
 
 .warning {
   background-color:#f3bebe;
