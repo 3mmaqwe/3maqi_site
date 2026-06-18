@@ -5,31 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="..\images\isda_noboarder.png">
     <title>DRAWBOX</title>
-     <!-- generic styling for all drawbox -->
+     <!--generic drawbox styling -->
      <link href="drawbox.css" rel="stylesheet" type="text/css" media="all">
-     <!--3maqi's custom stying-->
-      <link href="3maqidrawbox.css" rel="stylesheet" type="text/css" media="all">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-      <!-- looks like my site is on the wayback machine.. wow https://web.archive.org/web/sitemap/https://3maqi.art/ -->
 </head>
-<body id="mybackground">
-<div class="flex">
-
-    <div class="drawbox_con left">
-        <h1>DRAWBOX</h1> 
+<body>
+<div id="circularcursor"></div>
+   
+    
+   
+    <div class="drawbox_con">
+        <h1>DRAWBOX Tutorial</h1> 
     <div class="des" id="des1">
-        <p>Draw me a picture! If you want to leave me a written note instead, please sign my guest book :)</p>
+        <p><a href="/index.html">back to home</a></p>
     </div>
     <div class="TheCanvas">
-        <nav>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/skyrim/QuillDrawing.html">Skyrim</a></li>
-                <li><a href="https://3maqi.atabook.org/">My Guestbook</a></li>
-            </ul>
-        </nav>
     <canvas id="drawboxcanvas" width="500px" height="500px"></canvas>
     <br>
+    <div onclick="change_color(this)" style="background:red" class="stroke-color"></div>
+    <div onclick="change_color(this)" style="background:blue" class="stroke-color"></div>
+    
+   
     <fieldset id="controls">
     <label for="colorpicker"><strong>Brush Color:  </strong></label>
     <input type="color"  name="colorpicker" id="colorpicker" oninput="stroke_color = this.value; colorchoice.value = this.value"> 
@@ -72,24 +68,18 @@
     </div>
 
     <div class="des">
-         <p>having trouble submitting? you can manually upload the image using this <a href="https://forms.gle/aaWMSQ8LUEwz8U4b6" target="_blank">form</a></p>
-        <p>I also recommend drawing on a computer or larger screen.</p>
-        <p>To prevent spam I now have to approve an image for it to be posted. For a more lengthy info: <a href="rules.html">rules list</a></p>
-        <p>ive also commented on some of the images, hover over it to see em!</p>
-        <p><a href="drawbox_guide.html">Make your own Drawbox page!</a></p>
+        <p>Draw Me a picture!</p>
+        <p><a href="https://3maqi.art/a/drawbox_guide.html">Create your own Drawbox</a></p>
+        
        
     </div>
     </div>
-    <div class="right">
-        <hr>
-    <h1>Submitted Drawings ☻</h1>
+       <hr>
+    <h2>Submitted Drawings ☻</h1>
     <hr>
     <div id="gallery">Loading images...</div>
     <hr>
     <br>
-    </div>
-    
-    </div>
     <script src="drawbox.js"></script>
    
 </body>

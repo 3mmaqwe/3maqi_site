@@ -1,47 +1,68 @@
 /*
-        
-        FILL IN THESE VARIABLES BASED ON THE GUIDE AT https://drawbox.nekoweb.org
-        
-        IF YOU HAVE ANY QUESTION, SUGGESTIONS, OR NEED HELP, PLEASE EMAIL ME AT drawbox@jhorn.net OR @MONKEYBATION on DISCORD *** This contact info might not be working anymore**
-        
-				      /`·.¸
-				     /¸...¸`:·
-				 ¸.·´  ¸   `·.¸.·´)
-				: © ):´;      ¸  {
-				 `·.¸ `·  ¸.·´\`·¸)
-				     `\\´´\¸.·´
-        
 
+// Drawbox was orignally created by https://drawbox.nekoweb.org - u can see the archived site at: https://web.archive.org/web/20251224062205/https://drawbox.nekoweb.org/
+// this drawbox code has been modified and is currently maintained by 3maqi.art 
+  
+                   _ |\_
+                   \` ..\
+              __,.-" =__Y=
+            ."        )
+      _    /   ,    \/\_
+     ((____|    )_-\ \_-`  
+jgs  `-----'`-----` `--`
 
-https://docs.google.com/forms/d/e/1FAIpQLScoGz_QbDtoTdXdRmH5dDlIpCo2DNZY-LEg3SKhtHKNSlAcAw/viewform?usp=pp_url&entry.2109284117=eee&entry.1862726355=aaa
+https://oldcompcz.github.io/jgs/joan_stark/
 
-https://docs.google.com/spreadsheets/d/1ktraLj0cL4rySe8eQsC892Bd0qsPlKtR6vk-Fmbb2BE/edit?usp=sharing
+  FILL IN THESE VARIABLES BASED ON THE GUIDE AT https://3maqi.art/a/drawbox_guide.html
 */
 const GOOGLE_FORM_ID = "1FAIpQLScoGz_QbDtoTdXdRmH5dDlIpCo2DNZY-LEg3SKhtHKNSlAcAw";
 const ENTRY_ID = "entry.2109284117";
 const NAME_ID = "entry.1862726355";
 const GOOGLE_SHEET_ID = "1ktraLj0cL4rySe8eQsC892Bd0qsPlKtR6vk-Fmbb2BE";
+// turn on or off gallery
 const DISPLAY_IMAGES = true;
+// post approval - make false if you dont want to approve images
+const IMAGE_APPROVAL = true;
+
+// optional I recommend getting your own client ID https://apidocs.imgur.com/ */
+const CLIENT_ID = "bfaaee57f0b78f1";
 
 /*
         
         DONT EDIT BELOW THIS POINT IF YOU DONT KNOW WHAT YOU ARE DOING.
-        https://docs.google.com/forms/d/e/1FAIpQLScoGz_QbDtoTdXdRmH5dDlIpCo2DNZY-LEg3SKhtHKNSlAcAw/formResponse
+       
 */
-// my id
-const CLIENT_ID = "bfaaee57f0b78f1";
-// old id 
-//const CLIENT_ID = "b4fb95e0edc434c";
+
 const GOOGLE_SHEET_URL = "https://docs.google.com/spreadsheets/d/" + GOOGLE_SHEET_ID + "/export?format=csv";
 const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/" + GOOGLE_FORM_ID + "/formResponse";
 
-let canvas = document.getElementById("drawboxcanvas");
-let context = canvas.getContext("2d");
-context.fillStyle = "white";
+ let canvas = document.getElementById("drawboxcanvas");
+ let context = canvas.getContext("2d");
+ context.fillStyle = "white";
+ context.fillRect(0, 0, canvas.width, canvas.height);
 
 
-  context.fillRect(0, 0, canvas.width, canvas.height);
 
+function CreateCanvasMobile(x) {
+  if (x.matches) { // If screensize is less then 500px
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetWidth;
+     context.fillStyle = "white";
+     context.fillRect(0, 0, canvas.width, canvas.height);
+     console.log("resizing canvas");
+  }
+}
+
+// Create a MediaQueryList object
+var x = window.matchMedia("(max-width: 499px)")
+
+// Call listener function at run time
+CreateCanvasMobile(x);
+
+// Attach listener function on state changes
+x.addEventListener("change", function() {
+  CreateCanvasMobile(x);
+});
 
 
 let restore_array = [];
@@ -49,7 +70,7 @@ let start_index = -1;
 let stroke_color = "black";
 let stroke_width = "2";
 let is_drawing = false;
-let opacity = "1";
+let line_opacity = "1";
 
 
 //added stroke_join and Line_cap to modify line
@@ -59,6 +80,63 @@ let line_cap = "round";
 
 //added username field as well
 let user_name = "anonymous";
+
+
+// code for pen
+// thank you to https://stackoverflow.com/questions/66780623/custom-cursor-drawn-on-canvas-in-javascript for making this wonderful code!
+const pos = { x: 0, y: 0 };
+// a simple object to keep the current pen styles
+const pen_style = {
+  color: "black",
+  cap: "round",
+  radius: "2",
+  canvas: document.createElement("canvas"),
+  cursor_url: null,
+  opacity: "1"
+};
+// update the pen-style object, and the cursor 
+document.querySelector( "fieldset" ).oninput = updatePenStyle;
+// do it once now to update the cursor
+updatePenStyle();
+
+function updatePenStyle() {
+  // grab the new values
+  const rad = pen_style.radius = stroke_width;
+  const color = pen_style.color = stroke_color;
+  const cap = pen_style.cap = line_cap;
+  const opacity = pen_style.opacity = line_opacity;
+  // reuse the same canvas every time
+  const cursor_canvas = pen_style.canvas;
+  const cursor_ctx = cursor_canvas.getContext( "2d" );
+
+  // update the canvas's drawing
+  cursor_canvas.width = cursor_canvas.height = rad;
+  cursor_ctx.fillStyle = color;
+  if( cap === "round" ) {
+    cursor_ctx.arc( rad / 2, rad / 2, rad / 2, 0, Math.PI * 2 );
+  }
+  else {
+    cursor_ctx.rect( 0, 0, rad, rad );
+  }
+  cursor_ctx.fill();
+  // extract it as a png image
+  cursor_canvas.toBlob( function( blob ) {
+    // revoke the previous blob URL we created (if any)
+    URL.revokeObjectURL( pen_style.cursor_url );
+    // store the new one
+    pen_style.cursor_url = URL.createObjectURL( blob );
+    // use it as CSS 'cursor'
+    canvas.style.cursor = `url(${ pen_style.cursor_url }) ${ rad/2 } ${ rad/2 }, auto`;
+  });  
+}
+
+
+function setPosition(e) {
+  const rect = canvas.getBoundingClientRect();
+  pos.x = e.clientX - rect.left
+  pos.y = e.clientY - rect.top
+}
+
 
 function change_color(element) {
   stroke_color = element.style.background;
@@ -71,15 +149,17 @@ function start(event) {
   event.preventDefault();
 }
 
+
 function draw(event) {
   if (!is_drawing) return;
   context.lineTo(getX(event), getY(event));
   context.strokeStyle = stroke_color;
   context.lineWidth = stroke_width;
   context.lineCap = line_cap;
-  context.lineJoin = stroke_join;
-  context.globalAlpha = opacity;
+  context.lineJoin = stroke_join; 
+ context.globalAlpha = line_opacity;
   context.stroke();
+  setPosition(event);
   event.preventDefault();
 }
 
@@ -113,6 +193,14 @@ canvas.addEventListener("mousemove", draw, false);
 canvas.addEventListener("mouseup", stop, false);
 canvas.addEventListener("mouseout", stop, false);
 
+
+
+
+
+
+
+
+
 function Undo() {
   if (start_index <= 0) {
     Clear();
@@ -123,19 +211,32 @@ function Undo() {
   }
 }
 
+
+
+// i kept accidently clearing my image when i meant to do /undo haha
 function Clear() {
+
+  if (confirm("are you sure you want to clear? This can not be undo.") == true) {
   context.fillStyle = "white";
+  context.globalAlpha = 1;
   context.clearRect(0, 0, canvas.width, canvas.height);
   context.fillRect(0, 0, canvas.width, canvas.height);
   restore_array = [];
   start_index = -1;
+  context.globalAlpha = line_opacity;
+} else {
+  // do nothing
+}
+  
 }
 
-context.drawImage = function() {
-	console.warn("noo >:(");
-};
-
+// code to upload image 
 document.getElementById("submit").addEventListener("click", async function () {
+    if (confirm("Are you ready to submit your image?") == true) {
+
+  if (start_index <= -1) { alert("I know art is subjective and all, but you can't submit an empty canvas!"); }
+
+  else {   
   const submitButton = document.getElementById("submit");
   const statusText = document.getElementById("status");
 
@@ -171,19 +272,28 @@ document.getElementById("submit").addEventListener("click", async function () {
     });
 
     statusText.textContent = "Upload successful!";
-    alert("Image uploaded and submitted successfully! It will post once I approve the image :)");
+    if(IMAGE_APPROVAL){
+      alert("Image uploaded and submitted successfully! It will post once I approve the image :)");
+    }
+    else {
+      alert("Image uploaded and submitted successfully!");
+    };
+    
     location.reload();
   } catch (error) {
     console.error(error);
     statusText.textContent = "Error uploading image.";
-    alert("Error uploading image or submitting to Google Form. \n try uploading your image here: https://forms.gle/aaWMSQ8LUEwz8U4b6 ");
+    alert("Error uploading image or submitting to Google Form. \n try uploading your image here: https://forms.gle/aaWMSQ8LUEwz8U4b6 or email me at emma@3maqi.art with your image ");
   } finally {
     submitButton.disabled = false;
   }
-});
+  }}});
 
+
+// display gallery of images
 async function fetchImages() {
   if (!DISPLAY_IMAGES) {
+    document.getElementById("gallery").textContent = "images Display is disabled.";
     console.log("Image display is disabled.");
     return;
   }
@@ -206,24 +316,29 @@ async function fetchImages() {
       const author =columns[2].trim().replace(/"/g, "");
       const approved =columns[3].trim().replace(/"/g, "");
       const myComment =columns[4].trim().replace(/"/g, "");
-
-
-      // uncomment out for debuggingS
-      //console.log("Parsed - URL:", imgUrl, "Approved:", approved, "Author:", author);
-
-      if (imgUrl.startsWith("http") && approved=="TRUE") {
-       // console.log("Loading image:", imgUrl);
+ 
+      function loadImages() {
         const div = document.createElement("div");
         div.classList.add("image-container");
-
+        // inner html is a bit... insecure. Id like to fix this at some point
         div.innerHTML = `
                     <img src="${imgUrl}" alt="drawing" class="drawbox" title="${myComment}">
                     <p>${timestamp}</p>
-                    <p><span>By: <span>${author}</p>
-                    
+                    <p><span>By: <span>${author}</p>             
                 `;
         gallery.appendChild(div);
       }
+      
+      if(IMAGE_APPROVAL){
+         if (imgUrl.startsWith("http") && approved=="TRUE") {
+           loadImages();
+          }
+      }
+       else{
+        if (imgUrl.startsWith("http")){
+           loadImages();
+        }
+       }
     });
   } catch (error) {
     console.error("Error fetching images:", error);

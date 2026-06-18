@@ -1,39 +1,75 @@
-   /*
-        I have custom css for draw box. Mainly because its layout is so drastically different from the rest of my site. For one most of my size has a 75% body width
-        but I feel like draw box can just have 100% width. 
-
-   */
+  
+   /* ####### tutorial styling - feel free to remove when you copy over ######*/
+   .blue{background-color:cyan;}
+   .yellow{background-color:yellow;}
+   .green{background-color:lime;}
    
+    dl{
+      padding: 20px;
+    }
+    dt {
+      font-weight: bold;
+      overflow-wrap: break-word;
+    }
 
-   :root{
- 
---dark-color: #4A5E4C;
---hover-color:#2a362c;
---light-color:#ADDFB3;
---section-color:#bdf3c4;
---body-color:#171e18;
- cursor: url('images/isda_cusor.cur'), auto;
+    dd{
+      margin-top:5px;
+      overflow-wrap: break-word;
+    }
 
-}
-   
-   * {box-sizing: border-box;}
-        
+    .tutorial {
+       justify-content: center;
+        width: 80%;
+        margin: auto;
+           
+    }
+
+    /* if you like the style of my og page, also added 3maqidrawbox.css to your page :) 
+      please use a different background though please! 
+    */
+    /* ########################################################################*/
+
+
+      /* have the max width be the size of your canvas */          
+ @media screen and (max-width: 500px) {
+  canvas {
+     width: 100%;         
+     aspect-ratio: 1 / 1;
+     
+  }
+   #controls, .des{
+                     width: 100%; 
+                }
+
+  .guide{
+    padding: 5px;
+  }
+
+   .flex {
+    display: block;
+   }
+                
+ }
+      
+   :root {
+     --canvasSize: 502px;
+     --borderStyle: 1px solid black;
+   } 
+
+    * {box-sizing: border-box;}
+
+
         body{
             font-family: Helvetica, Verdana;
-             width: 100%;
-             background-image: url("../images/seamless-texture-green-watercolor.jpg");
-             background-attachment: fixed;
-             background-color:var(--body-color);
-             min-width: 500px;
-            
+             width: 100%;   
         }
-   
+  
         canvas {
             border: 1px solid black;
             cursor: crosshair;
         }
         .drawbox_con{
-            float: left;
+           
             padding: 20px;
         }
        
@@ -42,12 +78,11 @@
             flex-wrap: wrap;
             gap: 5px;
             padding: 20px;
-           /* background: white; */
-        }
+                }
 
         
         .image-container {
-            border: 1px solid #1e3620;
+            border: var(--borderStyle);
             padding: 5px;
             text-align: center;
             border-radius: 5px;
@@ -60,118 +95,28 @@
             height: auto;
             display: block;
         }
-        #controls{
-            background:#addfb3ba;
-            width:500px;
+        #controls, .des {
+            width:var(--canvasSize);
+            border:var(--borderStyle); 
             padding: 5px;
-            margin-top:5px;
             margin-bottom:5px;
-            border-radius: 5px;
+            background-color: lightgrey;
+            margin-inline:0px;
+        }
+        
+        .guide{
+          padding: 20px;
+        }
 
+        .flex {
+          display: flex;
+          flex-direction: row;  
+         
         }
-        .des{
-            background:#addfb35d;
-            max-width: 500px;
-            padding:5px;
-            margin-bottom: 5px;
-            border-radius: 5px;
-        }
+
         
 
 
-        
-hr{
-  height:2px;
-  border-style: double;
-  border-width: thick;
-  border-color: #4A5E4C;
-  border-right-style: none;
-  border-left-style: none;
-  border-bottom-style:none;
-  color: #4A5E4C;
-  background-color: transparent;
-}
-
-
-button {
-  border-radius: 25px;
-  margin: 0;
-  padding: 14px 16px;
-  overflow: hidden;
-   background-color: var(--dark-color);
-   border-style: double;
-  border-width: thick;
-  border-color: var(--light-color);
-  color: white;
- /* cursor: pointer; */
-  
-  cursor: url('images/isda_cusor_Pointer.cur'), pointer;
-  
-}
-
-button a, button a:visited {
-  color:white;
-  text-decoration: none;
-  cursor: url('images/isda_cusor_Pointer.cur'), pointer; 
-}
- button:hover {
-  background-color: var(--hover-color);
-  cursor: url('images/isda_cusor_Pointer.cur'), pointer;
-}
-
-
-/*draw box nav */
-nav ul {
-    width: 400px;
-  list-style-type: none;
-  border-radius: 25px;
-  margin: 5px;
-  padding: 0;
-  overflow: hidden;
-   background-color: #4A5E4C;
-   border-style: double;
-  border-width: thick;
-  border-color: #ADDFB3;
-}
-
-nav li {
-  list-style-type: none;
-  float: left;
-  border-right: thick double #ADDFB3;
-}
-
-nav li a {
-  list-style-type: none;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-nav li a:visited {
-  list-style-type: none;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-nav li a:hover {
-   background-color: #2a362c;
-
-}
-
-nav li:last-child {
-  border-right: none;
-  /* float:right; */
-}
-nav li:last-child a:hover {
-  border-right: none;
-  /* float:right; */
- 
-}
 
 
 
@@ -181,27 +126,18 @@ nav li:last-child a:hover {
                
                
                 .drawbox_con{
-                  padding: 0px;
+                  padding: 20px;
            
               }
 
-             #controls, #des{
+             #controls, .des{
                     max-width:100%;
                 }
 
-
-                 body{
-                    width:100%;
-                }
-
-                .image-container{
-                   
-                  max-width: 100%;
-                }
-
-
-                #controls{
-                 width:100%;
+                                
+             
+               #controls{
+                 max-width:var(--canvasSize);
                }
 
             }
@@ -217,14 +153,15 @@ nav li:last-child a:hover {
               }
 
              #controls, .des{
-                    width:100%;
+                    width: 100%;
+                    max-width:500px;
                 }
 
-
-                 body{
-                    width:100%;
-                }
-
+                  .flex {
+                  display: block;
+                  }
+         
+                
                 .image-container{
                    flex-direction: column;
                   max-width: 100%;
@@ -233,44 +170,12 @@ nav li:last-child a:hover {
 
 
             }
-         
-            
+
+                   
 
         
 
-        @media screen and (max-width: 501px){
-            hr{
-                display:none;
-            }
-
-            body{
-
-                
-                 width:100%;
-                 
-            }
-               canvas{
-                 border:none;
-               }
             
-               
-                .drawbox_con{
-                 float: none;
-                  padding: 0px;
-           
-              }
-
-             #controls, .des{
-                    width:100%;
-                    background:none;
-                }
-
-                .image-container{
-                  max-width: 100%;
-                }
-
-            }
-         
             
 
         

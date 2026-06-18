@@ -1,0 +1,130 @@
+/* 
+custom styling for my site. 
+
+
+
+
+
+*/
+
+ :root{
+ 
+--dark-color: #4A5E4C;
+--hover-color:#2a362c;
+--light-color:#ADDFB3;
+--section-color:#bdf3c4;
+--body-color:#171e18;
+ cursor: url('/images/isda_cusor.cur'), auto;
+
+} 
+
+
+   
+
+/* draw box nav */
+nav ul {
+    max-width: 400px;
+  list-style-type: none;
+  border-radius: 25px;
+  margin: 5px;
+  padding: 0;
+  overflow: hidden;
+   background-color: #4A5E4C;
+   border-style: double;
+  border-width: thick;
+  border-color: #ADDFB3;
+}
+
+nav li {
+  list-style-type: none;
+  float: left;
+  border-right: thick double #ADDFB3;
+}
+
+nav li a {
+  list-style-type: none;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:visited {
+  list-style-type: none;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover {
+   background-color: #2a362c;
+
+}
+
+nav li:last-child {
+  border-right: none;
+  /* float:right; */
+}
+nav li:last-child a:hover {
+  border-right: none;
+  /* float:right; */
+ 
+}
+button {
+  border-radius: 25px;
+  margin: 0;
+  padding: 14px 16px;
+  overflow: hidden;
+   background-color: var(--dark-color);
+   border-style: double;
+  border-width: thick;
+  border-color: var(--light-color);
+  color: white;
+ /* cursor: pointer; */
+  
+  cursor: url('/images/isda_cusor_Pointer.cur'), pointer;
+  
+}
+
+button a, button a:visited {
+  color:white;
+  text-decoration: none;
+  cursor: url('/images/isda_cusor_Pointer.cur'), pointer; 
+}
+ button:hover {
+  background-color: var(--hover-color);
+  cursor: url('/images/isda_cusor_Pointer.cur'), pointer;
+}
+
+ /* my custom site background is here, please change it to something else for your site :) */ 
+  #mybackground{
+     background-image: url("../images/seamless-texture-green-watercolor.jpg");
+             background-attachment: fixed;
+             background-color:var(--body-color);
+   }
+
+hr{
+  height:2px;
+  border-style: double;
+  border-width: thick;
+  border-color: #4A5E4C;
+  border-right-style: none;
+  border-left-style: none;
+  border-bottom-style:none;
+  color: #4A5E4C;
+  background-color: transparent;
+}
+.des, #controls{
+     background:#addfb35d;
+}
+
+
+@media screen and (max-width: 1500px){ 
+
+    .flex {
+        display: block;
+    }
+}

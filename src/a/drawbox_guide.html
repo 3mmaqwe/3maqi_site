@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="..\images\isda_noboarder.png">
+    <title>DRAWBOX</title>
+     <!--generic drawbox styling -->
+     <link href="drawbox.css" rel="stylesheet" type="text/css" media="all">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+ <div class="flex tutorial">
+  <div class="drawbox_con left">
+        <h1>DRAWBOX Tutorial</h1> 
+    <div class="des" id="des1">
+        <p><a href="/index.html">back to home</a>| <a href="drawbox.html">Back to 3maqi's drawbox</a></p>
+    </div>
+    <div class="TheCanvas">
+    <canvas id="drawboxcanvas" width="500px" height="500px"></canvas>
+    <br>
+    <fieldset id="controls">
+            <label for="colorpicker"><strong>Brush Color:  </strong></label>
+            <input type="color"  name="colorpicker" id="colorpicker" oninput="stroke_color = this.value; colorchoice.value = this.value"> 
+            <output name="colorchoice" id="colorchoice" for="colorpicker">black</output>
+        <br>
+            <label for="StrokeAmount"><strong>Stroke Size: </strong></label>
+            <input type="range" id="Strokewidth" name="Strokewidth" min="1" max="100" value="2" oninput="stroke_width = this.value; StrokeAmount.value=this.value" title="stroke width">
+            <output name="StrokeAmount" id="StrokeAmount" for="Stokewidth">2</output>
+        <br><br>
+            <label for="OpacityAmount"><strong>Opacity: </strong></label>
+            <input type="range" id="Opacity" name="Opacity" step="0.05" min="0" max="1" value="1" oninput="line_opacity = this.value; OpacityAmount.value=this.value" title="Opacity width">
+            <output name="OpacityAmount" id="OpacityAmount" for="Opacity">1.00</output>
+        <br><br>
+            <label for="BrushType"><strong>Brush type:</strong></label>
+                <select id="BrushType" name="BrushType" oninput="stroke_join = this.value">
+                    <option value="round" selected>Round</option>
+                    <option value="bevel">bevel</option>
+                    <option value="miter">miter</option>
+                </select>
+         <span> | </span>
+            <label for="LineCap"><strong>Line Cap:</strong></label>
+                <select id="LineCap" name="LineCap" oninput="line_cap = this.value">
+                    <option value="round" selected>Round</option>
+                    <option value="butt">Butt</option>
+                    <option value="square">Square</option>
+                </select>
+        <br><br>
+            <label for="Name"><strong>Your Name:</strong></label>
+            <input type="text" oninput="user_name = this.value" required maxlength="30">
+        <br>
+        <br>
+</fieldset>   
+    <button onclick="Undo()" title="you can also do crtl+z">Undo</button>
+    <button onclick="Clear()" title="clear button">Clear</button>
+    <button id="submit">Submit drawing</button>
+
+    <p id="status"></p>
+    </div>
+
+    <div class="des">
+        <p>Draw Me a picture! <a href="https://3maqi.art/a/drawbox_guide.html">Create your own Drawbox!</a></p>
+        
+       
+    </div>
+    </div>
+    <div class="guide right">
+         <h2>How to Setup</h2>
+    <p>I did not create drawbox. However the <a href="https://web.archive.org/web/20251224062205/https://drawbox.nekoweb.org/">Original guide</a> site is gone, so I thought I would create a new one. Plus I have added a few new things to the code,
+    and wanted to add on to the guide for that.</p>
+     <p>You will need a google account, and 3 Drawbox files.</p>
+<ol>
+    <li><a href="txt/drawbox.txt">drawbox.html</a> The Canvas and input elements, as well as where the images get displayed.</li>
+    <li><a href="drawbox.js">drawbox.js</a> this is the code that makes the drawbox work, and uploads image to imgur.</li>
+    <li><a href="drawbox.css">drawbox.css</a> styling for the drawbox.</li>
+</ol>
+
+<p> in the drawbox.js file you need to provide 5 variables. Below ill go over how to get these variables.</p>
+
+<h3>Step 1: create a google forms</h3>
+
+<p>you can call it whatever you like. add a "short answer" question. i called mine "imgur link". press the 3 dots up next to your pfp. press "pre-fill form". it will open a new tab in which your blank google form will be presented to you.
+input something into the form and tap "get link". copy the link and open it up in a notes app.</p>
+
+<dl>
+    <dt>this is mine:</dt>
+        <dd>https://docs.google.com/forms/d/e/<span class="yellow">1FAIpQLScbzFT1pxeIkp8yNB3fB7VD9V89Jbitr4h30Q3jXYjy54SlMQ</span>/viewform?usp=pp_url&<span class="blue">entry.258336726</span>=imgur</dd>
+</dl>
+
+
+<h3>Step 2: Create a google sheet</h3>
+
+<p>you then want to go back to the edit page of your form and click "responses". click "link to sheets" and create a sheet.
+    <br>
+     go to the sheet and create 3 more columns:</p>
+<dl>
+    <dt>Name</dt>
+        <dd>Name of the Artist</dd>
+    <dt>Approved</dt>
+    <dd>make this a checkmark column type</dd>
+    <dt>Comments</dt>
+    <dd>So you can add little comments to drawings if you want :)</dd>
+</dl>
+
+<p>Then navigate to your responses on your google form and press "view in sheets". once on your sheet, press "share" and change General access to "anyone with link":
+   <dl>
+    <dt>You should get this link:</dt>
+        <dd>https://docs.google.com/spreadsheets/d/<span class="green">16jUCXXinqztl3sFdtpWur9yFCAiASDsvmIsF3xHv-BU</span>/edit?usp=sharing</dd>
+   </dl>
+
+</p>
+
+<h3>Step 3: Fill in the following Variables in your <em>drawbox.js</em> file.</h3>
+<dl>
+<dt>GOOGLE_FORM_ID</dt>
+<dd>the long string of text is your google form URL. i highlighted mine in yellow. <span class="yellow">1FAIpQLScbzFT1pxeIkp8yNB3fB7VD9V89Jbitr4h30Q3jXYjy54SlMQ</span></dd>
+
+
+<dt>ENTRY_ID</dt>
+<dd>your entry id will be formatted along the lines of this; i highlighted mine in blue <span class="blue">entry.258336726</span></dd>
+
+
+<dt>DISPLAY_IMAGES</dt>
+<dd>simply set this to true or false depending if you wish to display your images on your page or not. For example, maybe you want to have a seperate page for the images.</dd>
+
+<dt>IMAGE_APPROVAL</dt>
+<dd>Set this to true or false depending if you want to moderate / approve submitted images. Good for high traffic sites / bad actors. </dd>
+
+<dt>GOOGLE_SHEET_ID</dt>
+<dd>copy your ID (my one is highlighted in green above in step 2) <span class="green">16jUCXXinqztl3sFdtpWur9yFCAiASDsvmIsF3xHv-BU</span> - and paste it into the GOOGLE_SHEET_ID variable</dd>
+</dl>
+<p>thats it! if youve set up everything correctly, it should work. This is my first tutorial. If anything is confusing, please let me know.</p>
+</div>
+</div>
+   
+    <hr>
+    <h2>Submitted Drawings ☻</h1>
+    <hr>
+    <div id="gallery">Loading images...</div>
+    <hr>
+    <br>
+    <script src="drawbox.js"></script>
+   
+</body>
+</html>
