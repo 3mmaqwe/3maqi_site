@@ -412,6 +412,7 @@ button a, button a:visited {
   cursor: url('images/isda_cusor_Pointer.cur'), pointer; 
 }
  button:hover {
+  color:white;
   background-color: var(--hover-color);
   cursor: url('images/isda_cusor_Pointer.cur'), pointer;
 }
@@ -428,7 +429,6 @@ a:visited {
 
 a:hover,
 a:focus {
-    color: #2a3d01;
     text-decoration: none;
     font-style: italic;
 }
