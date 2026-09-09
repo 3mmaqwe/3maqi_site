@@ -283,7 +283,7 @@ document.getElementById("submit").addEventListener("click", async function () {
   } catch (error) {
     console.error(error);
     statusText.textContent = "Error uploading image.";
-    alert("Error uploading image or submitting to Google Form. \n try uploading your image here: https://forms.gle/aaWMSQ8LUEwz8U4b6 or email me at emma@3maqi.art with your image ");
+    alert("Error uploading image or submitting to Google Form");
   } finally {
     submitButton.disabled = false;
   }
