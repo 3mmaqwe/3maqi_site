@@ -31,9 +31,66 @@
     <canvas id="drawboxcanvas" width="500px" height="500px"></canvas>
     <br>
     <fieldset id="controls">
-    <label for="colorpicker"><strong>Brush Color:  </strong></label>
+    <label for="colorpicker"><strong>Colorpicker:  </strong></label>
     <input type="color"  name="colorpicker" id="colorpicker" oninput="stroke_color = this.value; colorchoice.value = this.value"> 
-    <output name="colorchoice" id="colorchoice" for="colorpicker">black</output>
+    <output name="colorchoice" id="colorchoice" for="colorpicker">Black</output><br><br>
+
+
+    <!---you can add multiple color palettes make sure to have the value and id name match!-->
+    <!--color color gen site: https://coolors.co/?home -->
+ <label><strong>Color Palette:</strong></label>
+  <select name="palette" id="palette"  onchange="showDiv()">
+    <option value="3maqi">3maqi</option>
+    <option value="Pink">Pink</option>
+    <option value="AutumnHarvest">Autumn Harvest</option>
+    <option value="Basic">Basic Html Colors</option>
+  </select>
+  <div class="colors">
+     <!---color Palette! add your favorite color, your site colors, etc..-->
+   <div id="3maqi" class="colorPalette">
+        <div onclick="change_color(this); colorchoice.value = 'Dark Green' ; colorpicker.value = '#171e18'"  style="background: #171e18;" class="stroke_color"></div>
+        <div onclick="change_color(this); colorchoice.value = 'Fir Green' ; colorpicker.value = '#2a362c'"  style="background: #2a362c;" class="stroke_color"></div>
+        <div onclick="change_color(this); colorchoice.value = 'Leaf Green' ; colorpicker.value = '#4A5E4C'" style="background: #4A5E4C;" class="stroke_color"></div>
+        <div onclick="change_color(this); colorchoice.value = 'Sage' ; colorpicker.value = '#acbc89'" style="background: #acbc89;" class="stroke_color"></div>
+        <div onclick="change_color(this); colorchoice.value = 'Lime' ; colorpicker.value = '#ADDFB3'" style="background: #ADDFB3;" class="stroke_color"></div>
+        <div onclick="change_color(this); colorchoice.value = 'Afternoon Blue' ; colorpicker.value = '#6a7eb1'" style="background: #6a7eb1;" class="stroke_color"></div>
+        <div onclick="change_color(this); colorchoice.value = 'Peach' ; colorpicker.value = '#deaea2'" style="background: #deaea2;" class="stroke_color"></div>
+        <div onclick="change_color(this); colorchoice.value = 'Orange' ; colorpicker.value = '#eaaa75'" style="background: #eaaa75;" class="stroke_color"></div>
+        <div onclick="change_color(this); colorchoice.value = 'Yellow' ; colorpicker.value = '#eccf89'" style="background: #eccf89;" class="stroke_color"></div>
+   </div>
+    
+   <!-- https://coolors.co/palette/ffe5ec-ffc2d1-ffb3c6-ff8fab-fb6f92 -->
+    <div id="Pink" class="colorPalette">
+        <div onclick="change_color(this); colorchoice.value = 'Soft Blush' ; colorpicker.value = '#FFE5EC'"  style="background: #FFE5EC;" class="stroke_color"></div>
+        <div onclick="change_color(this); colorchoice.value = 'Pastel Pink' ; colorpicker.value = '#FFC2D1'"  style="background: #FFC2D1;" class="stroke_color"></div>
+        <div onclick="change_color(this); colorchoice.value = 'Cherry Blossom' ; colorpicker.value = '#FFB3C6'"  style="background: #FFB3C6;" class="stroke_color"></div>
+        <div onclick="change_color(this); colorchoice.value = 'Cotton Candy' ; colorpicker.value = '#ff8fab'"  style="background: #ff8fab;" class="stroke_color"></div>
+        <div onclick="change_color(this); colorchoice.value = 'Petal Rouge' ; colorpicker.value = '#fb6f92'"  style="background: #fb6f92;" class="stroke_color"></div>     
+   </div>
+     
+   <!-- https://coolors.co/palette/6f1d1b-bb9457-432818-99582a-ffe6a7  -->
+    <div id="AutumnHarvest" class="colorPalette">
+        <div onclick="change_color(this); colorchoice.value = 'Dark Wine' ; colorpicker.value = '#6f1d1b'"  style="background: #6f1d1b;" class="stroke_color"></div>
+        <div onclick="change_color(this); colorchoice.value = 'Camel' ; colorpicker.value = '#BB9457'"  style="background: #BB9457;" class="stroke_color"></div>
+        <div onclick="change_color(this); colorchoice.value = 'Dark Coffee' ; colorpicker.value = '#432818'"  style="background: #432818;" class="stroke_color"></div>
+        <div onclick="change_color(this); colorchoice.value = 'Chocolate Brown' ; colorpicker.value = '#99582a'"  style="background: #99582a;" class="stroke_color"></div>
+        <div onclick="change_color(this); colorchoice.value = 'Light Apricot' ; colorpicker.value = '#ffe6a7'"  style="background: #ffe6a7;" class="stroke_color"></div>     
+   </div>
+   
+   <!-- https://www.w3schools.com/colors/colors_names.asp -->
+   <div id="Basic" class="colorPalette">
+    <div onclick="change_color(this); colorchoice.value = 'Red' ; colorpicker.value = '#ff0000'"  style="background: #ff0000;" class="stroke_color"></div>
+    <div onclick="change_color(this); colorchoice.value = 'Blue' ; colorpicker.value = '#0000ff'"  style="background: #0000ff;" class="stroke_color"></div>
+    <div onclick="change_color(this); colorchoice.value = 'Yellow' ; colorpicker.value = '#ffff00'"  style="background: #ffff00" class="stroke_color"></div>
+    <div onclick="change_color(this); colorchoice.value = 'Green' ; colorpicker.value = '#00ff00'"  style="background: #00ff00" class="stroke_color"></div>
+    <div onclick="change_color(this); colorchoice.value = 'Cyan' ; colorpicker.value = '#00ffff'"  style="background: #00ffff" class="stroke_color"></div>
+    <div onclick="change_color(this); colorchoice.value = 'Magenta' ; colorpicker.value = '#ff00ff'"  style="background: #ff00ff" class="stroke_color"></div>
+    <div onclick="change_color(this); colorchoice.value = 'Black' ; colorpicker.value = '#000000'"  style="background: #000000" class="stroke_color"></div>
+  </div>
+
+  </div>
+   
+
     <br>
     <label for="StrokeAmount"><strong>Stroke Size: </strong></label>
     <input type="range" id="Strokewidth" name="Strokewidth" min="1" max="100" value="2" oninput="stroke_width = this.value; StrokeAmount.value=this.value" title="stroke width">
@@ -74,9 +131,9 @@
     <div class="des">
          <p>having trouble submitting? you can manually upload the image using this <a href="https://forms.gle/aaWMSQ8LUEwz8U4b6" target="_blank">form</a></p>
         <p>I also recommend drawing on a computer or larger screen.</p>
-        <p>To prevent spam I now have to approve an image for it to be posted. For a more lengthy info: <a href="rules.html">rules list</a></p>
+        <p>To prevent spam I now have to approve an image for it to be posted. For a more lengthy info: <a href="rules.html">FAQ</a></p>
         <p>ive also commented on some of the images, hover over it to see em!</p>
-        <p><a href="drawbox_guide.html">Make your own Drawbox page!</a></p>
+        <p><a href="drawbox_guide.html">Make your own Drawbox page!</a>| <a href="\devlog.html">Devlog</a></p>
        
     </div>
     </div>

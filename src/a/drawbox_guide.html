@@ -20,10 +20,50 @@
     <canvas id="drawboxcanvas" width="500px" height="500px"></canvas>
     <br>
     <fieldset id="controls">
-            <label for="colorpicker"><strong>Brush Color:  </strong></label>
+            <label for="colorpicker"><strong>Color Picker:  </strong></label>
             <input type="color"  name="colorpicker" id="colorpicker" oninput="stroke_color = this.value; colorchoice.value = this.value"> 
-            <output name="colorchoice" id="colorchoice" for="colorpicker">black</output>
-        <br>
+            <output name="colorchoice" id="colorchoice" for="colorpicker">black</output><br><br>
+      
+      
+ <!---you can add multiple color palettes make sure to have the value and id name match!-->
+    <!--color color gen site: https://coolors.co/?home -->
+ <label><strong>Color Palette:</strong></label>
+  <select name="palette" id="palette"  onchange="showDiv()">
+    <option value="Basic">Basic Html Colors</option>
+    <option value="Pink">Pink</option>
+    <option value="AutumnHarvest">Autumn Harvest</option>
+  </select>
+
+     <!-- https://www.w3schools.com/colors/colors_names.asp -->
+      <!--make sure the colorpicker.value is in hexdemical. Colorchoice value is the name that will display when you choose a color-->
+  <div id="Basic" class="colorPalette">
+    <div onclick="change_color(this); colorchoice.value = 'Red' ; colorpicker.value = '#ff0000'"  style="background: #ff0000;" class="stroke_color"></div>
+    <div onclick="change_color(this); colorchoice.value = 'Blue' ; colorpicker.value = '#0000ff'"  style="background: #0000ff;" class="stroke_color"></div>
+    <div onclick="change_color(this); colorchoice.value = 'Yellow' ; colorpicker.value = '#ffff00'"  style="background: #ffff00" class="stroke_color"></div>
+    <div onclick="change_color(this); colorchoice.value = 'Green' ; colorpicker.value = '#00ff00'"  style="background: #00ff00" class="stroke_color"></div>
+    <div onclick="change_color(this); colorchoice.value = 'Cyan' ; colorpicker.value = '#00ffff'"  style="background: #00ffff" class="stroke_color"></div>
+    <div onclick="change_color(this); colorchoice.value = 'Magenta' ; colorpicker.value = '#ff00ff'"  style="background: #ff00ff" class="stroke_color"></div>
+    <div onclick="change_color(this); colorchoice.value = 'Black' ; colorpicker.value = '#000000'"  style="background: #000000" class="stroke_color"></div>
+  </div>
+
+   <!-- https://coolors.co/palette/ffe5ec-ffc2d1-ffb3c6-ff8fab-fb6f92 -->
+    <div id="Pink" class="colorPalette">
+        <div onclick="change_color(this); colorchoice.value = 'Soft Blush' ; colorpicker.value = '#FFE5EC'"  style="background: #FFE5EC;" class="stroke_color"></div>
+        <div onclick="change_color(this); colorchoice.value = 'Pastel Pink' ; colorpicker.value = '#FFC2D1'"  style="background: #FFC2D1;" class="stroke_color"></div>
+        <div onclick="change_color(this); colorchoice.value = 'Cherry Blossom' ; colorpicker.value = '#FFB3C6'"  style="background: #FFB3C6;" class="stroke_color"></div>
+        <div onclick="change_color(this); colorchoice.value = 'Cotton Candy' ; colorpicker.value = '#ff8fab'"  style="background: #ff8fab;" class="stroke_color"></div>
+        <div onclick="change_color(this); colorchoice.value = 'Petal Rouge' ; colorpicker.value = '#fb6f92'"  style="background: #fb6f92;" class="stroke_color"></div>     
+   </div>
+     
+   <!-- https://coolors.co/palette/6f1d1b-bb9457-432818-99582a-ffe6a7  -->
+    <div id="AutumnHarvest" class="colorPalette">
+        <div onclick="change_color(this); colorchoice.value = 'Dark Wine' ; colorpicker.value = '#6f1d1b'"  style="background: #6f1d1b;" class="stroke_color"></div>
+        <div onclick="change_color(this); colorchoice.value = 'Camel' ; colorpicker.value = '#BB9457'"  style="background: #BB9457;" class="stroke_color"></div>
+        <div onclick="change_color(this); colorchoice.value = 'Dark Coffee' ; colorpicker.value = '#432818'"  style="background: #432818;" class="stroke_color"></div>
+        <div onclick="change_color(this); colorchoice.value = 'Chocolate Brown' ; colorpicker.value = '#99582a'"  style="background: #99582a;" class="stroke_color"></div>
+        <div onclick="change_color(this); colorchoice.value = 'Light Apricot' ; colorpicker.value = '#ffe6a7'"  style="background: #ffe6a7;" class="stroke_color"></div>     
+   </div>
+   
             <label for="StrokeAmount"><strong>Stroke Size: </strong></label>
             <input type="range" id="Strokewidth" name="Strokewidth" min="1" max="100" value="2" oninput="stroke_width = this.value; StrokeAmount.value=this.value" title="stroke width">
             <output name="StrokeAmount" id="StrokeAmount" for="Stokewidth">2</output>
@@ -129,7 +169,9 @@ input something into the form and tap "get link". copy the link and open it up i
 <dt>GOOGLE_SHEET_ID</dt>
 <dd>copy your ID (my one is highlighted in green above in step 2) <span class="green">16jUCXXinqztl3sFdtpWur9yFCAiASDsvmIsF3xHv-BU</span> - and paste it into the GOOGLE_SHEET_ID variable</dd>
 </dl>
-<p>thats it! if youve set up everything correctly, it should work. This is my first tutorial. If anything is confusing, please let me know.</p>
+<p>thats it! if youve set up everything correctly, it should work. This is my first tutorial. If anything is confusing, please let me know. I also update the drawbox time from time, so if you follow my
+    <a href="https://3maqi.art/feed.xml">RSS feed</a>, you should get updates when I add new features. 
+</p>
 </div>
 </div>
    
