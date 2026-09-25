@@ -26,7 +26,8 @@ body {
    display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  max-width: 50%;
+  min-width: 0;
     margin: 0 auto;
   }
   /* i wanted a bigger font, bc the small text can hurt lol */
