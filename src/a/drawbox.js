@@ -16,7 +16,7 @@ https://oldcompcz.github.io/jgs/joan_stark/
   FILL IN THESE VARIABLES BASED ON THE GUIDE AT https://3maqi.art/a/drawbox_guide.html
 */
 const GOOGLE_FORM_ID = "1FAIpQLScoGz_QbDtoTdXdRmH5dDlIpCo2DNZY-LEg3SKhtHKNSlAcAw";
-const ENTRY_ID = "entry.2109284117";
+const IMGUR_ID = "entry.2109284117";
 const NAME_ID = "entry.1862726355";
 const GOOGLE_SHEET_ID = "1ktraLj0cL4rySe8eQsC892Bd0qsPlKtR6vk-Fmbb2BE";
 // turn on or off gallery
@@ -272,7 +272,7 @@ document.getElementById("submit").addEventListener("click", async function () {
     console.log("Uploaded image URL:", imageUrl);
 
     const googleFormData = new FormData();
-    googleFormData.append(ENTRY_ID, imageUrl);
+    googleFormData.append(IMGUR_ID, imageUrl);
     googleFormData.append(NAME_ID,user_name);
 
     await fetch(GOOGLE_FORM_URL, {

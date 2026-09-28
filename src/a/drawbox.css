@@ -3,7 +3,16 @@
    .blue{background-color:cyan;}
    .yellow{background-color:yellow;}
    .green{background-color:lime;}
+   .magenta{background-color:magenta;}
    
+    #form{
+       display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50%;
+  min-width: 0;
+    margin: 0 auto;
+    }
     dl{
       padding: 20px;
     }
