@@ -14,6 +14,8 @@ jgs  `-----'`-----` `--`
 https://oldcompcz.github.io/jgs/joan_stark/
 
   FILL IN THESE VARIABLES BASED ON THE GUIDE AT https://3maqi.art/a/drawbox_guide.html
+  i might move theses to a seperate json file,,, once I learn how to implement it. So that if I update drawbox, you can copy new code, but your variables can remain unchanged
+  alternatively you can save them in a another file for safe keeping.
 */
 const GOOGLE_FORM_ID = "1FAIpQLScoGz_QbDtoTdXdRmH5dDlIpCo2DNZY-LEg3SKhtHKNSlAcAw";
 const IMGUR_ID = "entry.2109284117";
@@ -245,7 +247,6 @@ document.getElementById("submit").addEventListener("click", async function () {
     if (confirm("Are you ready to submit your image?") == true) {
 
   if (start_index <= -1) { alert("I know art is subjective and all, but you can't submit an empty canvas!"); }
-
   else {   
   const submitButton = document.getElementById("submit");
   const statusText = document.getElementById("status");
