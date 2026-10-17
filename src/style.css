@@ -50,7 +50,7 @@ body {
 }
 
 
-  
+/* MINECRAFT STYLING */
 /* minecraft font */
 @font-face {
   font-family: MinecraftDefault;
@@ -131,10 +131,32 @@ body {
   cursor: url('minecraft/images/Diamond_Sword_JE3_BE3.cur'), auto !important;
 }
 
+/* END OF MINECRAFT STYLING */
+
+
+/*Zelda Section Styling */
+
+.Zelda {
+  background-image: url("../images/cat_background/OQ5DF90.jpg");
+     cursor: url('https://cdn.cursors-4u.net/previews/brown-cat-169e5e3c-32.webp') 32 32, auto !important;
+}
+.ZeldaMain {
+    background: rgba(255, 255, 255, 0.518);
+  backdrop-filter: blur(10px);
+  padding: 10px;
+   border: 3px solid black;
+   border-radius: 25px;
+}
 
 * {
   box-sizing: border-box;
 }
+
+
+.flexbox2{
+display: flex;
+}
+
 
 /* ids */
 
@@ -587,7 +609,7 @@ nav li a:hover {
 
 /* Add a card effect for articles */
 section {
-  background-color: #bdf3c4;
+  background-color:var(--section-color);
   border-radius: 25px;
   padding: 15px;
   border-style: double;
@@ -596,6 +618,20 @@ section {
   margin: 15px 0; 
   display: flow-root;
 }
+
+
+.darkmode {
+  background-color:  var(--body-color);
+   color: var(--section-color);
+    border-color: var(--section-color);
+}
+.darkmode hr{
+  color: var(--section-color);
+}
+.darkmode a{
+  color: var(--section-color);
+}
+
 
 dt{
   background-color: #99c19e;
@@ -807,12 +843,10 @@ body{
     /* same for website links - i think it be nice to have like a page to sort links */
   } 
   /*makes grid display go away on mobile*/
-  .watercolor-grid {
+  .watercolor-grid, .Journal-ImageGrid, .flexbox2  {
     display: block;
   }
-  .Journal-ImageGrid{
-    display: block;
-  }
+ 
   .watercolor-grid figure {
     margin-bottom: 20px;
   }
