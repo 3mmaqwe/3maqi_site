@@ -13,14 +13,16 @@ jgs  `-----'`-----` `--`
 
 https://oldcompcz.github.io/jgs/joan_stark/
 
-  FILL IN THESE VARIABLES BASED ON THE GUIDE AT https://3maqi.art/a/drawbox_guide.html
+  FILL IN THESE VARIABLES BASED ON THE GUIDE AT https://3maqi.art/a/index.html
   i might move theses to a seperate json file,,, once I learn how to implement it. So that if I update drawbox, you can copy new code, but your variables can remain unchanged
   alternatively you can save them in a another file for safe keeping.
 */
+//mine
 const GOOGLE_FORM_ID = "1FAIpQLScoGz_QbDtoTdXdRmH5dDlIpCo2DNZY-LEg3SKhtHKNSlAcAw";
 const IMGUR_ID = "entry.2109284117";
 const NAME_ID = "entry.1862726355";
 const GOOGLE_SHEET_ID = "1ktraLj0cL4rySe8eQsC892Bd0qsPlKtR6vk-Fmbb2BE";
+
 // turn on or off gallery
 const DISPLAY_IMAGES = true;
 // post approval - make false if you dont want to approve images
@@ -28,6 +30,9 @@ const IMAGE_APPROVAL = true;
 
 // optional I recommend getting your own client ID https://apidocs.imgur.com/ */
 const CLIENT_ID = "bfaaee57f0b78f1";
+
+// I have some console logging stuff here and there. thought id make it so u can turn it off or on.
+const DEBUG_MODE = false;
 
 /*
         
@@ -51,7 +56,10 @@ function CreateCanvasMobile(x) {
     canvas.height = canvas.offsetWidth;
      context.fillStyle = "white";
      context.fillRect(0, 0, canvas.width, canvas.height);
-     console.log("resizing canvas");
+     if (DEBUG_MODE) {
+      console.log("resizing canvas");
+     }
+     
   }
 }
 
@@ -318,8 +326,10 @@ async function fetchImages() {
     gallery.innerHTML = "";
     rows.reverse().forEach((row) => {
       const columns = row.split(",");
-      console.log("Row:", row);
-      console.log("Columns:", columns);
+      if (DEBUG_MODE){
+         console.log("Row:", row);
+        console.log("Columns:", columns);
+      }
       if (columns.length < 2) return;
 
       const timestamp = columns[0].trim();

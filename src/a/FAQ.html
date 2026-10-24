@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="..\images\isda_noboarder.png">
+    <title>DRAWBOX</title>
+     <!--link href="../style.css" rel="stylesheet" type="text/css" media="all" -->
+     <link href="drawbox.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<style>
+    body {
+  counter-reset: Rule;
+  min-width: 0px;
+}
+
+h2::before {
+  counter-increment: Rule;
+  content: "" counter(Rule) ": ";
+}
+</style>
+<body>
+ <h1>Drawbox Tutorial FAQ</h1>
+ <br> <a href="index.html">Back to drawbox tutorial</a>
+ <p>Hi here are some common issues ive gotten from people emailing me. I figured I put down issues people have so people can check here and see if they have a similar
+    issue. I also just have other questions that maybe people would ask me.
+ </p>
+<h2>Image can't be submitted to imgur / uploaded to google</h2>
+<p>Mostly commonly it is probably for this reason:</p>
+<p>if you have a free account from neocites made after 2024 you have to use iframes as a workaround for drawbox to work.(aka hosting the page elsewhere) you could host your drawbox on <a href="https://docs.github.com/en/pages">github pages</a> or <a href="https://nekoweb.org/">nekoweb</a>,
+    or another site that has Non-strict Content Security Policy for free (use external scripts). an example of the iframe mirroring can be seen at my second neocities page: <a href="https://drawbox.neocities.org/">https://drawbox.neocities.org/</a> 
+alternatively you could swtich to a paid account for neocities. thats what I do.</p>
+<p>it could also be that your testing in localhost or offline. Image uploading only works on a live server ive noticed.</p>
+
+<h2>Failed to load images.</h2>
+
+<p>first make sure that you have the sheet set to <a href="drawbox_images/linkshare.jpg">general access</a> - so that "Anyone on the internet with the link can view". Also make sure that you have <a href="drawbox_images/sheet.png">5 columns on your google sheet</a>. 
+    also again make sure you are testing in a <a href="https://realpython.com/python-http-server/">local host enviroment</a>, just opening the html on your browser will cause drawbox to not work properly.
+</p>
+
+<h2>Who made drawbox?</h2>
+<p>Im not the original creator. This was originally created by the now defunt site <a href="https://web.archive.org/web/20250906084141/https://jhorn.net/">jhorn.net</a>, who hosted their <a href="https://web.archive.org/web/20250402183458mp_/https://drawbox.nekoweb.org/">drawbox on nekowebs</a>.
+at the time when I made my own drawbox this site was still up. But at some point in 2025 the owner has seemed to removed their site and nekoweb tutorial from the internet. it seems like they just <a href="https://web.archive.org/web/20251020012457/https://jhorn.net/moved.html">moved sites</a>
+its been exploring the old site. hopefully one day i can find the new site :)</p>
+</body>
